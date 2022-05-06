@@ -17,7 +17,7 @@ title: RSE2107A
 tagline: Practical Robotics
 description: Course website for Introduction to Practical Robotics
 author: Weston Robot
-baseurl: '/robotics101' # the subpath of your site, e.g. /blog
+baseurl: '/rse2107a' # the subpath of your site, e.g. /blog
 url: 'https://westonrobot.net' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", vendor]
 
