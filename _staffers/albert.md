@@ -1,9 +1,9 @@
 ---
 name: Albert
 role: Teaching Assistant
-email: me@example.com
+email: course@westonrobot.com
 website: https://kevinl.info
 photo: avatar.jpeg
 ---
 
-I like teaching Robotics!
+Robotics is cool!
