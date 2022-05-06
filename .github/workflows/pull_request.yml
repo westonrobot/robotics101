@@ -1,9 +1,6 @@
-name: Publish Page
+name: Pull Request Check
 
-on:
-  push:
-    branches:    
-      - main
+on: [pull_request]
 
 jobs:
   jekyll:
@@ -23,9 +20,3 @@ jobs:
     - uses:  helaili/jekyll-action@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-
-    # Specify the target branch (optional)
-    - uses: helaili/jekyll-action@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        target_branch: 'gh-pages'
