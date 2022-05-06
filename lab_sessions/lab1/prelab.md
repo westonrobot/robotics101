@@ -8,6 +8,11 @@ nav_order: 1
 
 ## Install Ubuntu 18.04
 
+> ***NOTICE:*** Before proceeding with any ubuntu installation (especially when dual booting), it
+> is highly recommended that you backup any important data you have on the computer.
+> We will not be responsible for any loss of data and cannot provide assistance with
+> any data recovery attempts.
+
 ### 1. Preparation
 
 You need to set up a bootable USB drive for Ubuntu installation. You need the following:
@@ -20,7 +25,7 @@ You need to set up a bootable USB drive for Ubuntu installation. You need the fo
 
 **IMPORTANT** : You will need to format the USB drive, so backup your data on the USB drive first.
 
-After creation, verify you can boot from your USB drive. Usually you can choose which disk to boot from by pressing F2 or F10 at the boot screen. Search the Internet for information specific to your computer brand and model. If unable to boot from USB, try disabling secure boot/fast boot in BIOS configuration. 
+After creation, verify you can boot from your USB drive. Usually you can choose which disk to boot from by pressing F2 or F10 or ESC at the boot screen. Search the Internet for information specific to your computer brand and model. If unable to boot from USB, try disabling secure boot/fast boot in BIOS configuration.
 
 ### 2. Disk Partition
 
