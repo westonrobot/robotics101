@@ -16,11 +16,12 @@ nav_order: 1
 [Prelab Notes]({{ site.baseurl }}{% link lab_notes/lab1/prelab.md %})
 
 # Lab
-## Familiarizing with Ubuntu 18.04
-By the end of Lab 1, you are going to:
-- Learn about package manager (**apt-get**)
-- Understand system variables (**.bashrc**)
-- Install ROS Melodic
+    By the end of Lab 1, you are expected to:
+        1. Learn about package manager (**apt-get**)
+        2. Understand system variables (**.bashrc**)
+        3. Install ROS Melodic
+
+[Lab Notes]({{ site.baseurl }}{% link lab_notes/lab1/lab.md %})
 
 # Resources
 - Personal computer installed with Ubuntu 18.04 (per student)
