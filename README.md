@@ -36,7 +36,7 @@ Then you can modify the files and preview the site:
 $ bundle exec jekyll serve --livereload
 ```
 
-Open the preview page at: http://127.0.0.1:4000/rse2107a/
+Open the preview page at: http://127.0.0.1:4000
 
 ## Reference
 
