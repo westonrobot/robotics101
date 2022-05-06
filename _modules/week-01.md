@@ -1,23 +1,14 @@
 ---
-title: Introduction to Java
+title: Course Introduction
 ---
 
-Sep 28
-: [Java & Git](#)
+May 9
+: **Lecture**{: .label .label-purple }[Java & Git](#)
   : [1.1](#)
 
-Sep 29
-: **Section**{: .label .label-purple }[Intro to Java](#)
-  : [Solution](#)
-
-Sep 30
-: [Variables & Objects](#)
-  : [1.2](#), [2.1](#)
-
-Oct 1
+May 11
 : **Lab**{: .label .label-purple } [Intro to Java](#)
 
-Oct 2
-: [Tracing, IntLists, & Recursion](#)
-  : [2.1](#)
-: **HW 1 due**{: .label .label-red }
+May 13
+: **Lab 1 report due**{: .label .label-red }
+  : [1.2](#), [2.1](#)
