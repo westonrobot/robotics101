@@ -2,7 +2,10 @@
 layout: page
 title: Lectures
 description: >-
-    Course policies and information.
+    Course lectures.
+permalink: /lectures/
+has_children: true
 nav_order: 4
 ---
 
+{:toc}
