@@ -6,15 +6,14 @@ description: >-
 nav_order: 2
 ---
 
-<!-- # Syllabus
-{:.no_toc}
+## Syllabus
 
+<!-- 
 1. TOC
 {:toc}
-
 --- -->
 
-## Objectives 
+### Objectives 
 
 This course is primarily designed for students who are new to robotics but want to get a quick
 exposure to various aspects of robotics development, including hardware, ROS, autonomous navigation,
@@ -22,34 +21,34 @@ computer vision and machine learning, etc. It covers the industry best tools, wo
 and bridges the gaps between academia courses and solutions to practical challenges in robot and robotics
 application development.
 
-## Prerequisites
+### Prerequisites
 
 A basic understanding of electronics, computer network and programming is assumed.
 Hands-on experience with CAD tools and 3D printing is also required.
 
-## Office Hours
+### Office Hours
 
 After class, or by appointment, or post your questions in the forum provided for this purpose.
 
-## Grading Policy
+### Grading Policy
 
 * Labs (50%): 8 graded lab sessions, each worth 4-8%
 * Final project (50%): demonstration (25%), presentation (15%), report (10%)
 
-## Class Policy
+### Class Policy
 
 Regular attendance of both the lectures and lab sessions are essential and expected.
 
-## Academic Honesty
+### Academic Honesty
 
 Lack of knowledge of the academic honesty policy is not a reasonable explanation
 for a violation.
 
-## Tentative Schedule
+### Tentative Schedule
 
-You can find the course schedule from [this page](schedule.md).
+You can find the course schedule on [this page](schedule.md).
 
-## Main References
+### Main References
 
 As the course covers a wide variety of topics, students are encouraged to search and
 learn from resources from the Internet. The following is a short list of useful books that will be touched
