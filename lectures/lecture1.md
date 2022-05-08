@@ -10,5 +10,5 @@ nav_order: 1
 
 * Mon, May 09, 9:00 am – 13:00 am
 * Lecture resources
-    - Slides: [pdf]([#](https://tangrobot.sharepoint.com/:b:/s/ProductDevelopment/EZTanLuM_IRBiIeOBTRPPXoBnJxUB9zJxWJ5RSJzIotSRw?e=Z9ou7W))
+    - Slides: [pdf](https://tangrobot.sharepoint.com/:b:/s/ProductDevelopment/EZTanLuM_IRBiIeOBTRPPXoBnJxUB9zJxWJ5RSJzIotSRw?e=Z9ou7W)
     <!-- - Lecture notes: [pdf](#) -->
