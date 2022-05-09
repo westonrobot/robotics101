@@ -6,8 +6,10 @@ parent: Lectures
 nav_order: 1
 ---
 
-# **Overview**
+# **Lecture 1: Introduction to practical robotics**
+* Mon, May 09, 9:00 am – 13:00 am
 
+## **Overview**
 
 Week 1's lecture will provide a overview of the robotics industry in Singapore and cover administrative matters pertaining to the module. 
 
@@ -16,5 +18,8 @@ This lecture will serve as an introduction to the essential concepts of Ubuntu a
 Further information regarding week 1's prelab and lab will be provided during the lecture.
 Looking forward to meeting all of you on Monday!
 
-[Lecture 1 slides](https://github.com/westonrobot/robotics101)
+
+## **Lecture resources**
+    * Slides: [pdf](https://tangrobot.sharepoint.com/:b:/s/ProductDevelopment/EZTanLuM_IRBiIeOBTRPPXoBnJxUB9zJxWJ5RSJzIotSRw?e=Z9ou7W)
+    <!-- - Lecture notes: [pdf](#) -->
 

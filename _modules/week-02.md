@@ -1,12 +1,12 @@
 ---
-title: Week 2 - Basic Data Structures
+title: Week 2 - Python and ROS Basics
 ---
 
-May 9
-: [Java & Git](#)
+May 16
+: [Python crash course & ROS basic concepts](#)
 
-May 11
-: [Intro to Java](#)
+May 18
+: **Lab 2**{: .label .label-green} [Write a ROS node to publish and subscribe topics](#)
 
-May 13
+May 22
 : **Lab 2 report due**{: .label .label-red }
