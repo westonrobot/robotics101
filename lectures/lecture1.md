@@ -20,6 +20,6 @@ Looking forward to meeting all of you on Monday!
 
 
 ## **Lecture resources**
-    * Slides: [pdf](https://tangrobot.sharepoint.com/:b:/s/ProductDevelopment/EZTanLuM_IRBiIeOBTRPPXoBnJxUB9zJxWJ5RSJzIotSRw?e=Z9ou7W)
-    <!-- - Lecture notes: [pdf](#) -->
+* Slides: [pdf](https://tangrobot.sharepoint.com/:b:/s/ProductDevelopment/EZTanLuM_IRBiIeOBTRPPXoBnJxUB9zJxWJ5RSJzIotSRw?e=Z9ou7W)
+<!-- - Lecture notes: [pdf](#) -->
 
