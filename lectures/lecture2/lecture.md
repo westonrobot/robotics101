@@ -7,7 +7,7 @@ nav_order: 2
 ---
 
 # **Lecture 2: Python and ROS basics**
-* Mon, May 16, 9:00 am – 13:00 am
+* Mon, May 17, 9:00 am – 13:00 am
 
 ## **Overview**
 
