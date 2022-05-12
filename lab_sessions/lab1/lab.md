@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lab 1
+title: Lab 1 - Linux basics & ROS installation
 permalink: /lab_sessions/lab1
 parent: Lab Sessions
 nav_order: 1
