@@ -25,7 +25,7 @@ It will be in a short-form open-ended answer format, and concepts covered will b
 ## Lab Report and Submission
 * Thoughout this lab, there are tasks that you are supposed to perform and record observations/deductions.
 * Each task will be clearly labelled and will need to be included in your lab report, which is in the format "**lab2\_report\_STUDENT\_ID.doc / pdf**", include your name, student_id at the begining of the report.
-* Zip up your lab report and other requirements (if present) and name it "**lab2\_STUDENT\_ID.zip**" and upload it onto xSITe \_____LOCATION TBC_____.
+* Zip up your lab report and other requirements (if present) and name it "**lab2\_STUDENT\_ID.zip**" and upload it onto \_____LOCATION TBC_____.
 
 ## Learning Outcomes
 By the end of lab 2, you will have:
@@ -180,4 +180,4 @@ Now that we have gone through setting up, building, and running a exisitng packa
 ![img](assets/network_after.png)
 
 ## Submission
-Zip up your lab report and the package you have made in Task 3 and 4 into a zip file called "**lab2\_STUDENT\_ID.zip**" and submit it on to xSITe by 22<sup>nd</sup> May 2022, 23:59.
+Zip up your lab report and the package you have made in Task 3 and 4 into a zip file called "**lab2\_STUDENT\_ID.zip**" and submit by 22<sup>nd</sup> May 2022, 23:59.

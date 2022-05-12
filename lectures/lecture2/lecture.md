@@ -21,7 +21,7 @@ Further information regarding week 2's prelab and lab will be provided during th
 
 
 ## **Lecture resources**
-* Slides: [pdf](https://tangrobot.sharepoint.com/:b:/s/ProductDevelopment/EZTanLuM_IRBiIeOBTRPPXoBnJxUB9zJxWJ5RSJzIotSRw?e=Z9ou7W)
+* Slides: [pdf]({{ site.baseurl }})
 * In-class Resources: [zip]({{ site.baseurl }}{% link lectures/lecture2/handouts.zip %}) (Refer to the README on how to run the notebook)
 <!-- - Lecture notes: [pdf](#) -->
 

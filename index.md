@@ -9,9 +9,9 @@ seo:
 nav_order: 1
 ---
 
-# Introduction to Practical Robotics
+# Robotics 101
 
-Welcome to the **RSE2107A Introduction to Practical Robotics** class! 
+Welcome to the **Introduction to Practical Robotics** class! 
 
 You can find useful information about the course here:
 
