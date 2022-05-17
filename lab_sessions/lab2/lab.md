@@ -14,8 +14,9 @@ It will be in a short-form open-ended answer format, and concepts covered will b
 **Readings**
 1. [ROS - Understanding Nodes](http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes)
 2. [ROS - Understanding Topics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
-3. [Linux - Ifconfig](https://www.computerhope.com/unix/uifconfi.htm)
-4. [Python - Basics Tutorial](https://www.tutorialspoint.com/python/index.htm)
+3. [ROS - Launch files](http://wiki.ros.org/roslaunch/XML#Minimal_Example)
+4. [Linux - Ifconfig](https://www.computerhope.com/unix/uifconfi.htm)
+5. [Python - Basics Tutorial](https://www.tutorialspoint.com/python/index.htm)
 
 ## Setup
 * Be in your teams of 5
@@ -114,6 +115,7 @@ Gazebo is a simulator that enables us to simulate a close representation of the 
    2. Once the simulation has been started, view the resulting ROS network using rqt_graph
       1. **Task 1a**{: .label .label-blue}Take a screenshot of the network graph, include this screenshot in your report.
       2. **Task 1b**{: .label .label-blue}From this screenshot, which nodes publishes and subscribes to the "/cmd_vel" topic?
+      3. **Task 1c**{: .label .label-blue}What is the message data format used on this "/cmd_vel" topic?
 
 ### Tele-operation
 
@@ -121,31 +123,35 @@ The limo_base package contains the ROS package that controls and drives the limo
 
 In the following task, we will attempt to control the limo using your own computer. To achieve this, we will need to run the limo_base control node on the limo itself, and make our own computer publish to the /cmd_vel topic within the same ROS network.
 
+NOTE: Your limo's has already been setup with all necessary ROS packages for this course within a catkin workspace. The workspace can be found under ~/agilex_ws. For the following task however, you will use the catkin workspace you have made earlier.
+
 *Do coordinate with your team members when attempting to do this task as to avoid situations where multiple members are attempting to control the robot*
 
 **Task 2: Tele-operating your limo**{: .label .label-green}
 
-   1. Connect your computer to the limo's wifi.
+   1. Connect your computer and the limo to a common wifi.
    2. With a keyboard attached to limo's computer, find the ip address of the nano
       1.  **Task 2a**{: .label .label-blue}What's the nano's ip address?
    3. After finding the ip address
-      1. add the lines below to the nano's bashrc file, replacing with the ip address you have found and source bashrc
+      1. add the lines below to the nano's bashrc file, replacing with the ip address (e.g. http://192.168.111.111:11311) you have found and source bashrc
         ```bash
         export ROS_MASTER_URI=http://<nano ip address>:11311
         export ROS_HOSTNAME=<nano ip address>
         ```
    4. Run the limo_base_node on the jetson nano computer.
    5. On your computer, find the ip address of your computer.
-      1. add the lines below your own bashrc file, be mindful of which ip address you use and source the neew bashrc file
+      1.  **Task 2b**{: .label .label-blue}What's your computer's ip address?
+      2. add the lines below your own bashrc file, be mindful of which ip address you use and source the new bashrc file
         ```bash
         export ROS_MASTER_URI=http://<nano ip address>:11311
         export ROS_HOSTNAME=<your own ip address>
         ```
    6. On your computer run the teleop twist keyboard node to publish to /cmd_vel
    7. Once the teleop twist keyboard has been started, view the resulting ROS network using rqt_graph
-      1. **Task 2b**{: .label .label-blue}Take a screenshot of the network graph, include this screenshot in your report.
-      2. **Task 2c**{: .label .label-blue}Where is the ROS master node running on?
-      3. **Task 2d**{: .label .label-blue}From this screenshot and the bashrc files, can you deduce what does setting the ROS_MASTER_URI and ROS_HOSTNAME environment variables do?
+      1. **Task 2c**{: .label .label-blue}Take a screenshot of the network graph, include this screenshot in your report.
+      2. **Task 2d**{: .label .label-blue}From this screenshot, which nodes publishes and subscribes to the "/cmd_vel" topic?
+      3. **Task 2e**{: .label .label-blue}Where is the ROS master node running on?
+      4. **Task 2f**{: .label .label-blue}From this screenshot and the bashrc files, can you deduce what does setting the ROS_MASTER_URI and ROS_HOSTNAME environment variables do?
 
 ## Making our first package
 Now that we have gone through setting up, building, and running a exisitng package, we can now start making our very own custom package. This lab will cover creating the 2 most basic nodes we can have, *publishers* and *subscribers*.
@@ -164,15 +170,22 @@ Now that we have gone through setting up, building, and running a exisitng packa
 
 1. Follow the official ROS tutorial [here](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) to create your first publisher and subscriber nodes.
 2. After creating the 2 nodes, run the 2 nodes and rqt_graph
-   1. **Task 3a**{: .label .label-blue}Take a screenshot of the network graph, include this screenshot in your report.
-   2. **Task 3b**{: .label .label-blue}What is the topic name these 2 nodes are communcating on and where is this defined?
+   1. **Task 3a**{: .label .label-blue}Take a screenshot of the ROS network graph, include this screenshot in your report.
+   2. **Task 3b**{: .label .label-blue}What is the topic name these 2 nodes are communcating on and where/how is this name defined?
    3. **Task 3c**{: .label .label-blue}What is the message data format used on this topic?
    4. **Task 3d**{: .label .label-blue}What is the frequency rate (in Hz) of publishing on this topic and how can we change this rate?
 
 **Task 4: Implementing our own node**{: .label .label-green}
 
-1. **Task 4a**{: .label .label-blue}Building on the publisher and subscriber package we just made, create a node that "intercepts" the original message, changes the content (anyway you like) and republishes this new message to a new topic. You can modify the 2 original nodes to publish and subscribe to any topic you like and the resultant network should look similar to the diagram below when all 3 nodes are running. Include a screenshot of the network when all 3 nodes are running.
+1. **Task 4a**{: .label .label-blue}Building on the publisher and subscriber package we just made, create a node that, for every new message it receives from the original publisher;
+   1. it changes the content of the received message (anyway you like)
+   2. republishes this new message to a new topic which is subscribed by the original subscriber
+
+   You can modify the 2 original nodes to publish and subscribe to any topic you like and the resultant network should look similar to the diagram below when all 3 nodes are running. Include a screenshot of the network when all 3 nodes are running.
 2. **Task 4b**{: .label .label-blue}Include this final modified package alongside your report during submission.
+3. **Task 4c**{: .label .label-blue}Briefly describe your new node.
+4. **Task 4d**{: .label .label-blue}While running all 3 nodes, what happens to the listener node's behavior when you switch off the talker node?
+5. **Task 4e**{: .label .label-blue}Create a ROS launch file to launch all 3 nodes at the same time using 1 roslaunch command.
 
 **Before**
 ![img](assets/network_before.png)
