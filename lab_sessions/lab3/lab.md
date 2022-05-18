@@ -1,15 +1,23 @@
 ---
 layout: page
-title: Lab 3 - Using Git
+title: Lab 3 - Using Git & ROS Services
 permalink: /lab_sessions/lab3
 parent: Lab Sessions
 nav_order: 3
 ---
-**Lab 3 submission due on 28<sup>nd</sup> May 2022, 23:59**{: .label .label-red }
+**Lab 3 submission due on 28<sup>th</sup> May 2022, 23:59**{: .label .label-red }
 # Prelab (1%)
 
-We will have a short quiz on concepts that have been covered in the lecture and those that will be needed during this lab session.
-It will be in a short-form open-ended answer format, and concepts covered will be from the readings found below.
+1. Prepare your Github accounts
+   1. Each member should have his/her own github account
+2. Each team has to make a github organization
+   1. Organization names should follow this format: RSE2107A-AY2122T3-Group-X
+   2. Where X is your grp number
+   3. Every member should be a member in this organization
+3. Download and install your preferred (I)DE.
+   1. For those who don't have one, [Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a good place to start.
+   2. VSCode has great python & ROS extensions. ;p
+4. We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.
 
 **Readings**
 1. [Git - Basics Chapter 2](https://git-scm.com/book/en/v2)
@@ -21,7 +29,7 @@ It will be in a short-form open-ended answer format, and concepts covered will b
 
 **Materials**
 1. [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
-2. [Low Level Protocol]()
+2. [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}) 
 
 ----
 
@@ -43,5 +51,7 @@ By the end of lab 3, you will have:
 2. experience how code collaboration works using Git
 3. leart how to implement a ROS service and client
 
-## Submission
-Zip up your lab report and the package you have made into a zip file called "**lab3\_STUDENT\_ID.zip**" and submit by 28<sup>nd</sup> May 2022, 23:59.
+----
+
+
+
