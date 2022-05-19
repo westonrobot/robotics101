@@ -74,6 +74,10 @@ Today we will start by creating your organisations, ones which you will hopefull
 2. After creation, we need to get all team members within the same organisation
    1. From the organisation's homepage, select the "People tab".
    2. Once there, use the "invite member" button to invite each member of your team into your Github organisation as members.
+   3. **IMPORTANT: To facilitate grading, do invite the following accounts to your organisation as well.**
+      1. hanskw-weston
+      2. Aojd22
+      3. kartheegeyan
 3. Congratulations, you now have a Github organisation as a team, you can explore the features and settings available to you as a organisation.
    1. *One such pertinent feature is the member privileges settings.*
 
@@ -172,4 +176,36 @@ Well.. that situation is what we call a *merge conflict*, when git does not know
 Final desired text
 ![img](assets/final_form.png)
 9. Repeat this step until all members have merged in their changes.
-10. **Task 2c**{: .label .label-blue}Include the url of your remote repository in your report
+10. **Task 2c**{: .label .label-blue}Include a screenshot of the remote main branch's commit history, and the url of your remote repository in your report.
+
+## Mini-project
+To put what we have learnt into practice, each team will now attempt a "mini-project" of sorts. The end result of this mini-project should be in one shared remote repository (private or public, up to you) on github.
+
+### Background overview
+The limo robot is controlled by the limo_base node. This node publishes the status of the robot using the "/limo_status" topic and the [limo_base::LimoStatus msg data format](https://github.com/westonrobot/limo_ros/blob/master/limo_base/msg/LimoStatus.msg). However, the format only outputs numerical representations of the robot status, meaning that without the correct interpretation, one cannot tell what each number actually means.
+
+Thankfully, a description of the various values have been included in the materials provided in this lab, [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}).
+
+**Task 3: Putting what we learnt to practice**{: .label .label-green}
+
+1. Using the protocol given, make a ROS package (called ***limo_status_translator***) that has 2 types of nodes, details and functions given below:
+   1. limo_status_translator_node
+      1. Subscribe to the "/limo_status" topic.
+      2. Process the message received from the "/limo_status" topic into a "human readable string"
+      3. Implement a service ([.srv file]({{ site.baseurl }}{% link lab_sessions/lab3/assets/GetLimoStatus.srv %}) given), that will respond with the correct string depending on what was requested.
+   2. limo_status_client_node
+      1. Every 1 second, request the different types of strings from limo_status_translator_node and publishes the strings to 5 different topics as string msgs
+         1. /limo_status/vehicle_state
+         2. /limo_status/control_mode
+         3. /lmo_status/battery_voltage
+         4. /limo_status/error_code
+         5. /limo_status/motion_mode
+   3. Final result/example
+    ![img](assets/mini_proj.png)
+2. **Task 3a**{: .label .label-blue}Include these things in your report
+   1. A short description of your contribution to the project
+   2. A screenshot of the ROS network when limo_base + the 2 new nodes are running
+   3. The url of your remote repository.
+
+## Submission
+Zip up your lab report and the package you have made in Task 3 into a zip file called "**lab2\_STUDENT\_ID.zip**" and submit by 28<sup>th</sup> May 2022, 23:59.
