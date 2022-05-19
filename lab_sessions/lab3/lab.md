@@ -9,14 +9,12 @@ nav_order: 3
 # Prelab (1%)
 
 1. Prepare your Github accounts
-   1. Each member should have his/her own github account
-2. Each team has to make a github organization
-   1. Organization names should follow this format: RSE2107A-AY2122T3-Group-X
-   2. Where X is your grp number
-   3. Every member should be a member in this organization
-3. Download and install your preferred (I)DE.
+   1. Each member should have his/her own Github account
+   2. *TIP for school students: you are typically eligible for Github pro for free with the [GitHub Student Developer Pack](https://education.Github.com/); along with many other perks.* ;D
+2. Download and install your preferred (I)DE.
    1. For those who don't have one, [Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a good place to start.
    2. VSCode has great python & ROS extensions. ;p
+3. Install git onto your systems
 4. We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.
 
 **Readings**
@@ -28,12 +26,10 @@ nav_order: 3
 6. [Python - Bin, Hex, & Octal](https://blog.finxter.com/python-conversions-decimal-binary-octal-hex/)
 
 **Materials**
-1. [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+1. [Git Cheatsheet](https://education.Github.com/git-cheat-sheet-education.pdf)
 2. [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}) 
 
 ----
-
-# Lab 2 (5%) 
 
 ## Setup
 * Be in your teams of 5
@@ -49,9 +45,97 @@ nav_order: 3
 By the end of lab 3, you will have:
 1. learnt the basic project workflow using Git
 2. experience how code collaboration works using Git
-3. leart how to implement a ROS service and client
+3. learnt how to implement a ROS service and client
 
 ----
 
+# Lab 3 (5%) 
 
+## Setting up a Github organisation
+While multiple developers can work on a project in a single Github repository just fine, Github organisations take this a step further. They allow developers to share/manage access and collaborate across multiple projects/code repositories, all as a team.
 
+Today we will start by creating your organisations, ones which you will hopefully continue to use throughout this course.
+
+*Note: only one member of the team has to create the organisation, he/she will be the owner of said organisation. The owner will be addressed as such for the rest of the course*
+
+1. Creating an organisation
+   1. On the owner's main Github page, click the "+" tab on the top-right hand corner and   select "new organisation"
+   2. There are multiple tiers of Github organisations, we will just create a free tier one for this course.
+      1. For the organisation name, each team should follow the below format:
+         1. RSE2107A-AY2122T3-Team-X
+         2. Where X is your team number
+      2. For contact email, you can use the owner's email address
+      3. The organisation should belong to the owner's personal account
+      4. It should look something shown below
+
+        ![img](assets/new_github_org.png)
+
+2. After creation, we need to get all team members within the same organisation
+   1. From the organisation's homepage, select the "People tab".
+   2. Once there, use the "invite member" button to invite each member of your team into your Github organisation as members.
+3. Congratulations, you now have a Github organisation as a team, you can explore the features and settings available to you as a organisation.
+   1. *One such pertinent feature is the member privileges settings.*
+
+## Using Git(hub) basics
+From the lecture & readings, you should have a rough idea of what Git is all about and it's role in any software development project. 
+
+Good-bye whatever this was...
+
+![img](assets/chaos.png)
+
+Hello ordered chaos...
+
+![img](assets/ordered_chaos.png)
+
+This section of the lab will walk you through a typical project workflow when collaborating on a project, from repository creation to content manipulation.
+
+*Note: the workflow demonstrated here is commonly called a "[feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)", which is only one of many commonly used workflows out there. While we are using this workflow in this lab, feel free to use any other workflows for your project development in the future*
+
+**Task 1: Working with Git solo**{: .label .label-green}
+
+1. Creating a remote code repository
+   1. From the owner's organisation's "Repositories" tab, click "New repository".
+   2. Name this repository, "lab3-git", *check add a README file*, make it public and hit "create" (make sure the owner is the organisation).
+   3. *After creating, check that every member has write access to this new repository.*
+2. Cloning remote repository to make a local one
+   1. Now we need each member to have a local repository to work on.
+   2. From the repository's page, copy the clone url (make sure it is the SSH version) from the green "Code" button.
+   ![img](assets/cloning.png)
+   3. On your terminal, navigate to where you would like this repository to exist and run
+        ```bash
+        git clone <clone url>
+        ```
+   4. A new local copy of the repository folder will be created in that location.
+   5. **Task 1a**{: .label .label-blue}We have just created a new remote repository and cloned it into a local repository. However, we can achieve the same result if we reverse the order and make a new local repository and *pushing* it into a remote one. Can you briefly describe the process to do so? (include any commands needed)
+3. Time to commit your first bit of "code"
+   1. In your terminal, navigate to the "lab3-git" folder.
+   2. **Task 1b**{: .label .label-blue}Once in, you can view your repository status by running the command below, include a screenshot of the output in your report.
+        ```bash
+        git status
+        ```
+   3. Create and checkout to a new branch by running the commands below (replacing the name accordingly)
+        ```bash
+        git branch feature_<member name>
+        git checkout feature_<member name>
+        ```
+       1. **Task 1c**{: .label .label-blue}After checking out this new branch, check git status again and include a screenshot of the output in your report
+       2. **Task 1d**{: .label .label-blue}Compare the outputs from task 1b and 1c, are there any differences between them? If there are, can you explain *why* there are differences?
+   4. In this new branch, create a text file using your name (e.g. albert.txt) in the folder, and write in it, a short introduction of yourself (or anything you would like to share with us).
+   5. As of now, this new file is *untracked* (you can check status) and we will need to *add this file* (or *staging*)to the repository. Run
+        ```bash
+        git add <member name>.txt
+        ```
+   6. we can now commit the files we have just staged by running *(some of you will see an error where git does not know who you are, run the suggested commands to configure your name and email with git)*
+        ```bash
+        git commit -m "Initial commit by <member name>
+        ```
+   7. After commiting, we can now *push* the branch (with our new commit) to the remote repository on Github by
+        ```bash
+        git push --set-upstream origin feature_<member name>
+        ```
+       1. **Task 1e**{: .label .label-blue}Can you explain what does "--set-upstream" does and why we need it?
+   8. Now on create a *pull request* that requests to *merge* your new remote branch to the main remote branch, you should be able to see the commit and changes you have made in this new *pull request*
+    ![img](assets/new_pr.png)
+    ![img](assets/pr_details.png)
+   9. From this newly created *pull request*, merge your commits to the main branch
+4. **TAKE A BREAK: Wait for all your members to complete task 1 before continuing**
