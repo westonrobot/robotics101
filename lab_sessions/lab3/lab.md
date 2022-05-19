@@ -140,7 +140,7 @@ In this task, we will go through creating and commit a file to a common remote r
     ![img](assets/new_pr.png)
     ![img](assets/pr_details.png)
    9. From this newly created *pull request*, get another member to *review and approve* the merge and merge your commits to the main branch. *NOTE: you can always reject a pull request if something is wrong*
-4. **TAKE A BREAK: Wait for all your members to complete task 1 before continuing**
+4. **TAKE A BREAK: Wait for all your members to complete task 1 before continuing**{: .label .label-yellow}
 
 **Task 2: Working with Git as a team**{: .label .label-green}
 
