@@ -27,7 +27,8 @@ nav_order: 3
 
 **Materials**
 1. [Git Cheatsheet](https://education.Github.com/git-cheat-sheet-education.pdf)
-2. [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}) 
+2. [Markdown Cheatsheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
+3. [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}) 
 
 ----
 
@@ -92,6 +93,7 @@ This section of the lab will walk you through a typical project workflow when co
 *Note: the workflow demonstrated here is commonly called a "[feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)", which is only one of many commonly used workflows out there. While we are using this workflow in this lab, feel free to use any other workflows for your project development in the future*
 
 **Task 1: Working with Git solo**{: .label .label-green}
+In this task, we will go through creating and commit a file to a common remote repository. This this task, you should be aware how to track changes in your repositories and how to successfully merge your changes into a single shared repository.
 
 1. Creating a remote code repository
    1. From the owner's organisation's "Repositories" tab, click "New repository".
@@ -137,5 +139,37 @@ This section of the lab will walk you through a typical project workflow when co
    8. Now on create a *pull request* that requests to *merge* your new remote branch to the main remote branch, you should be able to see the commit and changes you have made in this new *pull request*
     ![img](assets/new_pr.png)
     ![img](assets/pr_details.png)
-   9. From this newly created *pull request*, merge your commits to the main branch
+   9. From this newly created *pull request*, get another member to *review and approve* the merge and merge your commits to the main branch. *NOTE: you can always reject a pull request if something is wrong*
 4. **TAKE A BREAK: Wait for all your members to complete task 1 before continuing**
+
+**Task 2: Working with Git as a team**{: .label .label-green}
+
+In the previous task, we have seen how we can individually make changes to our files and commit them onto a shared remote repository. However, we have glossed over a detail in the workflow...
+
+**What if several people created/made changes to the same file/code? How would git know which code to use?**
+
+Well.. that situation is what we call a *merge conflict*, when git does not know how to merge 2 bits of code correctly.
+
+1. **Task 2a**{: .label .label-blue}Now that everyone has merged their changes in the main branch, view the commit history of the main branch and include a screenshot in your report.
+![img](assets/commit_history.png)
+2. Now on your local repo, checkout to the main branch and run the command below. The log outputs before and after the pull should reflect any changes to the git history for that branch.
+    ```bash
+    git log
+    git pull
+    git log
+    ```
+   1. **Task 2b**{: .label .label-blue}We ran *git pull* to get changes from the remote main branch into our local main branch. What command is used if we just want to **check** for changes but not get those changes?
+3. Now from the main branch, make and checkout a new branch called "feature_readme_< member name >"
+4. Your README file should only contain the repo's name at the moment, under this title, write ur name and a few lines on what you expect to learn from this course (or anything else you want to feedback so far) and save the README.
+5. Now stage, *commit* and *push* your changes to the remote repository and create a new *merge request* to the main *branch*.
+6. Now for each *merge attempt* after the first merge, github should now warn that there is now a conflict and we would have to resolve it before it can merge.  
+***NOTE: Please coordinate among your members when merging***
+![img](assets/merge_conflict.png)
+7. When you click the resolve button, you will see a similar screen to this
+![img](assets/conflict_details.png)
+8. To resolve the conflict, edit the text to the desired text, making sure to remove the lines with arrows and equals added by git. After which mark the conflict as resolved and *commit* the merge.
+![img](assets/unwanted_lines.png)
+Final desired text
+![img](assets/final_form.png)
+9. Repeat this step until all members have merged in their changes.
+10. **Task 2c**{: .label .label-blue}Include the url of your remote repository in your report
