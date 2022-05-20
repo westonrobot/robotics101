@@ -30,7 +30,6 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 Further information regarding week 3's prelab and lab will be provided during the lecture.
 
 
-## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }})
-<!-- - Lecture notes: [pdf](#) -->
+<!-- ## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}) -->
 

@@ -19,7 +19,6 @@ Further information regarding week 1's prelab and lab will be provided during th
 Looking forward to meeting all of you on Monday!
 
 
-## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }})
-<!-- - Lecture notes: [pdf](#) -->
+<!-- ## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}) -->
 

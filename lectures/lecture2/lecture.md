@@ -20,8 +20,7 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 Further information regarding week 2's prelab and lab will be provided during the lecture.
 
 
-## **Lecture resources**
+<!-- ## **Lecture resources**
 * Slides: [pdf]({{ site.baseurl }})
-* In-class Resources: [zip]({{ site.baseurl }}{% link lectures/lecture2/handouts.zip %}) (Refer to the README on how to run the notebook)
-<!-- - Lecture notes: [pdf](#) -->
+* In-class Resources: [zip]({{ site.baseurl }}{% link lectures/lecture2/handouts.zip %}) (Refer to the README on how to run the notebook) -->
 
