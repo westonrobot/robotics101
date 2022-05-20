@@ -6,8 +6,15 @@ parent: Lab Sessions
 nav_order: 3
 ---
 **Lab 3 submission due on 28<sup>th</sup> May 2022, 23:59**{: .label .label-red }
-# Prelab (1%)
 
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
+# Prelab (1%)
+## Before lab
 1. Prepare your Github accounts
    1. Each member should have his/her own Github account
    2. *TIP for school students: you are typically eligible for Github pro for free with the [GitHub Student Developer Pack](https://education.Github.com/); along with many other perks.* ;D
@@ -15,9 +22,11 @@ nav_order: 3
    1. For those who don't have one, [Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a good place to start.
    2. VSCode has great python & ROS extensions. ;p
 3. Install git onto your systems
-4. We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.
 
-**Readings**
+## Start of Lab
+1. We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.
+
+## Readings
 1. [Git - Basics Chapter 2](https://git-scm.com/book/en/v2)
 2. [ROS - Understanding Services](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
 3. [ROS - Creating Service & Client](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
@@ -25,14 +34,14 @@ nav_order: 3
 5. [Python - Bitwise Operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
 6. [Python - Bin, Hex, & Octal](https://blog.finxter.com/python-conversions-decimal-binary-octal-hex/)
 
-**Materials**
+## Materials
 1. [Git Cheatsheet](https://education.Github.com/git-cheat-sheet-education.pdf)
 2. [Markdown Cheatsheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
-3. [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}) 
+3. [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %})
 
 ----
 
-## Setup
+# Setup
 * Be in your teams of 5
 * Steps should be performed by all **group members individually** unless told otherwise.
 * You can share observation data, but not explanations, code or deductions for the lab report
@@ -96,7 +105,7 @@ This section of the lab will walk you through a typical project workflow when co
 
 *Note: the workflow demonstrated here is commonly called a "[feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)", which is only one of many commonly used workflows out there. While we are using this workflow in this lab, feel free to use any other workflows for your project development in the future*
 
-**Task 1: Working with Git solo**{: .label .label-green}
+### **Task 1: Working with Git solo**{: .label .label-green}
 In this task, we will go through creating and commit a file to a common remote repository. This this task, you should be aware how to track changes in your repositories and how to successfully merge your changes into a single shared repository.
 
 1. Creating a remote code repository
@@ -146,7 +155,7 @@ In this task, we will go through creating and commit a file to a common remote r
    9. From this newly created *pull request*, get another member to *review and approve* the merge and merge your commits to the main branch. *NOTE: you can always reject a pull request if something is wrong*
 4. **TAKE A BREAK: Wait for all your members to complete task 1 before continuing**{: .label .label-yellow}
 
-**Task 2: Working with Git as a team**{: .label .label-green}
+### **Task 2: Working with Git as a team**{: .label .label-green}
 
 In the previous task, we have seen how we can individually make changes to our files and commit them onto a shared remote repository. However, we have glossed over a detail in the workflow...
 
@@ -179,20 +188,21 @@ Final desired text
 10. **Task 2c**{: .label .label-blue}Include a screenshot of the remote main branch's commit history, and the url of your remote repository in your report.
 
 ## Mini-project
-To put what we have learnt into practice, each team will now attempt a "mini-project" of sorts. The end result of this mini-project should be in one shared remote repository (private or public, up to you) on github.
+To put what we have learnt into practice, each team will now attempt a "mini-project" of sorts. The end result of this mini-project should be in one shared remote repository (private or public, up to you) on github. How the work is split up among the members will be entirely up to each team.
 
 ### Background overview
 The limo robot is controlled by the limo_base node. This node publishes the status of the robot using the "/limo_status" topic and the [limo_base::LimoStatus msg data format](https://github.com/westonrobot/limo_ros/blob/master/limo_base/msg/LimoStatus.msg). However, the format only outputs numerical representations of the robot status, meaning that without the correct interpretation, one cannot tell what each number actually means.
 
 Thankfully, a description of the various values have been included in the materials provided in this lab, [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}).
 
-**Task 3: Putting what we learnt to practice**{: .label .label-green}
+### **Task 3: Putting what we learnt to practice**{: .label .label-green}
 
 1. Using the protocol given, make a ROS package (called ***limo_status_translator***) that has 2 types of nodes, details and functions given below:
    1. limo_status_translator_node
       1. Subscribe to the "/limo_status" topic.
       2. Process the message received from the "/limo_status" topic into a "human readable string"
       3. Implement a service ([.srv file]({{ site.baseurl }}{% link lab_sessions/lab3/assets/GetLimoStatus.srv %}) given), that will respond with the correct string depending on what was requested.
+         1. e.g. if get_status = 4, that means the client is requesting for the status_string corresponding to the robot's current motion_mode
    2. limo_status_client_node
       1. Every 1 second, request the different types of strings from limo_status_translator_node and publishes the strings to 5 different topics as string msgs
          1. /limo_status/vehicle_state
