@@ -43,11 +43,12 @@ nav_order: 3
 
 # Setup
 * Be in your teams of 5
-* Steps should be performed by all **group members individually** unless told otherwise.
-* You can share observation data, but not explanations, code or deductions for the lab report
+* Tasks & report should be performed by all **group members individually** unless told otherwise.
 
 ## Lab Report and Submission
-* Thoughout this lab, there are tasks that you are supposed to perform and record observations/deductions.
+* Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.
+* You can share common experimental data, but not explanations, code or deductions for the lab report.
+* Discrepancies between report results and code submissions are liable for loss of marks.
 * Each task will be clearly labelled and will need to be included in your lab report, which is in the format "**lab3\_report\_STUDENT\_ID.doc / pdf**", include your name, student_id at the begining of the report.
 * Zip up your lab report and other requirements (if present) and name it "**lab3\_STUDENT\_ID.zip**" and upload it.
 
