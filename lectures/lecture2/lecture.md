@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Lecture 2 - Python and ROS basics
+title: Lecture 2 - Python & ROS basics
 permalink: /lectures/lecture2
 parent: Lectures
 nav_order: 2
 ---
 
-# **Lecture 2: Python and ROS basics**
+# **Lecture 2: Python & ROS basics**
 * Mon, May 17, 9:00 am – 13:00 am
 
 ## **Overview**
