@@ -49,8 +49,8 @@ nav_order: 3
 * Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.
 * You can share common experimental data, but not explanations, code or deductions for the lab report.
 * Discrepancies between report results and code submissions are liable for loss of marks.
-* Each task will be clearly labelled and will need to be included in your lab report, which is in the format "**lab3\_report\_STUDENT\_ID.doc / pdf**", include your name, student_id at the begining of the report.
-* Zip up your lab report and other requirements (if present) and name it "**lab3\_STUDENT\_ID.zip**" and upload it.
+* Each task will be clearly labelled and will need to be included in your lab report, which is in the format "**lab3\_report\_<STUDENT\_ID>.doc / pdf**", include your name, student_id at the begining of the report.
+* Zip up your lab report and other requirements (if present) and name it "**lab3\_<STUDENT\_ID>.zip**" and upload it.
 
 ## Learning Outcomes
 By the end of lab 3, you will have:
@@ -107,7 +107,7 @@ This section of the lab will walk you through a typical project workflow when co
 *Note: the workflow demonstrated here is commonly called a "[feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)", which is only one of many commonly used workflows out there. While we are using this workflow in this lab, feel free to use any other workflows for your project development in the future*
 
 ### **Task 1: Working with Git solo**{: .label .label-green}
-In this task, we will go through creating and commit a file to a common remote repository. This this task, you should be aware how to track changes in your repositories and how to successfully merge your changes into a single shared repository.
+In this task, we will go through creating and commit a file to a common remote repository. By the end of this task, you should be aware how to track changes in your repositories and how to successfully merge your changes into a single shared repository.
 
 1. Creating a remote code repository
    1. From the owner's organisation's "Repositories" tab, click "New repository".
@@ -117,12 +117,12 @@ In this task, we will go through creating and commit a file to a common remote r
    1. Now we need each member to have a local repository to work on.
    2. From the repository's page, copy the clone url (make sure it is the SSH version) from the green "Code" button.
    ![img](assets/cloning.png)
-   3. On your terminal, navigate to where you would like this repository to exist and run
+   1. On your terminal, navigate to where you would like this repository to exist and run
         ```bash
         git clone <clone url>
         ```
-   4. A new local copy of the repository folder will be created in that location.
-   5. **Task 1a**{: .label .label-blue}We have just created a new remote repository and cloned it into a local repository. However, we can achieve the same result if we reverse the order and make a new local repository and *pushing* it into a remote one. Can you briefly describe the process to do so? (include any commands needed)
+   2. A new local copy of the repository folder will be created in that location.
+   3. **Task 1a**{: .label .label-blue}We have just created a new remote repository and cloned it into a local repository. However, we can achieve the same result if we reverse the order and make a new local repository and *pushing* it into a remote one. Can you briefly describe the process to do so? (include any commands needed)
 3. Time to commit your first bit of "code"
    1. In your terminal, navigate to the "lab3-git" folder.
    2. **Task 1b**{: .label .label-blue}Once in, you can view your repository status by running the command below, include a screenshot of the output in your report.
@@ -143,7 +143,7 @@ In this task, we will go through creating and commit a file to a common remote r
         ```
    6. we can now commit the files we have just staged by running *(some of you will see an error where git does not know who you are, run the suggested commands to configure your name and email with git)*
         ```bash
-        git commit -m "Initial commit by <member name>
+        git commit -m "Initial commit by <member name>"
         ```
    7. After commiting, we can now *push* the branch (with our new commit) to the remote repository on Github by
         ```bash
@@ -192,7 +192,7 @@ Final desired text
 To put what we have learnt into practice, each team will now attempt a "mini-project" of sorts. The end result of this mini-project should be in one shared remote repository (private or public, up to you) on github. How the work is split up among the members will be entirely up to each team.
 
 ### Background overview
-The limo robot is controlled by the limo_base node. This node publishes the status of the robot using the "/limo_status" topic and the [limo_base::LimoStatus msg data format](https://github.com/westonrobot/limo_ros/blob/master/limo_base/msg/LimoStatus.msg). However, the format only outputs numerical representations of the robot status, meaning that without the correct interpretation, one cannot tell what each number actually means.
+The limo robot is controlled by the limo_base node. This node publishes the status of the robot using the "/limo_status" topic and the [limo_base/LimoStatus msg data format](https://github.com/westonrobot/limo_ros/blob/master/limo_base/msg/LimoStatus.msg). However, the format only outputs numerical representations of the robot status, meaning that without the correct interpretation, one cannot tell what each number actually means.
 
 Thankfully, a description of the various values have been included in the materials provided in this lab, [LimoStatus Msg Protocol]({{ site.baseurl }}{% link lab_sessions/lab3/assets/LimoStatus_protocol.xlsx %}).
 
