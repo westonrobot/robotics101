@@ -44,9 +44,9 @@ nav_order: 4
 
 ## Learning Outcomes
 By the end of lab 4, you will have:
-1. learnt the basic project workflow using Git
-2. experience how code collaboration works using Git
-3. learnt how to implement a ROS service and client
+1. learnt how to create your own gazebo simulation world
+2. learnt how to integrate your gazebo world into ROS
+3. learnt how to perform mapping of your simulation world
 
 ----
 
