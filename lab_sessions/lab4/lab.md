@@ -47,9 +47,9 @@ nav_order: 4
 
 ## Learning Outcomes
 By the end of lab 4, you will have:
-1. learnt how to import stl models into gazebo simulation
-2. editing launch files to use different gazebo environments
-3. learnt how to implement a ROS service and client
+1. learnt how to create your own gazebo simulation world
+2. learnt how to integrate your gazebo world into ROS
+3. learnt how to perform mapping of your simulation world
 
 ----
 
@@ -147,7 +147,7 @@ For simplicity, this lab will only require the groups to work with STL files. Th
     ```xml
     <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/sit.world/>
     ```
-    
+
 4. Now you are ready to launch the simulation.
 
     ```bash
