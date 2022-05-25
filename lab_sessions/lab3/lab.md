@@ -17,6 +17,7 @@ nav_order: 3
 ## Before lab
 1. Prepare your Github accounts
    1. Each member should have his/her own Github account
+      1. Make sure to setup [SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for your account to be able to push/pull code from Github
    2. *TIP for school students: you are typically eligible for Github pro for free with the [GitHub Student Developer Pack](https://education.Github.com/); along with many other perks.* ;D
 2. Download and install your preferred (I)DE.
    1. For those who don't have one, [Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a good place to start.
