@@ -27,6 +27,7 @@ nav_order: 4
 3. [TF - tf2 Overview](http://wiki.ros.org/tf2/Tutorials)
 4. [ROS Navigation - Setup](http://wiki.ros.org/navigation/Tutorials/RobotSetup)
 5. [Gazebo - ROS Integration](https://classic.gazebosim.org/tutorials?tut=ros_overview)
+6. [ROS Navigation - Map Building](http://wiki.ros.org/pr2_simulator/Tutorials/BuildingAMapInSimulation)
 
 ## Materials
 1. [YDLidar - ROS package](https://github.com/YDLIDAR/ydlidar_ros)
@@ -156,6 +157,43 @@ For simplicity, this lab will only require the groups to work with STL files. Th
 
 ## Using a Gazebo world
 ### **Task 3: Mapping a simulation world**{: .label .label-green}
+Now that you have a working simulation world, we can now start over first dive into the ROS navigation stack. The ROS navigation stack is a 2D navigation stack, meaning it does its job while only considering a 2d world/map. Essentially, the ROS navigation stack has these parts to allow autonomous navigation...
+1. Map data of the surrounding environment (not always required)
+2. Sensor data (typically but not limited to lidar)
+3. Transforms (or tfs)
+4. Planners and controllers
+
+![ROS navigation stack](assets/overview_tf_small.png)
+
+Today we will take a look at building a map using the simulation world you have made with the slam_gmapping node within the gmapping package. To build a map, we require environment data from sensors (lidar laserscan in this case)
+
+1. Run the simulation world using the launch file you have edited in Task 2.
+2. **Task 3a**{: .label .label-green}
+   1. Include a screenshot of the ROS Network in your report.
+   2. What topic name is the lidar laserscan data being published under?
+3. Now we can run the slam_gmapping node to build the map,
+    ```bash
+    roslaunch limo_bringup limo_gmapping.launch
+    ```
+    
+    ***NOTE: Above, we have used a launch file already made within the limo_bringup package which runs other nodes as well but we can also run the slam_gmapping nodes separately and run rviz to visualize the map***
+    ```bash
+    rosrun gmapping slam_gmapping
+    rosrun rviz rviz
+    ```
+    ![rviz mapping](assets/rviz_map.png)
+
+4. **Task 3b**{: .label .label-green}
+   1. Include a screenshot of the ROS Network in your report.
+   2. What topic name is the slam_gmapping node subscribed to for laserscan data?
+5. **Task 3c**{: .label .label-green}From task 3a and 3b answers and the rviz window, can you infer what has happened to the map building process and what might be the problem?
+6. **Task 3d**{: .label .label-green}Fix the problem by modifying the launch file and build a full map of your environment by driving your limo around in the simulation, stopping once in awhile to build a section of the map (the resultant map should be tidy and clean). Describe what you did to fix the problem in your report.
+7. **Task 3e**{: .label .label-green}
+   1. We can now save the map by running
+        ```bash
+        rosrun map_server map_saver -f <map_name>
+        ```
+   2. This should have generated a *.pgm* and *.yaml* file in the directory you have ran the command. Include these 2 files and the modified limo_ros package in your submission. 
 
 
 ## Submission
