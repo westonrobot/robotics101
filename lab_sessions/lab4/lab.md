@@ -61,9 +61,8 @@ By the end of lab 4, you will have:
 Gazebo simulation can only use STL, OBJ or Collada (DAE) file formats for imported models. 
 For simplicity, this lab will only require the groups to work with STL files. The STL file found under Materials will serve as the base for your simulation where you will be importing your own models on to.
 
-1. Now that we have an empty world, we can start adding 3d models.
-    1. Create directory called "meshes" in the limo_gazebo_sim package. 
-    2. Download the empty_sit_map.stl file found under Materials and save it to the /meshes directory.
+1. Create directory called "meshes" in the limo_gazebo_sim package. 
+    1. Download the empty_sit_map.stl file found under Materials and save it to the /meshes directory.
 
         ![filesystem](assets/meshes_filesystem.png)
 
@@ -84,34 +83,46 @@ For simplicity, this lab will only require the groups to work with STL files. Th
 
     4. Do not be alarmed by the size of the imported model. The large size of the model is due to the mismatch in standard units used by Gazebo and CAD software. Go ahead and place the model anywhere in the gazebo world.
 
-3. To scale the model down to the appropriate size, right click on the model and select 'Open Link Inspector'. This pop-up will allow you to change physical properties and geometry related to the link, visual and collision.
+3. The imported model is also called a link in gazebo. A physical link in the simulation contains inertia, visual and collision properties. To edit the model, right click on the model and select 'Open Link Inspector'. The pop-up will allow you to change physical properties and geometry related to the link, visual and collision.
 
-    1. Under the 'link' tab, set the pose of the model to 
-        
-        ```
-        x = -5.00, y = -2.50, z = 0.00, roll = 1.57, pitch = 0.00, yaw = 0.00
-        ```
-        ![link](assets/link.png)
+    1. Lets set the pose of the model to the perimeters below so that the limo model can be generated at the global origin without any collision for the second part of the lab.
 
-    2. Under the 'visual' tab, set the geometry of the model to 
+    ![link](assets/6%20DOF%20Diagram.webp) 
+    
+    ```
+    x = -5.00, y = -2.50, z = 0.00, roll = 1.57, pitch = 0.00, yaw = 0.00
+    ```
+
+    ![link](assets/link.png)
+
+    **Task 1a**{: .label .label-blue}What does the link of a model define in gazebo? Use relevant sub-properties to explain. 
+
+    2. The visual perimeters allow users to edit the overall appearance of the model. Properties such as colour, material, texture and size can be changed according to the user's needs. 
+    
+        1. The imported model is scaled up due to Gazebo's default unit of measurement being metres, while the default unit of measurement for CAD software is millimeters. Hence, we need to scale down the model by 1000. Under the 'visual' tab, set the geometry of the model to 
 
         ```
         x = 0.001, y = 0.001, z = 0.001, roll = 0.00, pitch = 0.00, yaw = 0.00
         ```
+
         ![link](assets/visual.png)
 
-    3. Under the 'collision' tab, set the geometry of the model to 
+    3. The collision tab defines properties such as friction, bounce and contact perimeters. The yellow frame you see in the gazebo model editor indicates the area of collision when running simulations. Similar to the visual property, the collision area also needs to be scaled down by 1000. Set the geometry of the model to 
 
         ```
         x = 0.001, y = 0.001, z = 0.001, roll = 0.00, pitch = 0.00, yaw = 0.00
         ```
         ![link](assets/collision.png)
 
+        1. **Task 1b**{: .label .label-blue}What will happen if the visual property is scaled to 0.0005 instead of 0.001? What impact will the difference in scaling have when simulating the teleoperation of the Limo in the gazebo environment?
+
+        2. **Task 1c**{: .label .label-blue}How are visual and collision related to link?
+
     4. Under 'file' save the model in a folder of your choice and exit the model editor. The final result should be something similar to the image below.
 
         ![map_image](assets/import_complete.png)
     
-    5. Now that you have successfully imported the model into gazebo, save the world in the /worlds directory under limo_gazebo_sim and name it **sit.world**.
+    5. You have successfully imported the model into gazebo, save the world in the /worlds directory under limo_gazebo_sim and name it **sit.world**.
 
         ![save_screen](assets/save_world.png)
 
@@ -129,6 +140,7 @@ For simplicity, this lab will only require the groups to work with STL files. Th
         <gazebo_ros gazebo_media_path="${prefix}/meshes"/>
     </export>  
     ```
+
 2. Open the sit.world file and search for \<model name='empty_sit_map' \> tag. Under this tag you will find the \<uri\> tag that specifies the path of your model. Change that to 
 
     ```xml
@@ -136,6 +148,10 @@ For simplicity, this lab will only require the groups to work with STL files. Th
     ```
 
     *Note: There are 2 instances of the path within the file that needs to be changed. Please also be mindful of the indentations.*
+
+    1. **Task 2a**{: .label .label-blue}What is the **absolute** path of your STL model
+
+    2. **Task 2b**{: .label .label-blue}Why are there 2 instances where the model path is defined?
 
 3. To launch the Limo simulation in your new gazebo environment, you will need to specify your world file in the **limo_ackerman.launch** and **limo_four_diff.launch** files. In the launch file you will find the line 
 
@@ -153,6 +169,10 @@ For simplicity, this lab will only require the groups to work with STL files. Th
 
     ```bash
     roslaunch limo_gazebo_sim limo_ackerman.launch
+    ```
+
+    ```bash
+    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
     ```
 
 ## Using a Gazebo world
