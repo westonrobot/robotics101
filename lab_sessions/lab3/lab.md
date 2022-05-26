@@ -204,7 +204,8 @@ Thankfully, a description of the various values have been included in the materi
       1. Subscribe to the "/limo_status" topic.
       2. Process the message received from the "/limo_status" topic into a "human readable string"
       3. Implement a service ([.srv file]({{ site.baseurl }}{% link lab_sessions/lab3/assets/GetLimoStatus.srv %}) given), that will respond with the correct string depending on what was requested.
-         1. e.g. if get_status = 4, that means the client is requesting for the status_string corresponding to the robot's current motion_mode
+         1. e.g. if get_status = 4 and motion_mode in /limo_status = 1, that means the client is requesting for the status_string corresponding to the robot's current motion_mode, which according to the protocol means that the limo is in ackerman motion mode. The server will then respond with something like "motion mode is ackerman".
+         2. ***The status_string has to be in a format that when reading it will immediately tell a user what the status codes actually mean, like the example above.***
    2. limo_status_client_node
       1. Every 1 second, request the different types of strings from limo_status_translator_node and publishes the strings to 5 different topics as string msgs
          1. /limo_status/vehicle_state
