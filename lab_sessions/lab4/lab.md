@@ -28,6 +28,8 @@ nav_order: 4
 4. [ROS Navigation - Setup](http://wiki.ros.org/navigation/Tutorials/RobotSetup)
 5. [Gazebo - ROS Integration](https://classic.gazebosim.org/tutorials?tut=ros_overview)
 6. [ROS Navigation - Map Building](http://wiki.ros.org/pr2_simulator/Tutorials/BuildingAMapInSimulation)
+7. [ROS - Topic Remapping](http://wiki.ros.org/Remapping%20Arguments)
+8. [ROS - Launch Topic Remapping](http://wiki.ros.org/roslaunch/XML/remap)
 
 ## Materials
 1. [YDLidar - ROS package](https://github.com/YDLIDAR/ydlidar_ros)
