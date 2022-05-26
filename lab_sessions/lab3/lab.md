@@ -30,7 +30,7 @@ nav_order: 3
 ## Readings
 1. [Git - Basics Chapter 2](https://git-scm.com/book/en/v2)
 2. [ROS - Understanding Services](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
-3. [ROS - Creating Service & Client](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
+3. [ROS - Creating Service & Client](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29)
 4. [ROS - Creating Msg and Srv](http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv)
 5. [Python - Bitwise Operators](https://www.tutorialspoint.com/python/bitwise_operators_example.htm)
 6. [Python - Bin, Hex, & Octal](https://blog.finxter.com/python-conversions-decimal-binary-octal-hex/)
