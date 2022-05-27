@@ -118,11 +118,15 @@ For simplicity, this lab will only require the groups to work with STL files. Th
 
         2. **Task 1c**{: .label .label-blue}How are visual and collision related to link?
 
-    4. Under 'file' save the model in a folder of your choice and exit the model editor. The final result should be something similar to the image below.
+    4. Select the 'Model' tab and check the 'static' box. When a model is set to be static, it becomes immovable. Gazebo's dynamics engine will not update its position.
+
+        ![static](assets/static_option.png)
+
+    5. Under 'file' save the model in a folder of your choice and exit the model editor. The final result should be something similar to the image below.
 
         ![map_image](assets/import_complete.png)
     
-    5. You have successfully imported the model into gazebo, save the world in the /worlds directory under limo_gazebo_sim and name it **sit.world**.
+    6. You have successfully imported the model into gazebo, save the world in the /worlds directory under limo_gazebo_sim and name it **sit.world**.
 
         ![save_screen](assets/save_world.png)
 
