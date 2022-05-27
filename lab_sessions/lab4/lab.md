@@ -138,7 +138,7 @@ For simplicity, this lab will only require the groups to work with STL files. Th
 
 1. For ease of collaboration in the future, it is important to change the absolute path of the models included in your .world file to a relative path, so that others can also use your gazebo environments without editing.
 
-    To achieve this, gazebo needs to know where the STL file is saved with respect to the root folder. Gazebo simulation has specific environment variables that can be defined by users to simplify this process. Include the following lines into the package.xml file found within the limo_gazebo_sim package.
+    To achieve this, gazebo needs to know where the STL file is saved with respect to the root folder. Gazebo simulation has specific environment variables that can be defined by users to simplify this process. Include the following lines into the package.xml file, **within the \<package\> tag**. Edit the package.xml file found within the limo_gazebo_sim package.
 
     ```xml
     <export>
@@ -147,10 +147,10 @@ For simplicity, this lab will only require the groups to work with STL files. Th
     </export>  
     ```
 
-2. Open the sit.world file and search for \<model name='empty_sit_map' \> tag. Under this tag you will find the \<uri\> tag that specifies the path of your model. Change that to 
+2. Open the sit.world file and search for \<model name='sit_map' \> tag. Under this tag you will find the \<uri\> tag that specifies the path of your model. Change that to 
 
     ```xml
-    <uri>model://empty_sit_map.stl</uri>
+    <uri>model://sit_map.stl</uri>
     ```
 
     *Note: There are 2 instances of the path within the file that needs to be changed. Please also be mindful of the indentations.*
@@ -162,13 +162,13 @@ For simplicity, this lab will only require the groups to work with STL files. Th
 3. To launch the Limo simulation in your new gazebo environment, you will need to specify your world file in the **limo_ackerman.launch** and **limo_four_diff.launch** files. In the launch file you will find the line 
 
     ```xml
-    <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/empty.world/>
+    <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/empty.world"/>
     ```
 
     This line sets the world file that will be used when the simulation is launched. Hence we will need to change it to 
 
     ```xml
-    <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/sit.world/>
+    <arg name="world_name" default="$(find limo_gazebo_sim)/worlds/sit.world"/>
     ```
 
 4. Now you are ready to launch the simulation.
