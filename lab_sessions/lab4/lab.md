@@ -212,6 +212,8 @@ Today we will take a look at building a map using the simulation world you have 
         ```
    2. This should have generated a *.pgm* and *.yaml* file representing the map in the directory you have ran the command. Include these 2 files and the modified limo_ros package in your submission. 
 
+**EXTRA (Not Graded): Try mapping your classroom using your LIMO, (*using limo_start.launch in limo_bringup instead of the simulation launch file*).**
+
 
 ## Submission
 Zip up your lab report into a zip file called "**lab4\_<STUDENT\_ID>.zip**" and submit by 4<sup>th</sup> June 2022, 23:59.
