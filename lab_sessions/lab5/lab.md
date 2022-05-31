@@ -48,5 +48,15 @@ By the end of lab 5, you will have:
 
 # Lab 5 (5%) 
 
+## Single Waypoint Navigation
+### **Task 1: Navigation using amcl & move_base**{: .label .label-green}
+
+## Action Servers/Client
+### **Task 2: Sending a Goal to move_base action server**{: .label .label-green}
+
+## Multi Waypoint Navigation
+### **Task 3: Navigation using a node**{: .label .label-green}
+
+
 ## Submission
 Zip up your lab report into a zip file called "**lab5\_<STUDENT\_ID>.zip**" and submit by 11<sup>th</sup> June 2022, 23:59.
