@@ -66,8 +66,6 @@ In this task, you would have to navigate the limo through multiple way-points on
    * Send the next way-point in the list.
    * Repeat till limo has reached the last way-point.
 
-<!-- -->
-
 1. **Task 2a**{: .label .label-green}Pick 4 way-points anywhere within your map, list these in your report.
 2. **Task 2b**{: .label .label-green}Create your custom node in its own package (behaviour listed above).
 3. **Task 2c**{: .label .label-green}Create a launch file that launches your node along with the navigation setup (i.e. by launching using this file, your limo should start navigating to your waypoints automatically)
