@@ -23,6 +23,7 @@ nav_order: 5
 2. [ROS Navigation - AMCL](http://wiki.ros.org/amcl)
 3. [ROS Navigation - Move_base](http://wiki.ros.org/move_base)
 4. [ActionLib - Python Tutorials](http://wiki.ros.org/actionlib_tutorials/Tutorials)
+5. [ROS Navigation - Map_Server](http://wiki.ros.org/map_server)
 
 ## Materials
 
@@ -73,23 +74,25 @@ Basic navigation using ROS navigation stack in created Gazebo world.
         roslaunch limo_bringup limo_navigation_diff.launch
         ```
 
-    2. LaserScan in RViz  will not display anything as it is not subscribing to the correct topic. Change to "/limo/scan"
+    2. LaserScan in RViz will not display anything as it is not subscribing to the correct topic. Change to "/limo/scan"
 
      ![Laserscan](assets/Laserscan.png)
 
 3. Initial pose estimate and single point navigation using RViz
-    1. At the top of RViz window, click "2D Pose Estimate". 
+    1. AMCL requires an intial starting position, we can define this starting position using the RViz interface. At the top of RViz window, click "2D Pose Estimate". 
     2. On the map, click and hold left mouse click at estimated location of Limo. 
-    3. At the top of RViz window, click "2D Nav Goal". 
+    3. After setting the intial pose, we can then publish a goal for the Limo to navigate to. At the top of RViz window, click "2D Nav Goal". 
     4. On the map, click and hold left mouse click at targeted location. 
 
 **Task 1a**{: .label .label-blue}What topics do "2D Pose Estimate" and "2D Nav Goal" publish to. Are the message types the same?
 
-**Task 1b**{: .label .label-blue}Briefly explain why there are no visuals displayed when LaserScan topic is set to /scan. 
+**Task 1b**{: .label .label-blue}With reference to the tasks in the previous lab, briefly explain why there are two available topics for LaserScan.
 
 **Task 1c**{: .label .label-blue}You will see 3 Map topics on the left window pane in the RViz, yet you only loaded one map, briefly describe what they are. 
 
 **Task 1d**{: .label .label-blue}Similarly, you will see 2 Path topics on the left window pane in the RViz, yet the robot only follows one path, briefly describe what they are. 
+
+**Task 1e**{: .label .label-blue}Which published topics from move_base can you use to check whether the robot has reached the navigation goal? Hint: refer to [move_base](http://wiki.ros.org/move_base) documentation and use the "rosmsg show" command.  
 
 **Optional Task**{: .label .label-blue}Instead of typing out the command to load the map each time, we have multiple ways to streamline this task. One such method is the roslaunch feature. Edit the navigation launch file to run the map server node. 
 
