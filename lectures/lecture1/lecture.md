@@ -7,18 +7,17 @@ nav_order: 1
 ---
 
 # **Lecture 1: Introduction to practical robotics**
-* Mon, May 09, 9:00 am – 13:00 am
+
+- Mon, May 09, 9:00 am – 1:00 pm
 
 ## **Overview**
 
-Week 1's lecture will provide a overview of the robotics industry in Singapore and cover administrative matters pertaining to the module. 
+Week 1's lecture will provide a overview of the robotics industry in Singapore and cover administrative matters pertaining to the module.
 
-This lecture will serve as an introduction to the essential concepts of Ubuntu and provide greater insight to the LIMO robot hardware. Students will be learn about the Ubuntu kernel, linux terminal commands, bash script and the file system. Furthermore, students will have a better understanding of the peripherals and drivers present on the LIMO robot. 
+This lecture will serve as an introduction to the essential concepts of Ubuntu and provide greater insight to the LIMO robot hardware. Students will be learn about the Ubuntu kernel, linux terminal commands, bash script and the file system. Furthermore, students will have a better understanding of the peripherals and drivers present on the LIMO robot.
 
 Further information regarding week 1's prelab and lab will be provided during the lecture.
 Looking forward to meeting all of you on Monday!
 
-
 <!-- ## **Lecture resources**
 * Slides: [pdf]({{ site.baseurl }}) -->
-

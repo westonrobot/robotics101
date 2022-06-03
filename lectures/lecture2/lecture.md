@@ -7,7 +7,8 @@ nav_order: 2
 ---
 
 # **Lecture 2: Python & ROS basics**
-* Mon, May 17, 9:00 am – 13:00 am
+
+- Mon, May 17, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -19,8 +20,6 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 2's prelab and lab will be provided during the lecture.
 
-
 <!-- ## **Lecture resources**
 * Slides: [pdf]({{ site.baseurl }})
 * In-class Resources: [zip]({{ site.baseurl }}{% link lectures/lecture2/handouts.zip %}) (Refer to the README on how to run the notebook) -->
-
