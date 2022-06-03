@@ -8,7 +8,7 @@ nav_order: 5
 
 # **Lecture 5 - ActionLib & ROS Navigation (Planning)**
 
-- Mon, June 6, 9:00 am – 13:00 am
+- Mon, June 6, 9:00 am – 1:00 pm
 
 ## **Overview**
 
