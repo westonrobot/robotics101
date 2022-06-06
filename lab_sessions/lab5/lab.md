@@ -84,7 +84,7 @@ Basic navigation using ROS navigation stack in created Gazebo world.
     3. After setting the intial pose, we can then publish a goal for the Limo to navigate to. At the top of RViz window, click "2D Nav Goal". 
     4. On the map, click and hold left mouse click at targeted location. 
 
-**Task 1a**{: .label .label-blue}What topics do "2D Pose Estimate" and "2D Nav Goal" publish to. Are the message types the same?
+**Task 1a**{: .label .label-blue}What topics do "2D Pose Estimate" and "2D Nav Goal" publish to and what are the message types? What are purposes of these topics?
 
 **Task 1b**{: .label .label-blue}With reference to the tasks in the previous lab, briefly explain why there are two available topics for LaserScan.
 
@@ -98,7 +98,7 @@ Basic navigation using ROS navigation stack in created Gazebo world.
 
 ## Multi Waypoint Navigation
 ### **Task 2: Navigation using a node**{: .label .label-green}
-Now that you have successfully navigated the limo through a known map one way-point/goal at a time using rviz and learnt how move_base receives/feedbacks its navigation goals/status.
+Now that you have successfully navigated the limo through a known map, one way-point/goal at a time using rviz and learnt how move_base receives/feedbacks its navigation goals/status.
 
 In this task, you would have to navigate the limo through multiple way-points one after another using your own custom node in its own package. 
 
