@@ -8,5 +8,5 @@ Jul 4
 Jul 6
 : **Lab 8**{: .label .label-green} [Basic pattern recognition with OpenCV and Python](#)
 
-Jul 10
+Jul 09
 : **Lab 8 report due**{: .label .label-red }

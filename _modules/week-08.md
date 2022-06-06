@@ -8,5 +8,5 @@ Jun 27
 Jun 29
 : **Lab 7**{: .label .label-green} [Lane detection and lane tracking control with LIMO](#)
 
-Jul 03
+Jul 02
 : **Lab 7 report due**{: .label .label-red }

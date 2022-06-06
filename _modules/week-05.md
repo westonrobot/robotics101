@@ -8,5 +8,5 @@ Jun 06
 Jun 08
 : **Lab 5**{: .label .label-green} [Implement multi-waypoint navigation with ROS](#)
 
-Jun 12
+Jun 11
 : **Lab 5 report due**{: .label .label-red }
