@@ -51,7 +51,7 @@ By the end of lab 5, you will have:
 
 ## Single Waypoint Navigation
 ### **Task 1: Navigation using amcl & move_base**{: .label .label-green}
-Basic navigation using ROS navigation stack in created Gazebo world.
+Basic navigation using ROS navigation stack in created Gazebo world. We will be using the modified launch file and map you have made in lab 4.
 
 ![overview_tf_small](assets/overview_tf_small.png)
 
