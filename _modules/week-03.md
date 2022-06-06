@@ -8,5 +8,5 @@ May 23
 May 25
 : **Lab 3**{: .label .label-green} [Using Git & ROS Services](#)
 
-May 29
+May 28
 : **Lab 3 report due**{: .label .label-red }

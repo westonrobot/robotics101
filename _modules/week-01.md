@@ -8,5 +8,5 @@ May 9
 May 11
 : **Lab 1**{: .label .label-green} [Ubuntu and ROS installation & Linux basics]({{ site.baseurl }}{% link lab_sessions/lab1/lab.md %})
 
-May 15
+May 14
 : **Lab 1 report due**{: .label .label-red }

@@ -8,5 +8,5 @@ May 17
 May 18
 : **Lab 2**{: .label .label-green} [Write a ROS node to publish and subscribe topics](#)
 
-May 22
+May 21
 : **Lab 2 report due**{: .label .label-red }

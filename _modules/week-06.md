@@ -8,5 +8,5 @@ Jun 13
 Jun 15
 : **Lab 6**{: .label .label-green} [Advanced ROS navigation: planner for ackermann robot and add cost map](#)
 
-Jun 19
+Jun 18
 : **Lab 6 report due**{: .label .label-red }
