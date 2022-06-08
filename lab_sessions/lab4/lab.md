@@ -32,7 +32,7 @@ nav_order: 4
 8. [ROS - Launch Topic Remapping](http://wiki.ros.org/roslaunch/XML/remap)
 
 ## Materials
-1. [YDLidar - ROS package](https://github.com/YDLIDAR/ydlidar_ros_driver)
+1. [YDLidar - ROS package](https://github.com/YDLIDAR/ydlidar_ros_driver) *Note this package is slightly different fom the package already present in your limo robot, the package present in your limo is currently not available on github*
 2. [empty_sit_map.stl]({{ site.baseurl }}{% link lab_sessions/lab4/assets/empty_sit_map.stl %}) 
 
 ----
