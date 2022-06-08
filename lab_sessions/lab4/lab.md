@@ -32,7 +32,7 @@ nav_order: 4
 8. [ROS - Launch Topic Remapping](http://wiki.ros.org/roslaunch/XML/remap)
 
 ## Materials
-1. [YDLidar - ROS package](https://github.com/YDLIDAR/ydlidar_ros)
+1. [YDLidar - ROS package](https://github.com/YDLIDAR/ydlidar_ros_driver)
 2. [empty_sit_map.stl]({{ site.baseurl }}{% link lab_sessions/lab4/assets/empty_sit_map.stl %}) 
 
 ----
