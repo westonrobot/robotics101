@@ -65,7 +65,7 @@ Basic navigation using ROS navigation stack in created Gazebo world. We will be 
     2. In another terminal, load map using map_server ros package
 
         ```bash
-        rosrun map_server map_server -f <path-to-map>
+        rosrun map_server map_server <path-to-map-yaml-file>
         ``` 
 2. Launch navigation
     1. In another terminal, launch navigation launch file 
