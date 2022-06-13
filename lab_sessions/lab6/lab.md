@@ -23,6 +23,8 @@ nav_order: 6
 2. [ROS Navigation - AMCL](http://wiki.ros.org/amcl)
 3. [ROS Navigation - Move_base](http://wiki.ros.org/move_base)
 4. [ROS Navigation - Map_Server](http://wiki.ros.org/map_server)
+5. [A* Algorithm](https://brilliant.org/wiki/a-star-search/)
+6. [Dijkstra's Algorithm](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/)
 
 ## Materials
 
@@ -36,8 +38,8 @@ nav_order: 6
 * Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.
 * You can share common experimental data, but not explanations, code or deductions for the lab report.
 * Discrepancies between report results and code submissions are liable for loss of marks.
-* Each task will be clearly labelled and will need to be included in your lab report, which is in the format "**lab6\_report\_<STUDENT\_ID>.doc / pdf**", include your name, student_id at the begining of the report.
-* Zip up your lab report and other requirements (if present) and name it "**lab6\_<STUDENT\_ID>.zip**" and upload it.
+* Each task will be clearly labelled and will need to be included in your lab report, which is in the format "**lab6\_report\_team\_<TEAM\_ID>.doc / pdf**", include your name, student_id at the beginning of the report.
+* Zip up your lab report and other requirements (if present) and name it "**lab6\_team\_<TEAM\_ID>.zip**" and upload it.
 
 ## Learning Outcomes
 By the end of lab 6, you will have:
@@ -48,15 +50,17 @@ By the end of lab 6, you will have:
 
 ----
 
-# Lab 6 (4%) 
+# Lab 6 (4%)
+
+Today's lab will be done as a team, therefore each team will only have to create 1 report for this lab. However, each member will still need to submit that same report **individually** on the submission page.
 
 ## Recap
 Over the past few labs, you have mapped and navigated through a virtual gazebo environment. Today we will attempt to do the same in a real-life environment.
 
 ### **Task 1: Mapping of a real-life environment**{: .label .label-green}
-For this task, each team is tasked to use the limo robot to map a section of your classroom(or any area of your choosing). The section and size of your map is up to each team, but try to map an area big enough for the limo to move and navigate through. Since we the area might be chaotic, the generated map do not have to be very clean. We can fix that further down this lab.
+For this task, each team is tasked to use the limo robot to map a section of your classroom(or any area of your choosing). The section and size of your map is up to each team, but try to map an area big enough for the limo to move and navigate through. Since the area might be chaotic, the generated map do not have to be very clean. We can fix that further down this lab.
 
-* **Task 1a**{: .label .label-blue}Include the generated map and a picture of the real-life space with your report.
+* **Task 1a**{: .label .label-blue}Include the generated map and pictures of the real-life space with your report.
 
 ### **Task 2: Navigation of a real-life environment**{: .label .label-green}
 Using the map you have generated and the limo_navigator node you have made in lab 5 task 2 (You can choose among your members), navigate the limo through 4 different way-points through your environment by running the navigator node on your computer.
@@ -83,4 +87,4 @@ By editing the map (.pgm) file, we can indirectly influence the global/local pla
 
 
 ## Submission
-Zip up your lab report into a zip file called "**lab6\_<STUDENT\_ID>.zip**" and submit by 18<sup>th</sup> June 2022, 23:59.
+Zip up your lab report into a zip file called "**lab6\_team\_<TEAM\_ID>.zip**" and submit by 18<sup>th</sup> June 2022, 23:59.
