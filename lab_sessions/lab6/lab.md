@@ -51,10 +51,10 @@ By the end of lab 6, you will have:
 # Lab 6 (4%) 
 
 ## Recap
-Over the past 2 labs, you have mapped and navigated through a virtual gazebo environment. Today we will attempt to do the same in a real-life environment.
+Over the past few labs, you have mapped and navigated through a virtual gazebo environment. Today we will attempt to do the same in a real-life environment.
 
 ### **Task 1: Mapping of a real-life environment**{: .label .label-green}
-For this task, each team is tasked to use the limo robot to map a section of your classroom. The section and size of your map is up to each team, but try to map an area big enough for the limo to move and navigate through. Since we the area might be chaotic, the generated map do not have to be very clean. We can fix that further down this lab.
+For this task, each team is tasked to use the limo robot to map a section of your classroom(or any area of your choosing). The section and size of your map is up to each team, but try to map an area big enough for the limo to move and navigate through. Since we the area might be chaotic, the generated map do not have to be very clean. We can fix that further down this lab.
 
 * **Task 1a**{: .label .label-blue}Include the generated map and a picture of the real-life space with your report.
 
