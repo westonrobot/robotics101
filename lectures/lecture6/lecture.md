@@ -8,11 +8,25 @@ nav_order: 6
 
 # **Lecture 6 - ROS Navigation (Recap & Costmaps)**
 
-- Mon, June 12, 9:00 am – 1:00 pm
+- Mon, June 13, 9:00 am – 1:00 pm
 
 ## **Overview**
 
-Week 6's lecture will provide a overview on...
+Week 6's lecture will provide a overview on the algorithms that the global planner (Dijkstra and A*) and local planner (Trajectory Rollout) uses.
+
+- Global Planners
+  - Overview on what global planner does
+  - Algorithms of global planners
+    - Dijkstra's
+    - A* (A-star)
+  - How they work in theory
+  - How are they applied in ROS Navigation stack
+
+- Local Planners
+  - Overview on what local planner does
+  - Trajectory Rollout
+    - How it works in theory
+    - How are trajectory selected
 
 
 While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects.
