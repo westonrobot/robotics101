@@ -81,7 +81,7 @@ For this task, you will need to write a node in its own package that subscribes 
 
 ## Working with Images
 
-### **Task 3: Analysing & Processing Predictable Images**{: .label .label-green}
+### **Task 3: Extracting Colours**{: .label .label-green}
 For this task, you will use the custom package you have made in task 2 and further process and analysis the image you receive. We will test using the given colour test image.
 
 The different combinations of the primary colours in the RGB colour space gives us a total of 6 primary/secondary colours which are
@@ -92,6 +92,9 @@ The different combinations of the primary colours in the RGB colour space gives 
 * Cyan
 * Magenta
 
+The colour_test_img.png image have what are known as "pure" colours, meaning they only have the component colours necessary to make that colour.
+
+However, images from the real world rarely so, having a mix of colours at different intensities but are still considered a specific colour. This can be the result of lighting, camera parameters, etc. We will use the colour_venn_diagram.jpg image as an example of this.
 
 1. **Task 3a**{: .label .label-blue}Create a python script called pure_color_extractor.py and include this script with your report. This script should
    1. Read the given colour_test_img.png image.
@@ -100,11 +103,8 @@ The different combinations of the primary colours in the RGB colour space gives 
 
 ![pure red extracted](assets/example_extract_pure.png)
 
-### **Task 4: Analysing & Processing "real" Images**{: .label .label-green}
-The colour_test_img.png image in task 3 have what are known as "pure" colours, meaning they only have the component colours necessary to make that colour. However, images from the real world rarely so, having a mix of colours at different intensities but are still considered a specific colour. This can be the result of lighting, camera parameters, etc.
-
-1. **Task 4a**{: .label .label-blue}Create a python script called mixed_color_extractor.py and include this script with your report. This script should
-   1. Read the given colour_test_img.png image.
+1. **Task 3b**{: .label .label-blue}Create a python script called mixed_color_extractor.py and include this script with your report. This script should
+   1. Read the given colour_venn_diagram.jpg image.
    2. Extract each of the 6 colours listed above
    3. Display each extracted colour on its own window (Total 7 including the original) named after the color. An example showing extracted red is shown below.
 
