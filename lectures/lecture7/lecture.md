@@ -6,7 +6,7 @@ parent: Lectures
 nav_order: 7
 ---
 
-# **Lecture 6 - ROS Navigation (Recap & Costmaps)**
+# **Lecture 7 - Introduction to Computer Vision with OpenCV**
 
 - Mon, June 27, 9:00 am – 1:00 pm
 
