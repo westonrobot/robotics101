@@ -12,8 +12,27 @@ nav_order: 7
 
 ## **Overview**
 
-Week 7's lecture will provide a overview on the algorithms that the global planner (Dijkstra and A*) and local planner (Trajectory Rollout) uses.
+Week 7's lecture will provide a overview on Computer Vision, OpenCV and PID Control.
 
+- Computer Vision
+  - Basic Element on Computer Vision
+  - 2D VS 3D Computer Vision
+  - Mono and Stereo Cameras
+  - Colour Spaces used in Computer Vision
+    - RGB, BGR
+    - HSV and HSL
+  - Typical applications in Robotics
+
+- OpenCV
+  - Overview on what is OpenCV
+  - OpenCV basics and examples in Jupyter
+
+- PID Control
+  - PID Application
+  - Types of Feedback control
+    - Bang Bang Control
+    - PID Control
+  - How P,I and D controls aid in moving a robot to its desired path
 
 
 
