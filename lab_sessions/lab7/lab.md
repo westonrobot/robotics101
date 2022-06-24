@@ -25,7 +25,8 @@ nav_order: 7
 ## Materials
 1. [Colour Test Image]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_test_img.png %})
 2. [Colour Venn Diagram]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_venn_diagram.jpg %})
-3. [Camera Adapter Mount Stp File]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_test_img.png %})
+3. [Road Lane Image]({{ site.baseurl }}{% link lab_sessions/lab7/assets/road_lane.jpg %})
+4. [Camera Adapter Mount Stp File]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_test_img.png %})
 
 ----
 
@@ -82,8 +83,6 @@ For this task, you will need to write a node in its own package that subscribes 
 ## Working with Images
 
 ### **Task 3: Extracting Colours**{: .label .label-green}
-For this task, you will use the custom package you have made in task 2 and further process and analysis the image you receive. We will test using the given colour test image.
-
 The different combinations of the primary colours in the RGB colour space gives us a total of 6 primary/secondary colours which are
 * Red
 * Green
@@ -92,20 +91,38 @@ The different combinations of the primary colours in the RGB colour space gives 
 * Cyan
 * Magenta
 
-The colour_test_img.png image have what are known as "pure" colours, meaning they only have the component colours necessary to make that colour.
-
-However, images from the real world rarely so, having a mix of colours at different intensities but are still considered a specific colour. This can be the result of lighting, camera parameters, etc. We will use the colour_venn_diagram.jpg image as an example of this.
-
-1. **Task 3a**{: .label .label-blue}Create a python script called pure_color_extractor.py and include this script with your report. This script should
+1. **Task 3a**{: .label .label-blue}The colour_test_img.png image have what are known as "pure" colours, meaning they only have the component colours necessary to make that colour. Create a python script called pure_color_extractor.py and include this script with your report. This script should
    1. Read the given colour_test_img.png image.
    2. Extract each of the 6 colours listed above
    3. Display each extracted colour on its own window (Total 7 including the original) named after the color. An example showing extracted red is shown below.
 
 ![pure red extracted](assets/example_extract_pure.png)
 
-1. **Task 3b**{: .label .label-blue}Create a python script called mixed_color_extractor.py and include this script with your report. This script should
+2. **Task 3b**{: .label .label-blue}However, images from the real world rarely so, having a mix of colours at different intensities but are still considered a specific colour. This can be the result of lighting, camera parameters, etc. We will use the colour_venn_diagram.jpg image as an example of this. Create a python script called mixed_color_extractor.py and include this script with your report. This script should
    1. Read the given colour_venn_diagram.jpg image.
    2. Extract each of the 6 colours listed above
    3. Display each extracted colour on its own window (Total 7 including the original) named after the color. An example showing extracted red is shown below.
 
 ![mixed red extracted](assets/example_extract_mix.png)
+
+
+### **Task 4: Detecting lines**{: .label .label-green}
+Sometimes we need to be able to extract/detect certain features in a image using opencv (shapes, line, etc). For this lab, we will focus on detecting straight lines.
+
+* A typical algorithm to detect straight lines in a image goes like this
+  1. Extract/Narrow down parts of the image that are relevant by filtering (can be done by color, cropping etc) if possible.
+  2. Optionally smooth/blur the image
+  3. Detect edges using Canny (or other algorithms) from the extracted parts
+  4. Find lines by processing the detected edges using HoughLinesP.
+
+1. **Task 4a**{: .label .label-blue}
+Create a python script called lane_line_detector.py and include this script with your report. This script should
+  1. Read the given road_lane.jpg image.
+  2. Extract the 2 WHITE lane lines at either side of the road.
+  3. Draw the detected lines and their slopes on the original image.
+  4. Display the drawn lines image in a window called "Detected Lanes Lines". An example is shown below
+
+![extracted lane lines](assets/example_lane_lines.png)
+
+## Submission
+Zip up your lab report and the package/scripts you have made in Task 2/3 into a zip file called "**lab7\_<STUDENT\_ID>.zip**" and submit by 2<sup>nd</sup> July 2022, 23:59.
