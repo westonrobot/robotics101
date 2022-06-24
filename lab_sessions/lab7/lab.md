@@ -21,9 +21,9 @@ nav_order: 7
 ## Readings
 1. [LIMO Guide - Depth Camera + LiDAR](https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md#7-depth-camera--lidar-mapping)
 2. [ROS - rosparam](http://wiki.ros.org/rosparam)
-3. [OpenCV - Canny Edge Detector](https://docs.opencv.org/3.4.11/da/d5c/tutorial_canny_detector.html)
-4. [OpenCV - Hough Line Detector](https://docs.opencv.org/3.4.11/d9/db0/tutorial_hough_lines.html)
-5. [OpenCV - Image Smoothing](https://docs.opencv.org/3.4.11/d4/d13/tutorial_py_filtering.html)
+3. [OpenCV - Canny Edge Detector](https://docs.opencv.org/4.1.1/da/d5c/tutorial_canny_detector.html)
+4. [OpenCV - Hough Line Detector](https://docs.opencv.org/4.1.1/d9/db0/tutorial_hough_lines.html)
+5. [OpenCV - Image Smoothing](https://docs.opencv.org/4.1.1/d4/d13/tutorial_py_filtering.html)
 
 ## Materials
 1. [Colour Test Image]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_test_img.png %})
