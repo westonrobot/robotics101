@@ -66,7 +66,7 @@ For this task, you will need to utilise the image stream from your LIMO's camera
   ```
 * **Task 1b**{: .label .label-blue}When running, this driver dynamically creates parameters that are exposed to the ROS network.
   * What parameters are used to state the height and width of the image captured?
-  * We can change these parameters using 2 methods, state these 2 methods.
+  * We can change these parameters using several methods, state 2 methods to do so.
 * **Task 1c**{: .label .label-blue}Out of all the different image streams published we are mainly interested in 2; "/camera/rgb/image_raw" & "/camera/rgb/image_raw/compressed". What are the data formats used to publish these 2 topics?
 
 ### **Task 2: Utilising the camera stream**{: .label .label-green}
@@ -82,6 +82,7 @@ For this task, you will need to write a node in its own package that subscribes 
 1. **Task 2a**{: .label .label-blue}Create your custom node in its own package (behaviour listed above).
 2. **Task 2b**{: .label .label-blue}Create a launch file to launch limo_pov_node.
 3. **Task 2c**{: .label .label-blue}In what color space is this image stream in? (you can use the colour test image provided)
+4. **Task 2d**{: .label .label-blue}Convert this image stream to a "GRB" colour space and display this new image in another window called "LIMO's WACKY POV".
 
 ## Working with Images
 
@@ -112,20 +113,15 @@ The different combinations of the primary colours in the RGB colour space gives 
 ### **Task 4: Detecting lines**{: .label .label-green}
 Sometimes we need to be able to extract/detect certain features in a image using opencv (shapes, line, etc). For this lab, we will focus on detecting straight lines.
 
-* A typical algorithm to detect straight lines in a image goes like this
-  1. Extract/Narrow down parts of the image that are relevant by filtering (can be done by color, cropping etc) if possible.
-  2. Optionally smooth/blur the image
-  3. Detect edges using Canny (or other algorithms) from the extracted parts
-  4. Find lines by processing the detected edges using HoughLinesP.
-
-1. **Task 4a**{: .label .label-blue}
-Create a python script called lane_line_detector.py and include this script with your report. This script should
+1. **Task 4a**{: .label .label-blue}Create a python script called lane_line_detector.py and include this script with your report. This script should
   1. Read the given road_lane.jpg image.
-  2. Extract the 2 WHITE lane lines at either side of the road.
+  2. Extract the 2 lane lines at either side of the road.
   3. Draw the detected lines and their slopes on the original image.
   4. Display the drawn lines image in a window called "Detected Lanes Lines". An example is shown below
 
 ![extracted lane lines](assets/example_lane_lines.png)
+
+1. **Task 4b**{: .label .label-blue}Elaborate on/Document your script from task 4a. You should write it in such a way that anyone reading this document will understand what you are trying to achieve and be able to replicate what you have done on any similar image. Make sure to include details on any values you have chosen, how those values affect the process and how you have arrived at those values.
 
 ## Submission
 Zip up your lab report and the package/scripts you have made in Task 2/3 into a zip file called "**lab7\_<STUDENT\_ID>.zip**" and submit by 2<sup>nd</sup> July 2022, 23:59.
