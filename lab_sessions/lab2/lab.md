@@ -6,6 +6,13 @@ parent: Lab Sessions
 nav_order: 2
 ---
 **Lab 2 submission due on 22<sup>nd</sup> May 2022, 23:59**{: .label .label-red }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
 # Prelab (1%)
 
 We will have a short quiz on concepts that have been covered in the lecture and those that will be needed during this lab session.
@@ -105,10 +112,8 @@ This limo_ros package is the same package contained within each limo robot IPC a
 
 The limo_ros repository contains 4 packages, and details can be found in the source code folder or the github repository itself. Do familiarize yourself with this package as this package will be the basis of your coming project. But for today, we will just be taking a look at how we can run the gazebo simulation and how to tele-operate the limo from your own computer.
 
-### Simulation
+### **Task 1: Running the simulation**{: .label .label-green}
 Gazebo is a simulator that enables us to simulate a close representation of the limo hardware in a virtual world. To setup and get familiar with the simulation of the limo robot, instructions can be found in the limo_gazebo_sim sub package README.md file or can be viewed on the github repository directly [here](https://github.com/westonrobot/limo_ros/tree/master/limo_gazebo_sim).
-
-**Task 1: Running the simulation**{: .label .label-green}
 
    1. Using the README in the repository's , start the simulation of the limo in gazebo in  
    the 4-wheeled differential drive movement mode and control it using the twist_keyboard.
@@ -117,7 +122,7 @@ Gazebo is a simulator that enables us to simulate a close representation of the 
       2. **Task 1b**{: .label .label-blue}From this screenshot, which nodes publishes and subscribes to the "/cmd_vel" topic?
       3. **Task 1c**{: .label .label-blue}What is the message data format used on this "/cmd_vel" topic?
 
-### Tele-operation
+### **Task 2: Tele-operating your limo**{: .label .label-green}
 
 The limo_base package contains the ROS package that controls and drives the limo robot. This package is designed to work on a computer connected to the limo's on-board low-level controller thorugh a serial port. To setup and get familiar with the control node of the limo robot, instructions can be found in the limo_base sub package README.md file or can be viewed on the github repository directly [here](https://github.com/westonrobot/limo_ros/tree/master/limo_base). 
 
@@ -126,8 +131,6 @@ In the following task, we will attempt to control the limo using your own comput
 NOTE: Your limo's has already been setup with all necessary ROS packages for this course within a catkin workspace. The workspace can be found under ~/agilex_ws. For the following task however, you will use the catkin workspace you have made earlier.
 
 *Do coordinate with your team members when attempting to do this task as to avoid situations where multiple members are attempting to control the robot*
-
-**Task 2: Tele-operating your limo**{: .label .label-green}
 
    1. Connect your computer and the limo to a common wifi.
    2. With a keyboard attached to limo's computer, find the ip address of the nano
@@ -166,7 +169,7 @@ Now that we have gone through setting up, building, and running a exisitng packa
     
    3. This will create a beginner_tutorials folder which contains a package.xml and a CMakeLists.txt, which have been partially filled out with the information you gave catkin_create_pkg.
 
-**Task 3: Creating a simple publisher and subscriber**{: .label .label-green}
+### **Task 3: Creating a simple publisher and subscriber**{: .label .label-green}
 
 1. Follow the official ROS tutorial [here](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29) to create your first publisher and subscriber nodes.
 2. After creating the 2 nodes, run the 2 nodes and rqt_graph
@@ -175,7 +178,7 @@ Now that we have gone through setting up, building, and running a exisitng packa
    3. **Task 3c**{: .label .label-blue}What is the message data format used on this topic?
    4. **Task 3d**{: .label .label-blue}What is the frequency rate (in Hz) of publishing on this topic and how can we change this rate?
 
-**Task 4: Implementing our own node**{: .label .label-green}
+### **Task 4: Implementing our own node**{: .label .label-green}
 
 1. **Task 4a**{: .label .label-blue}Building on the publisher and subscriber package we just made, create a node that, for every new message it receives from the original publisher;
    1. it changes the content of the received message (anyway you like)
