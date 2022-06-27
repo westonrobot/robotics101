@@ -124,4 +124,4 @@ Sometimes we need to be able to extract/detect certain features in a image using
 1. **Task 4b**{: .label .label-blue}Elaborate on/Document your script from task 4a. You should write it in such a way that anyone reading this document will understand what you are trying to achieve and be able to replicate what you have done on any similar image. Make sure to include details on any values you have chosen, how those values affect the process and how you have arrived at those values.
 
 ## Submission
-Zip up your lab report and the package/scripts you have made in Task 2/3 into a zip file called "**lab7\_<STUDENT\_ID>.zip**" and submit by 2<sup>nd</sup> July 2022, 23:59.
+Zip up your lab report and the package/scripts you have made in Task 2/3/4 into a zip file called "**lab7\_<STUDENT\_ID>.zip**" and submit by 2<sup>nd</sup> July 2022, 23:59.
