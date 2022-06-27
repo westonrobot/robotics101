@@ -29,7 +29,7 @@ nav_order: 7
 1. [Colour Test Image]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_test_img.png %})
 2. [Colour Venn Diagram]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_venn_diagram.jpg %})
 3. [Road Lane Image]({{ site.baseurl }}{% link lab_sessions/lab7/assets/road_lane.jpg %})
-4. [Camera Adapter Mount Stp File]({{ site.baseurl }}{% link lab_sessions/lab7/assets/colour_test_img.png %})
+4. [Camera Adapter Mount Stp File]({{ site.baseurl }}{% link lab_sessions/lab7/assets/limo_stereo_cam_adapter_v2.step %})
 
 ----
 
