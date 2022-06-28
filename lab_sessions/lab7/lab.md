@@ -114,10 +114,10 @@ The different combinations of the primary colours in the RGB colour space gives 
 Sometimes we need to be able to extract/detect certain features in a image using opencv (shapes, line, etc). For this lab, we will focus on detecting straight lines.
 
 1. **Task 4a**{: .label .label-blue}Create a python script called lane_line_detector.py and include this script with your report. This script should
-  1. Read the given road_lane.jpg image.
-  2. Extract the 2 lane lines at either side of the road.
-  3. Draw the detected lines and their slopes on the original image.
-  4. Display the drawn lines image in a window called "Detected Lanes Lines". An example is shown below
+   1. Read the given road_lane.jpg image.
+   2. Extract the 2 lane lines at either side of the road.
+   3. Draw the detected lines and their slopes on the original image.
+   4. Display the drawn lines image in a window called "Detected Lanes Lines". An example is shown below
 
 ![extracted lane lines](assets/example_lane_lines.png)
 
