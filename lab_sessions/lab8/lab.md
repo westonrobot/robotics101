@@ -113,18 +113,15 @@ If you haven't already done so under the Prelab section, create and login into y
 
     1. Note: This step will largely manual and is likely take up the bulk of your time. Nevertheless, we do encourage students to put in effort for image annotation as poorly annotated image data can heavily impact the accuracy of your trained model
 
-4. Once all the images have been annotated, add the images to the dataset. A prompt will request for the train-test data split. The train dataset is used to train the model, where it sees and learns from the dataset, whereas the test dataset is used to evalutate the model after training. The values to use for the dataset split can potentially impact your model training heavily. For this lab, we will be using the `80-20` split For this lab. This means that 80% of the data will fall under the train dataset, while the remaining data will fall under the test dataset.
+4. Once all the images have been annotated, add the images to the dataset. A prompt will request for the train-test data split. The values to use for the dataset split can potentially impact your model training heavily. For this lab, we will be using the `80-20` split For this lab. This means that 80% of the data will fall under the train dataset, while the remaining data will fall under the test dataset.
 ![Train Test](assets/trainTest.png)
 
 5. After the train-test dataset split, we will be able to add preprocessing and augmentations to our image data. 
 ![Preprocess Augmentation](assets/PreprocessAugment.png)
-    1. Image Preprocessing is a technique that suppresses undesired distortions or enhances some image features relevant for further processing and analysis task.
 
-        1. There are many [techniques](https://www.mygreatlearning.com/blog/introduction-to-image-pre-processing/) that you can employ for image preprocessing. For this lab, we will be adding the auto-orientate and resize (stretch to 640 x 480) steps. Re-sizing changes the pixel information of the image, where reducing an image in size will result in unneeded pixel information being discarded.
+    1. There are many [techniques](https://www.mygreatlearning.com/blog/introduction-to-image-pre-processing/) that you can employ for image preprocessing. For this lab, we will be adding the auto-orientate and resize (stretch to 640 x 480) steps. Re-sizing changes the pixel information of the image, where reducing an image in size will result in unneeded pixel information being discarded.
 
-    2. Data augmentation is a technique which we can use to increase our training data, by applying variations to the images that we currently have (ie. increasing the brightness/exposure) and appending them to the dataset. This helps in creating a more robust and generalized model.
-
-        1. There are many [techniques](https://iq.opengenus.org/data-augmentation/) that you can employ to further augment your dataset. However, due to the lack of a big dataset and time, do limit the number of augmentations to a maximum of 3 to prevent long training times for the model.
+    2. There are many [techniques](https://iq.opengenus.org/data-augmentation/) that you can employ to further augment your dataset. However, due to the lack of a big dataset and time, do limit the number of augmentations to a maximum of 3 to prevent long training times for the model.
 
 6. Once augmentations have been added, you will be able to generate a version and export the dataset in various types of formats. For this lab, we will be using the `YOLO v5 Pytorch` Format for export. Select the download code option and copy the download code into the notebook.
 
@@ -139,7 +136,7 @@ If you haven't already done so under the Prelab section, create and login into y
 
 With the dataset prepared and (painstakingly) annotated, it is now finally time to start training our model. Upload your notebook onto Google ColabOpen up the notebook and go to the Model Training Section. Follow the instructions in the notebook on how you can train your own model. 
 
-Ensure that you have connected to a GPU runtime before starting your model training. YOu can do so by clicking on the "Change runtime type" button and changing the hardware accelerator to GPU. Otherwise, your model training time will take a significantly longer time to complete.
+Ensure that you have connected to a GPU runtime before starting your model training. You can do so by clicking on the "Change runtime type" button and changing the hardware accelerator to GPU. Otherwise, your model training time will take a significantly longer time to complete.
 
 Note: The notebook has been purposely written with some brevity, such that students will have to learn how to look for relevant information and approach a problem without step-by-step instructions (which is an important skill for any engineer to have). Nevertheless, most of the concepts in the notebook have been discussed and most problems that you may encounter can be solved with some googling and an understanding of the concepts discussed.
 
@@ -155,8 +152,6 @@ Follow the instructions in the notebook to visualize your results using Tensorbo
 Now that we have our Tensorboard window, lets discuss some of the training metrics that it logs.
 
 mean Average Precision (mAP) is a popular metric that tells you how precise your classifier is (how many instances it classifies correctly), as well as how robust it is (it does not miss a significant number of instances), where it computes the average precision value for recall value over 0 to 1.
-
-Precision refers to the number of correct positive results (True Positives) divided by the number of positive results predicted by the classifier (True & False Positives), while recall refers to the number of correct positive results (True Positives) divided by the number of **all** relevant samples (True Positives & False Negatives)
 
 * **Task 4a**{: .label .label-blue} Attach a screenshot of your tensorboard metrics window with the lab report.
 * **Task 4b**{: .label .label-blue} What is the mAP value of your model when training at the 80th epoch? Does increasing the number of epochs mean that your mAP value will always increase?
