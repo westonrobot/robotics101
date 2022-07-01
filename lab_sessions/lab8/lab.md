@@ -131,9 +131,9 @@ If you haven't already done so under the Prelab section, create and login into y
 ![Select Yolov5](assets/selectYolov5.png)
 ![Download Code](assets/DownloadCode.png)
 
-* **Task 1a**{: .label .label-blue} Is it important for your bounding boxes to be a tight fit for the object? Explain your answer.
+* **Task 2a**{: .label .label-blue} Is it important for your bounding boxes to be a tight fit for the object? Explain your answer.
 
-* **Task 1b**{: .label .label-blue} Why did we choose to re-size our images to 640 x 480? (Instead of say 640 x 640?) Would re-sizing our images to 1280 x 960 be fine as well? (Hint - Observe the image resolutions of all the images within the dataset)
+* **Task 2b**{: .label .label-blue} Why did we choose to re-size our images to 640 x 480? (Instead of say 640 x 640?) Would re-sizing our images to 1280 x 960 be fine as well? (Hint - Observe the image resolutions of all the images within the dataset)
 
 ### **Task 3: Training the model**{: .label .label-green}
 
@@ -143,7 +143,7 @@ Ensure that you have connected to a GPU runtime before starting your model train
 
 Note: The notebook has been purposely written with some brevity, such that students will have to learn how to look for relevant information and approach a problem without step-by-step instructions (which is an important skill for any engineer to have). Nevertheless, most of the concepts in the notebook have been discussed and most problems that you may encounter can be solved with some googling and an understanding of the concepts discussed.
 
-* **Task 2a**{: .label .label-blue} Go through the notebook and run your model training through 80 epochs. Leave the output in the notebook.
+* **Task 3a**{: .label .label-blue} Go through the notebook and run your model training through 80 epochs. Leave the output in the notebook.
 
 ### **Task 4: Evaluating the trained model**{: .label .label-green}
 
@@ -158,12 +158,12 @@ mean Average Precision (mAP) is a popular metric that tells you how precise your
 
 Precision refers to the number of correct positive results (True Positives) divided by the number of positive results predicted by the classifier (True & False Positives), while recall refers to the number of correct positive results (True Positives) divided by the number of **all** relevant samples (True Positives & False Negatives)
 
-* **Task 3a**{: .label .label-blue} Attach a screenshot of your tensorboard metrics window with the lab report.
-* **Task 3b**{: .label .label-blue} What is the mAP value of your model when training at the 80th epoch? Does increasing the number of epochs mean that your mAP value will always increase?
-* **Task 3c**{: .label .label-blue} List down any 2 ways we can use to improve the mAP value of our model. State any assumptions that you made with the methods mentioned.
+* **Task 4a**{: .label .label-blue} Attach a screenshot of your tensorboard metrics window with the lab report.
+* **Task 4b**{: .label .label-blue} What is the mAP value of your model when training at the 80th epoch? Does increasing the number of epochs mean that your mAP value will always increase?
+* **Task 4c**{: .label .label-blue} List down any 2 ways we can use to improve the mAP value of our model. State any assumptions that you made with the methods mentioned.
 
 
-### **Task 4: Exporting the Model for deployment**{: .label .label-green}
+### **Task 5: Exporting the Model for deployment**{: .label .label-green}
 
 With our newly trained model, lets run some inferences on some test images in order to test out our model
 
@@ -171,6 +171,6 @@ With our newly trained model, lets run some inferences on some test images in or
 
 ![Uploading Image Files](assets/UploadingImageFiles.png)
 
-* **Task 4a**{: .label .label-blue} Download the images that was run through the inference and attach the 3 images with the lab report. **They should have bounding boxes drawn on the bottle caps with a minimum accuracy of 50%**.
+* **Task 5a**{: .label .label-blue} Download the images that was run through the inference and attach the 3 images with the lab report. **They should have bounding boxes drawn on the bottle caps with a minimum accuracy of 50%**.
 ![Example Bottle Cap Img](assets/exampleBottleCapImg.png)
-* **Task 4b**{: .label .label-blue} Export your model in the PyTorch format (best.pt), and put it together with the lab report.
+* **Task 5b**{: .label .label-blue} Export your model in the PyTorch format (best.pt), and put it together with the lab report.
