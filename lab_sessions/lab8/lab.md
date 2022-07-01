@@ -19,6 +19,9 @@ nav_order: 8
 1. Each Student must register for a free account with [Roboflow](https://roboflow.com/)
 2. Download the Lab 8 Google Colab notebook in the Materials Section
 
+## Start of Lab
+1. We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.
+
 ## Readings
 1. [Object Detection](https://www.fritz.ai/object-detection/)
 2. [YOLO - You Only Look Once](https://docs.ultralytics.com/)
@@ -62,11 +65,11 @@ By the end of lab 8, you will have:
 Being able to identify objects is a very important skill for robots to have in order to perform tasks in a human environment. Hence, we will build on certain concepts learnt from the previous lab and learn the basics of creating a deep learning model that can be deployed on your robots.
 
 ### **Task 1: Google Colab**{: .label .label-green}
-For this lab, we have also prepared a Python jupyter notebook with sample code for how you can train and deploy your own model. Since most deep learning libraries are mainly compatible with Python 3, we will be using Google Colab to run our notebook instead.
+For this lab, we have also prepared a Python jupyter notebook with sample code for how you can train and deploy your own model. Since most deep learning libraries are mainly only compatible with Python 3, we will be using Google Colab to run our notebook instead.
 
-[Google Colab](https://colab.research.google.com/?utm_source=scs-index) is a free Jupyter notebook environment that runs entirely in the cloud service. This allows us to access Google's computing resources such as GPUs for our deep learning needs. While there is the option to upgrade to a premium version with more feature and resources, the free version will prove sufficient for our needs.
+Google Colab is a free Jupyter notebook environment that runs entirely in the cloud service. This allows us to access Google's computing resources such as GPUs for our deep learning needs. While there is the option to upgrade to a premium version with more feature and resources, the free version will prove sufficient for our needs.
 
-Go to the Google Colab site and upload the downloaded Lab-8 notebook
+Go to the [Google Colab](https://colab.research.google.com/?utm_source=scs-index) site and upload the downloaded Lab-8 notebook. To do this, you will first need to login into your google account.
 ![Google Colab Upload](assets/GoogleColabUpload.png)
 
 You should be able to see the notebook uploaded onto your Google Drive
@@ -82,29 +85,29 @@ To run cells in the notebook, we will need to connect to a runtime so that we ca
 With this, you should be able to run the cells in the notebook as you have done previously with the Open-CV notebook.
 
 ### **Task 2: Create your object detection dataset**{: .label .label-green}
-The first step to creating our object detection model is to determine the kinds of objects that we want to identify. For this lab, we will be creating a model that is able to identify bottle caps. In future, you can experiment and train your model to identify other kinds of objects.
+The first step to creating our object detection model is to determine the kinds of objects that we want to identify. For this lab, we will be creating a model that is able to identify bottle caps. In future, you can experiment and train your model to identify multiple objects of other different types.
 
-So how do we train our model to identify bottle caps? Firstly, let's consider the case of a student like yourself in University. How can the student get better results for their exams? The best method (although some of you might disagree) is to constantly study relevant materials and practice different kinds of questions to do well for the exams. 
+So how do we train our model to identify bottle caps? Well, let's consider the case of a student like yourself in University. How can the student get better results for their exams? The best method (although some of you might disagree) is to constantly study relevant materials and practice different kinds of questions to do well for the exams. 
 
-Training our object detection model follows a similar concept. In order for our model to identify bottle caps accurately, we will need to give it pictures of bottle caps to study. Just like how studying more materials can give you better performance in exams, giving our model many variations of bottle caps to study will allow it to be more adept at being able to correctly identify bottle caps with a higher accuracy. Hence, we will first need to prepare our dataset for object detection.
+Training our object detection model follows a similar concept. In order for our model to identify bottle caps accurately, we will need to give it pictures of bottle caps to study. Just like how studying more materials can give you better performance in exams, giving our model many variations of bottle caps to study will allow it to be more adept at being able to correctly identify bottle caps. Hence, our first step for model training would be to prepare our dataset for object detection.
 
 For this lab, we have already prepared sample images for you to train your model.
-1. Download the training images under the materials. These will be used for training our object detection model.
-2. Use a labelling tool for annotation of training images
+1. Download the training images (1 - 7) zip file(s) under the materials section and extract the images into a single folder. These images will be used for training our object detection model.
+2. Annotate the training images using labelling tools
 * Our model needs to know where our bottle caps are in the images. Hence, we will need to draw bounding boxes to annotate the images and show the model where the bottle caps are located at. <br>
 ![Example annotated image](assets/example_annotated_img.png)
-* In order to annotate our images, we can make use of various softwares to do so, some of which are listed in the notebook. For this lab, we will be making use of [Roboflow](https://roboflow.com/) to annotate our images.
+* In order to annotate our images, we can make use of various softwares to do so, some of which are listed as additional readings in the notebook. For this lab, we will be making use of [Roboflow](https://roboflow.com/) to annotate our images.
 
 
 **Roboflow**
 
 Roboflow is a platform that we can use to add and annotate image data. Also, the annotated image dataset can be augmented (we will discuss this further later on) and exported into different formats for model training. Hence, it is a convenient platform for preparing our object detection dataset.
 
-If you haven't done so, create and login into your Roboflow account. Once logged in, the website will prompt you to run through their dataset preparation tutorial. We highly recommend that you follow the [tutorial project creation](https://blog.roboflow.com/getting-started-with-roboflow/), as we will be following the same process in order to prepare and export our dataset.
+If you haven't already done so under the Prelab section, create and login into your Roboflow account. Once logged in, the website will prompt you to run through their dataset preparation tutorial. We highly recommend that you follow the [tutorial project creation](https://blog.roboflow.com/getting-started-with-roboflow/), as we will be following the same process in order to prepare and export our dataset.
 
 1. Create your new project and call it `Lab 8`.
 ![Creating Project](assets/CreatingProject.png)
-2. Upload the training images that you have downloaded onto RoboFlow\
+2. Upload the training images that you have downloaded onto RoboFlow
 ![Upload Img](assets/UploadImg.png)
 3. Under the annotation section, add all images under your job, and annotate all the images with the bounding box tool. At this current moment, do not make use of the segmentation/polygon drawing tool, as our model is for identifying of objects, rather than for segmentation/classification (as explained in the lectures)
 
@@ -155,9 +158,9 @@ mean Average Precision (mAP) is a popular metric that tells you how precise your
 
 Precision refers to the number of correct positive results (True Positives) divided by the number of positive results predicted by the classifier (True & False Positives), while recall refers to the number of correct positive results (True Positives) divided by the number of **all** relevant samples (True Positives & False Negatives)
 
-* **Task 3a**{: .label .label-blue} Attach a screenshot of your tensorboard metrics window for submission.
-* **Task 3b**{: .label .label-blue} What is the mAP value of your model when training at the 80th epoch? What does this value say about the accuracy of the model?
-* **Task 3c**{: .label .label-blue} List down any 2 ways we can use to improve the mAP value of our model? State any assumptions that you made with the methods mentioned.
+* **Task 3a**{: .label .label-blue} Attach a screenshot of your tensorboard metrics window with the lab report.
+* **Task 3b**{: .label .label-blue} What is the mAP value of your model when training at the 80th epoch? Does increasing the number of epochs mean that your mAP value will always increase?
+* **Task 3c**{: .label .label-blue} List down any 2 ways we can use to improve the mAP value of our model. State any assumptions that you made with the methods mentioned.
 
 
 ### **Task 4: Exporting the Model for deployment**{: .label .label-green}
