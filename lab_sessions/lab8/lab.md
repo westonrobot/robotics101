@@ -168,4 +168,15 @@ With our newly trained model, lets run some inferences on some test images in or
 
 * **Task 5a**{: .label .label-blue} Download the images that was run through the inference and attach the 3 images with the lab report. **They should have bounding boxes drawn on the bottle caps with a minimum accuracy of 50%**.
 ![Example Bottle Cap Img](assets/exampleBottleCapImg.png)
-* **Task 5b**{: .label .label-blue} Export your model in the PyTorch format (best.pt), and put it together with the lab report.
+
+* **Task 5b**{: .label .label-blue} Export your model in the PyTorch format (best.pt), and download the online notebook(.ipynb) with the output cells intact. Submit them together with the lab report.
+
+**Note** 
+* We will also be **testing your model on 10 other bottle cap images that are not in your dataset** to evaluate the effectiveness & accuracy of your model. Hence, we highly recommend you to train and improve your model on additional images of bottle caps. 
+
+* These additional images can be taken using your own cameras(recommended to use the same aspect ratio as the training images of 4:3)/online images that you can find. Do refer to the considerations and good practices for Data Collection, Cleaning and Preparation mentioned in the lecture slides in order to optimize and improve your model training. 
+
+* At the same time, the bottle cap images that we will be testing on would **not be very different from those that were in the dataset**. Hence, we do not expect you to overtrain your model with a very high detection acccuracy.
+
+## Submission
+Zip up your lab report and the model files/notebooks you have made in Task 2/3/4/5 into a zip file called "**lab8\_<STUDENT\_ID>.zip**" and submit by 9<sup>nd</sup> July 2022, 23:59.
