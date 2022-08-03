@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lab 2 - Python and ROS basics | Robotics101</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Lab 2 - Python and ROS basics" />
+<meta name="author" content="Weston Robot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Course website for Introduction to Practical Robotics" />
+<meta property="og:description" content="Course website for Introduction to Practical Robotics" />
+<link rel="canonical" href="https://robotics101.westonrobot.net/lab_sessions/lab2" />
+<meta property="og:url" content="https://robotics101.westonrobot.net/lab_sessions/lab2" />
+<meta property="og:site_name" content="Robotics101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lab 2 - Python and ROS basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Weston Robot"},"description":"Course website for Introduction to Practical Robotics","headline":"Lab 2 - Python and ROS basics","url":"https://robotics101.westonrobot.net/lab_sessions/lab2"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://robotics101.westonrobot.net/" class="site-title lh-tight">
+  Robotics101
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/index.html" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/syllabus/" class="nav-list-link">Syllabus</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/schedule/" class="nav-list-link">Schedule</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lectures/" class="nav-list-link">Lectures</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture1" class="nav-list-link">Lecture 1 - Introduction to practical robotics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture2" class="nav-list-link">Lecture 2 - Python & ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture3" class="nav-list-link">Lecture 3 - Developer tools, project management & robot kinematics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture4" class="nav-list-link">Lecture 4 - Gazebo & ROS Navigation (Mapping)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture5" class="nav-list-link">Lecture 5 - ActionLib & ROS Navigation (Planning)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture6" class="nav-list-link">Lecture 6 - ROS Navigation (Recap & Costmaps)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture7" class="nav-list-link">Lecture 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture8" class="nav-list-link">Lecture 8 - Introduction to computer vision with Machine/Deep Learning</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lab_sessions/" class="nav-list-link">Lab Sessions</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab1" class="nav-list-link">Lab 1 - Linux basics & ROS installation</a></li><li class="nav-list-item  active"><a href="https://robotics101.westonrobot.net/lab_sessions/lab2" class="nav-list-link active">Lab 2 - Python and ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab3" class="nav-list-link">Lab 3 - Using Git & ROS Services</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab4" class="nav-list-link">Lab 4 - Using Gazebo & Mapping</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab5" class="nav-list-link">Lab 5 - ROS Navigation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab6" class="nav-list-link">Lab 6 - ROS Navigation (Recap & Costmap)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab7" class="nav-list-link">Lab 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab8" class="nav-list-link">Lab 8 - Introduction to computer vision with ML/DL</a></li></ul></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/resources/" class="nav-list-link">Resources</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Robotics101" aria-label="Search Robotics101" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://www.westonrobot.com/" class="site-button"
+                  
+                >
+                  Weston Robot
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/westonrobot" class="site-button"
+                  
+                >
+                  GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://robotics101.westonrobot.net/lab_sessions/">Lab Sessions</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Lab 2 - Python and ROS basics</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <p><strong class="label label-red">Lab 2 submission due on Sunday, 23:59</strong></p>
+      <h2 class="no_toc text-delta" id="table-of-contents">
+        
+        
+          <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of contents
+        
+        
+      </h2>
+    
+
+<ul id="markdown-toc">
+  <li><a href="#prelab-1" id="markdown-toc-prelab-1">Prelab (1%)</a>    <ul>
+      <li><a href="#setup" id="markdown-toc-setup">Setup</a></li>
+      <li><a href="#lab-report-and-submission" id="markdown-toc-lab-report-and-submission">Lab Report and Submission</a></li>
+      <li><a href="#learning-outcomes" id="markdown-toc-learning-outcomes">Learning Outcomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#lab-2-5" id="markdown-toc-lab-2-5">Lab 2 (5%)</a>    <ul>
+      <li><a href="#setting-up-a-catkin-workspace-for-ros-development" id="markdown-toc-setting-up-a-catkin-workspace-for-ros-development">Setting up a catkin workspace for ROS development</a></li>
+      <li><a href="#getting-and-building-an-existing-ros-package" id="markdown-toc-getting-and-building-an-existing-ros-package">Getting and Building an existing ROS package</a></li>
+      <li><a href="#running-a-node" id="markdown-toc-running-a-node">Running a node</a>        <ul>
+          <li><a href="#task-1-running-the-simulation" id="markdown-toc-task-1-running-the-simulation"><strong class="label label-green">Task 1: Running the simulation</strong></a></li>
+          <li><a href="#task-2-tele-operating-your-limo" id="markdown-toc-task-2-tele-operating-your-limo"><strong class="label label-green">Task 2: Tele-operating your limo</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#making-our-first-package" id="markdown-toc-making-our-first-package">Making our first package</a>        <ul>
+          <li><a href="#task-3-creating-a-simple-publisher-and-subscriber" id="markdown-toc-task-3-creating-a-simple-publisher-and-subscriber"><strong class="label label-green">Task 3: Creating a simple publisher and subscriber</strong></a></li>
+          <li><a href="#task-4-implementing-our-own-node" id="markdown-toc-task-4-implementing-our-own-node"><strong class="label label-green">Task 4: Implementing our own node</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#submission" id="markdown-toc-submission">Submission</a></li>
+    </ul>
+  </li>
+</ul>
+      <h1 id="prelab-1">
+        
+        
+          <a href="#prelab-1" class="anchor-heading" aria-labelledby="prelab-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prelab (1%)
+        
+        
+      </h1>
+    
+
+<p>We will have a short quiz on concepts that have been covered in the lecture and those that will be needed during this lab session.
+It will be in a short-form open-ended answer format, and concepts covered will be from the readings found below.</p>
+
+<p><strong>Readings</strong></p>
+<ol>
+  <li><a href="http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes">ROS - Understanding Nodes</a></li>
+  <li><a href="http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics">ROS - Understanding Topics</a></li>
+  <li><a href="http://wiki.ros.org/roslaunch/XML#Minimal_Example">ROS - Launch files</a></li>
+  <li><a href="https://www.computerhope.com/unix/uifconfi.htm">Linux - Ifconfig</a></li>
+  <li><a href="https://www.tutorialspoint.com/python/index.htm">Python - Basics Tutorial</a></li>
+</ol>
+      <h2 id="setup">
+        
+        
+          <a href="#setup" class="anchor-heading" aria-labelledby="setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setup
+        
+        
+      </h2>
+    
+<ul>
+  <li>Be in your teams of 5</li>
+  <li>Steps should be performed by all <strong>group members individually</strong>.</li>
+  <li>You can share observation data, but not explanations, code or deductions for the lab report</li>
+</ul>
+      <h2 id="lab-report-and-submission">
+        
+        
+          <a href="#lab-report-and-submission" class="anchor-heading" aria-labelledby="lab-report-and-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab Report and Submission
+        
+        
+      </h2>
+    
+<ul>
+  <li>Thoughout this lab, there are tasks that you are supposed to perform and record observations/deductions.</li>
+  <li>Each task will be clearly labelled and will need to be included in your lab report, which is in the format “<strong>lab2_report_STUDENT_ID.doc / pdf</strong>”, include your name, student_id at the begining of the report.</li>
+  <li>Zip up your lab report and other requirements (if present) and name it “<strong>lab2_STUDENT_ID.zip</strong>” and upload it onto _<strong>__LOCATION TBC</strong>___.</li>
+</ul>
+      <h2 id="learning-outcomes">
+        
+        
+          <a href="#learning-outcomes" class="anchor-heading" aria-labelledby="learning-outcomes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Learning Outcomes
+        
+        
+      </h2>
+    
+<p>By the end of lab 2, you will have:</p>
+<ol>
+  <li>learnt how to setup a ROS workspace for development</li>
+  <li>setup a ROS package and learn testing/debugging tools</li>
+  <li>create your own custom ROS package</li>
+</ol><hr />
+      <h1 id="lab-2-5">
+        
+        
+          <a href="#lab-2-5" class="anchor-heading" aria-labelledby="lab-2-5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab 2 (5%)
+        
+        
+      </h1>
+    
+      <h2 id="setting-up-a-catkin-workspace-for-ros-development">
+        
+        
+          <a href="#setting-up-a-catkin-workspace-for-ros-development" class="anchor-heading" aria-labelledby="setting-up-a-catkin-workspace-for-ros-development"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setting up a catkin workspace for ROS development
+        
+        
+      </h2>
+    
+<p>A catkin workspace is a folder dedicated for ROS development.</p>
+
+<ol>
+  <li>Make sure you have sourced you ROS installation</li>
+  <li>
+    <p>Now we can create and setup out first catkin workspace, to do this we</p>
+
+    <p>Make a folder where we want our workspace to be, (here we will make it at home and name it “catkin_ws”)<br />
+ <strong>Note: a catkin workspace folder can be named anything and be made anywhere</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/catkin_ws/src
+ <span class="nv">$ </span><span class="nb">cd</span> ~/catkin_ws/
+</code></pre></div>    </div>
+
+    <p>We initialize the workspace with a convenince tool, inside the catkin_ws folder we run</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>catkin_make
+</code></pre></div>    </div>
+
+    <p>If succesful, the folder will now have new “build” and “devel” folders. Inside the devel folder, there is a setup.bash file we need to source to setup the environment variables.<br />
+ <strong>We need to do this everytime we rebuild any packages</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">source </span>devel/setup.bash
+</code></pre></div>    </div>
+
+    <p>To make sure that the environment variables are setup correctly, we can check if the ROS_PACKAGE_PATH environment variable includes the directory you’re in.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$ROS_PACKAGE_PATH</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Now, you have set up a catkin workspace for ROS development.</li>
+</ol>
+      <h2 id="getting-and-building-an-existing-ros-package">
+        
+        
+          <a href="#getting-and-building-an-existing-ros-package" class="anchor-heading" aria-labelledby="getting-and-building-an-existing-ros-package"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Getting and Building an existing ROS package
+        
+        
+      </h2>
+    
+<p>A ROS package can be simply thought as a self contained project folder that has related code and configuration files in it.<br />
+A package can have 1 to many different nodes within it.<br />
+Today we will use the limo_ros package to demonstrate how to setup a ros package.
+This limo_ros package is the same package contained within each limo robot IPC and the package that you guys will build your project on.</p>
+
+<ol>
+  <li>
+    <p>First we need to get the source code for the ROS package.</p>
+
+    <p>The source code is contained in a github repository found <a href="https://github.com/westonrobot/limo_ros">here</a>.</p>
+
+    <p>For those already familiar with Git, you can go ahead and clone the repository into your catkin workspace’s src folder.</p>
+
+    <p>For the rest, you can download a zip folder with the source code under the Code tab here and extract to your catkin workspace src folder.<br />
+ <em>Do not fret!!! Git will be covered in a future lecture/lab</em></p>
+
+    <p><img src="/lab_sessions/lab2/assets/github_code_tab.png" alt="img" /></p>
+  </li>
+  <li>
+    <p>Now that we have the source code, we need to build the limo_ros package</p>
+
+    <p>To build the package, from the base catkin workspace folder, we have to run</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>catkin_make
+</code></pre></div>    </div>
+
+    <p>and after it builds successfully, we have to source devel/setup.bash</p>
+  </li>
+</ol>
+      <h2 id="running-a-node">
+        
+        
+          <a href="#running-a-node" class="anchor-heading" aria-labelledby="running-a-node"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Running a node
+        
+        
+      </h2>
+    
+
+<p>The limo_ros repository contains 4 packages, and details can be found in the source code folder or the github repository itself. Do familiarize yourself with this package as this package will be the basis of your coming project. But for today, we will just be taking a look at how we can run the gazebo simulation and how to tele-operate the limo from your own computer.</p>
+      <h3 id="task-1-running-the-simulation">
+        
+        
+          <a href="#task-1-running-the-simulation" class="anchor-heading" aria-labelledby="task-1-running-the-simulation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 1: Running the simulation</strong>
+        
+        
+      </h3>
+    
+<p>Gazebo is a simulator that enables us to simulate a close representation of the limo hardware in a virtual world. To setup and get familiar with the simulation of the limo robot, instructions can be found in the limo_gazebo_sim sub package README.md file or can be viewed on the github repository directly <a href="https://github.com/westonrobot/limo_ros/tree/master/limo_gazebo_sim">here</a>.</p>
+
+<ol>
+  <li>Using the README in the repository’s , start the simulation of the limo in gazebo in<br />
+   the 4-wheeled differential drive movement mode and control it using the twist_keyboard.</li>
+  <li>Once the simulation has been started, view the resulting ROS network using rqt_graph
+    <ol>
+      <li><strong class="label label-blue">Task 1a</strong>Take a screenshot of the network graph, include this screenshot in your report.</li>
+      <li><strong class="label label-blue">Task 1b</strong>From this screenshot, which nodes publishes and subscribes to the “/cmd_vel” topic?</li>
+      <li><strong class="label label-blue">Task 1c</strong>What is the message data format used on this “/cmd_vel” topic?</li>
+    </ol>
+  </li>
+</ol>
+      <h3 id="task-2-tele-operating-your-limo">
+        
+        
+          <a href="#task-2-tele-operating-your-limo" class="anchor-heading" aria-labelledby="task-2-tele-operating-your-limo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 2: Tele-operating your limo</strong>
+        
+        
+      </h3>
+    
+
+<p>The limo_base package contains the ROS package that controls and drives the limo robot. This package is designed to work on a computer connected to the limo’s on-board low-level controller thorugh a serial port. To setup and get familiar with the control node of the limo robot, instructions can be found in the limo_base sub package README.md file or can be viewed on the github repository directly <a href="https://github.com/westonrobot/limo_ros/tree/master/limo_base">here</a>.</p>
+
+<p>In the following task, we will attempt to control the limo using your own computer. To achieve this, we will need to run the limo_base control node on the limo itself, and make our own computer publish to the /cmd_vel topic within the same ROS network.</p>
+
+<p>NOTE: Your limo’s has already been setup with all necessary ROS packages for this course within a catkin workspace. The workspace can be found under ~/agilex_ws. For the following task however, you will use the catkin workspace you have made earlier.</p>
+
+<p><em>Do coordinate with your team members when attempting to do this task as to avoid situations where multiple members are attempting to control the robot</em></p>
+
+<ol>
+  <li>Connect your computer and the limo to a common wifi.</li>
+  <li>With a keyboard attached to limo’s computer, find the ip address of the nano
+    <ol>
+      <li><strong class="label label-blue">Task 2a</strong>What’s the nano’s ip address?</li>
+    </ol>
+  </li>
+  <li>After finding the ip address
+    <ol>
+      <li>add the lines below to the nano’s bashrc file, replacing with the ip address (e.g. http://192.168.111.111:11311) you have found and source bashrc
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;nano ip address&gt;:11311
+  <span class="nb">export </span><span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;nano ip address&gt;
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Run the limo_base_node on the jetson nano computer.</li>
+  <li>On your computer, find the ip address of your computer.
+    <ol>
+      <li><strong class="label label-blue">Task 2b</strong>What’s your computer’s ip address?</li>
+      <li>add the lines below your own bashrc file, be mindful of which ip address you use and source the new bashrc file
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;nano ip address&gt;:11311
+  <span class="nb">export </span><span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;your own ip address&gt;
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>On your computer run the teleop twist keyboard node to publish to /cmd_vel</li>
+  <li>Once the teleop twist keyboard has been started, view the resulting ROS network using rqt_graph
+    <ol>
+      <li><strong class="label label-blue">Task 2c</strong>Take a screenshot of the network graph, include this screenshot in your report.</li>
+      <li><strong class="label label-blue">Task 2d</strong>From this screenshot, which nodes publishes and subscribes to the “/cmd_vel” topic?</li>
+      <li><strong class="label label-blue">Task 2e</strong>Where is the ROS master node running on?</li>
+      <li><strong class="label label-blue">Task 2f</strong>From this screenshot and the bashrc files, can you deduce what does setting the ROS_MASTER_URI and ROS_HOSTNAME environment variables do?</li>
+    </ol>
+  </li>
+</ol>
+      <h2 id="making-our-first-package">
+        
+        
+          <a href="#making-our-first-package" class="anchor-heading" aria-labelledby="making-our-first-package"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Making our first package
+        
+        
+      </h2>
+    
+<p>Now that we have gone through setting up, building, and running a exisitng package, we can now start making our very own custom package. This lab will cover creating the 2 most basic nodes we can have, <em>publishers</em> and <em>subscribers</em>.</p>
+
+<ol>
+  <li>Creating a empty catkin package
+    <ol>
+      <li>Navigate to your catkin workspace’s src folder in your terminal</li>
+      <li>
+        <p>To create an empty package, run</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+</code></pre></div>        </div>
+      </li>
+      <li>This will create a beginner_tutorials folder which contains a package.xml and a CMakeLists.txt, which have been partially filled out with the information you gave catkin_create_pkg.</li>
+    </ol>
+  </li>
+</ol>
+      <h3 id="task-3-creating-a-simple-publisher-and-subscriber">
+        
+        
+          <a href="#task-3-creating-a-simple-publisher-and-subscriber" class="anchor-heading" aria-labelledby="task-3-creating-a-simple-publisher-and-subscriber"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 3: Creating a simple publisher and subscriber</strong>
+        
+        
+      </h3>
+    
+
+<ol>
+  <li>Follow the official ROS tutorial <a href="http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29">here</a> to create your first publisher and subscriber nodes.</li>
+  <li>After creating the 2 nodes, run the 2 nodes and rqt_graph
+    <ol>
+      <li><strong class="label label-blue">Task 3a</strong>Take a screenshot of the ROS network graph, include this screenshot in your report.</li>
+      <li><strong class="label label-blue">Task 3b</strong>What is the topic name these 2 nodes are communcating on and where/how is this name defined?</li>
+      <li><strong class="label label-blue">Task 3c</strong>What is the message data format used on this topic?</li>
+      <li><strong class="label label-blue">Task 3d</strong>What is the frequency rate (in Hz) of publishing on this topic and how can we change this rate?</li>
+    </ol>
+  </li>
+</ol>
+      <h3 id="task-4-implementing-our-own-node">
+        
+        
+          <a href="#task-4-implementing-our-own-node" class="anchor-heading" aria-labelledby="task-4-implementing-our-own-node"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 4: Implementing our own node</strong>
+        
+        
+      </h3>
+    
+
+<ol>
+  <li><strong class="label label-blue">Task 4a</strong>Building on the publisher and subscriber package we just made, create a node that, for every new message it receives from the original publisher;
+    <ol>
+      <li>it changes the content of the received message (anyway you like)</li>
+      <li>republishes this new message to a new topic which is subscribed by the original subscriber</li>
+    </ol>
+
+    <p>You can modify the 2 original nodes to publish and subscribe to any topic you like and the resultant network should look similar to the diagram below when all 3 nodes are running. Include a screenshot of the network when all 3 nodes are running.</p>
+  </li>
+  <li><strong class="label label-blue">Task 4b</strong>Include this final modified package alongside your report during submission.</li>
+  <li><strong class="label label-blue">Task 4c</strong>Briefly describe your new node.</li>
+  <li><strong class="label label-blue">Task 4d</strong>While running all 3 nodes, what happens to the listener node’s behavior when you switch off the talker node?</li>
+  <li><strong class="label label-blue">Task 4e</strong>Create a ROS launch file to launch all 3 nodes at the same time using 1 roslaunch command.</li>
+</ol>
+
+<p><strong>Before</strong>
+<img src="/lab_sessions/lab2/assets/network_before.png" alt="img" />
+<strong>After</strong>
+<img src="/lab_sessions/lab2/assets/network_after.png" alt="img" /></p>
+      <h2 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading" aria-labelledby="submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission
+        
+        
+      </h2>
+    
+<p>Zip up your lab report and the package you have made in Task 3 and 4 into a zip file called “<strong>lab2_STUDENT_ID.zip</strong>” and submit by Sunday, 23:59.</p>
+
+        
+
+        
+
+        
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

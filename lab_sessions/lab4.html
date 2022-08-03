@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lab 4 - Using Gazebo &amp; Mapping | Robotics101</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Lab 4 - Using Gazebo &amp; Mapping" />
+<meta name="author" content="Weston Robot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Course website for Introduction to Practical Robotics" />
+<meta property="og:description" content="Course website for Introduction to Practical Robotics" />
+<link rel="canonical" href="https://robotics101.westonrobot.net/lab_sessions/lab4" />
+<meta property="og:url" content="https://robotics101.westonrobot.net/lab_sessions/lab4" />
+<meta property="og:site_name" content="Robotics101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lab 4 - Using Gazebo &amp; Mapping" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Weston Robot"},"description":"Course website for Introduction to Practical Robotics","headline":"Lab 4 - Using Gazebo &amp; Mapping","url":"https://robotics101.westonrobot.net/lab_sessions/lab4"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://robotics101.westonrobot.net/" class="site-title lh-tight">
+  Robotics101
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/index.html" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/syllabus/" class="nav-list-link">Syllabus</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/schedule/" class="nav-list-link">Schedule</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lectures/" class="nav-list-link">Lectures</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture1" class="nav-list-link">Lecture 1 - Introduction to practical robotics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture2" class="nav-list-link">Lecture 2 - Python & ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture3" class="nav-list-link">Lecture 3 - Developer tools, project management & robot kinematics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture4" class="nav-list-link">Lecture 4 - Gazebo & ROS Navigation (Mapping)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture5" class="nav-list-link">Lecture 5 - ActionLib & ROS Navigation (Planning)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture6" class="nav-list-link">Lecture 6 - ROS Navigation (Recap & Costmaps)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture7" class="nav-list-link">Lecture 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture8" class="nav-list-link">Lecture 8 - Introduction to computer vision with Machine/Deep Learning</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lab_sessions/" class="nav-list-link">Lab Sessions</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab1" class="nav-list-link">Lab 1 - Linux basics & ROS installation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab2" class="nav-list-link">Lab 2 - Python and ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab3" class="nav-list-link">Lab 3 - Using Git & ROS Services</a></li><li class="nav-list-item  active"><a href="https://robotics101.westonrobot.net/lab_sessions/lab4" class="nav-list-link active">Lab 4 - Using Gazebo & Mapping</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab5" class="nav-list-link">Lab 5 - ROS Navigation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab6" class="nav-list-link">Lab 6 - ROS Navigation (Recap & Costmap)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab7" class="nav-list-link">Lab 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab8" class="nav-list-link">Lab 8 - Introduction to computer vision with ML/DL</a></li></ul></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/resources/" class="nav-list-link">Resources</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Robotics101" aria-label="Search Robotics101" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://www.westonrobot.com/" class="site-button"
+                  
+                >
+                  Weston Robot
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/westonrobot" class="site-button"
+                  
+                >
+                  GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://robotics101.westonrobot.net/lab_sessions/">Lab Sessions</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Lab 4 - Using Gazebo & Mapping</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <p><strong class="label label-red">Lab 4 submission due on Sunday, 23:59</strong></p>
+      <h2 class="no_toc text-delta" id="table-of-contents">
+        
+        
+          <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of contents
+        
+        
+      </h2>
+    
+
+<ul id="markdown-toc">
+  <li><a href="#prelab-1" id="markdown-toc-prelab-1">Prelab (1%)</a>    <ul>
+      <li><a href="#before-lab" id="markdown-toc-before-lab">Before lab</a></li>
+      <li><a href="#start-of-lab" id="markdown-toc-start-of-lab">Start of Lab</a></li>
+      <li><a href="#readings" id="markdown-toc-readings">Readings</a></li>
+      <li><a href="#materials" id="markdown-toc-materials">Materials</a></li>
+    </ul>
+  </li>
+  <li><a href="#setup" id="markdown-toc-setup">Setup</a>    <ul>
+      <li><a href="#lab-report-and-submission" id="markdown-toc-lab-report-and-submission">Lab Report and Submission</a></li>
+      <li><a href="#learning-outcomes" id="markdown-toc-learning-outcomes">Learning Outcomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#lab-4-4" id="markdown-toc-lab-4-4">Lab 4 (4%)</a>    <ul>
+      <li><a href="#creating-a-gazebo-world" id="markdown-toc-creating-a-gazebo-world">Creating a Gazebo world</a>        <ul>
+          <li><a href="#task-1-importing-models" id="markdown-toc-task-1-importing-models"><strong class="label label-green">Task 1: Importing Models</strong></a></li>
+          <li><a href="#task-2-saving--launching-worlds" id="markdown-toc-task-2-saving--launching-worlds"><strong class="label label-green">Task 2: Saving &amp; Launching Worlds</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#using-a-gazebo-world" id="markdown-toc-using-a-gazebo-world">Using a Gazebo world</a>        <ul>
+          <li><a href="#task-3-mapping-a-simulation-world" id="markdown-toc-task-3-mapping-a-simulation-world"><strong class="label label-green">Task 3: Mapping a simulation world</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#submission" id="markdown-toc-submission">Submission</a></li>
+    </ul>
+  </li>
+</ul>
+      <h1 id="prelab-1">
+        
+        
+          <a href="#prelab-1" class="anchor-heading" aria-labelledby="prelab-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prelab (1%)
+        
+        
+      </h1>
+    
+      <h2 id="before-lab">
+        
+        
+          <a href="#before-lab" class="anchor-heading" aria-labelledby="before-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Before lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>Each student must find and bring a STL model(s) you would like to import during the lab. The STL files can be shared amongst group members when importing multiple models.</li>
+  <li>Organisation owners should fork <a href="https://github.com/westonrobot/limo_ros">WestonRobot/Limo_ros</a> repository into your groups’ github organisation. Following that, each member of the organisation will fork that repository into your own personal github accounts.</li>
+</ol>
+      <h2 id="start-of-lab">
+        
+        
+          <a href="#start-of-lab" class="anchor-heading" aria-labelledby="start-of-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Start of Lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.</li>
+</ol>
+      <h2 id="readings">
+        
+        
+          <a href="#readings" class="anchor-heading" aria-labelledby="readings"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Readings
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md#5-lidar-mapping">Limo - Lidar Mapping</a></li>
+  <li><a href="https://github.com/agilexrobotics/limo-doc/blob/master/Limo%20user%20manual(EN).md#6-lidar-navigation">Limo - Lidar Navigation</a></li>
+  <li><a href="http://wiki.ros.org/tf2/Tutorials">TF - tf2 Overview</a></li>
+  <li><a href="http://wiki.ros.org/navigation/Tutorials/RobotSetup">ROS Navigation - Setup</a></li>
+  <li><a href="https://classic.gazebosim.org/tutorials?tut=ros_overview">Gazebo - ROS Integration</a></li>
+  <li><a href="http://wiki.ros.org/pr2_simulator/Tutorials/BuildingAMapInSimulation">ROS Navigation - Map Building</a></li>
+  <li><a href="http://wiki.ros.org/Remapping%20Arguments">ROS - Topic Remapping</a></li>
+  <li><a href="http://wiki.ros.org/roslaunch/XML/remap">ROS - Launch Topic Remapping</a></li>
+</ol>
+      <h2 id="materials">
+        
+        
+          <a href="#materials" class="anchor-heading" aria-labelledby="materials"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="https://github.com/YDLIDAR/ydlidar_ros_driver">YDLidar - ROS package</a> <em>Note this package is slightly different fom the package already present in your limo robot, the package present in your limo is currently not available on github</em></li>
+  <li><a href="/lab_sessions/lab4/assets/empty_sit_map.stl">empty_sit_map.stl</a></li>
+</ol><hr />
+      <h1 id="setup">
+        
+        
+          <a href="#setup" class="anchor-heading" aria-labelledby="setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setup
+        
+        
+      </h1>
+    
+<ul>
+  <li>Be in your teams of 5</li>
+  <li>Tasks &amp; report should be performed by all <strong>group members individually</strong> unless told otherwise.</li>
+</ul>
+      <h2 id="lab-report-and-submission">
+        
+        
+          <a href="#lab-report-and-submission" class="anchor-heading" aria-labelledby="lab-report-and-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab Report and Submission
+        
+        
+      </h2>
+    
+<ul>
+  <li>Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.</li>
+  <li>You can share common experimental data, but not explanations, code or deductions for the lab report.</li>
+  <li>Discrepancies between report results and code submissions are liable for loss of marks.</li>
+  <li>Each task will be clearly labelled and will need to be included in your lab report, which is in the format “<strong>lab4_report_&lt;STUDENT_ID&gt;.doc / pdf</strong>”, include your name, student_id at the begining of the report.</li>
+  <li>Zip up your lab report and other requirements (if present) and name it “<strong>lab4_&lt;STUDENT_ID&gt;.zip</strong>” and upload it.</li>
+</ul>
+      <h2 id="learning-outcomes">
+        
+        
+          <a href="#learning-outcomes" class="anchor-heading" aria-labelledby="learning-outcomes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Learning Outcomes
+        
+        
+      </h2>
+    
+<p>By the end of lab 4, you will have:</p>
+<ol>
+  <li>learnt how to create your own gazebo simulation world</li>
+  <li>learnt how to integrate your gazebo world into ROS</li>
+  <li>learnt how to perform mapping of your simulation world</li>
+</ol><hr />
+      <h1 id="lab-4-4">
+        
+        
+          <a href="#lab-4-4" class="anchor-heading" aria-labelledby="lab-4-4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab 4 (4%)
+        
+        
+      </h1>
+    
+      <h2 id="creating-a-gazebo-world">
+        
+        
+          <a href="#creating-a-gazebo-world" class="anchor-heading" aria-labelledby="creating-a-gazebo-world"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Creating a Gazebo world
+        
+        
+      </h2>
+    
+      <h3 id="task-1-importing-models">
+        
+        
+          <a href="#task-1-importing-models" class="anchor-heading" aria-labelledby="task-1-importing-models"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 1: Importing Models</strong>
+        
+        
+      </h3>
+    
+<p>Gazebo simulation can only use STL, OBJ or Collada (DAE) file formats for imported models. 
+For simplicity, this lab will only require the groups to work with STL files. The STL file found under Materials will serve as the base for your simulation where you will be importing your own models on to.</p>
+
+<ol>
+  <li>Create directory called “meshes” in the limo_gazebo_sim package.
+    <ol>
+      <li>
+        <p>Download the empty_sit_map.stl file found under Materials and save it to the /meshes directory.</p>
+
+        <p><img src="/lab_sessions/lab4/assets/meshes_filesystem.png" alt="filesystem" /></p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>To import any model into gazebo, you will need a .world file. For this lab we will be using the empty.world file that can be found in the limo_gazebo_sim package.</p>
+
+    <ol>
+      <li>
+        <p>From the /worlds directory within limo_gazebo_sim package run</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> gazebo empty.world
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Under ‘Edit’ select ‘Model Editor’ or press the shortcut keys Ctrl + M.</p>
+
+        <p><img src="/lab_sessions/lab4/assets/gazebo_mainscreen.png" alt="gazebo-mainscreen" /></p>
+      </li>
+      <li>
+        <p>In the model editor, click on ‘Add’ and change the link name to sit_map before importing the empty_sit_map.stl.</p>
+
+        <p><img src="/lab_sessions/lab4/assets/model_import.png" alt="gazebo-mainscreen" /></p>
+      </li>
+      <li>
+        <p>Do not be alarmed by the size of the imported model. The large size of the model is due to the mismatch in standard units used by Gazebo and CAD software. Go ahead and place the model anywhere in the gazebo world.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>The imported model is also called a link in gazebo. A physical link in the simulation contains inertia, visual and collision properties. To edit the model, right click on the model and select ‘Open Link Inspector’. The pop-up will allow you to change physical properties and geometry related to the link, visual and collision.</p>
+
+    <ol>
+      <li>Lets set the pose of the model to the perimeters below so that the limo model can be generated at the global origin without any collision for the second part of the lab.</li>
+    </ol>
+
+    <p><img src="assets/6%20DOF%20Diagram.webp" alt="link" /></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x = -5.00, y = -2.50, z = 0.00, roll = 1.57, pitch = 0.00, yaw = 0.00
+</code></pre></div>    </div>
+
+    <p><img src="/lab_sessions/lab4/assets/link.png" alt="link" /></p>
+
+    <p><strong class="label label-blue">Task 1a</strong>What does the link of a model define in gazebo? Use relevant sub-properties to explain.</p>
+
+    <ol>
+      <li>
+        <p>The visual perimeters allow users to edit the overall appearance of the model. Properties such as colour, material, texture and size can be changed according to the user’s needs.</p>
+
+        <ol>
+          <li>The imported model is scaled up due to Gazebo’s default unit of measurement being metres, while the default unit of measurement for CAD software is millimeters. Hence, we need to scale down the model by 1000. Under the ‘visual’ tab, set the geometry of the model to</li>
+        </ol>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x = 0.001, y = 0.001, z = 0.001, roll = 0.00, pitch = 0.00, yaw = 0.00
+</code></pre></div>        </div>
+
+        <p><img src="/lab_sessions/lab4/assets/visual.png" alt="link" /></p>
+      </li>
+      <li>
+        <p>The collision tab defines properties such as friction, bounce and contact perimeters. The yellow frame you see in the gazebo model editor indicates the area of collision when running simulations. Similar to the visual property, the collision area also needs to be scaled down by 1000. Set the geometry of the model to</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x = 0.001, y = 0.001, z = 0.001, roll = 0.00, pitch = 0.00, yaw = 0.00
+</code></pre></div>        </div>
+        <p><img src="/lab_sessions/lab4/assets/collision.png" alt="link" /></p>
+
+        <ol>
+          <li>
+            <p><strong class="label label-blue">Task 1b</strong>What will happen if the visual property is scaled to 0.0005 instead of 0.001? What impact will the difference in scaling have when simulating the teleoperation of the Limo in the gazebo environment?</p>
+          </li>
+          <li>
+            <p><strong class="label label-blue">Task 1c</strong>How are visual and collision related to link?</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>Select the ‘Model’ tab and check the ‘static’ box. When a model is set to be static, it becomes immovable. Gazebo’s dynamics engine will not update its position.</p>
+
+        <p><img src="/lab_sessions/lab4/assets/static_option.png" alt="static" /></p>
+      </li>
+      <li>
+        <p>Under ‘file’ save the model in a folder of your choice and exit the model editor. The final result should be something similar to the image below.</p>
+
+        <p><img src="/lab_sessions/lab4/assets/import_complete.png" alt="map_image" /></p>
+      </li>
+      <li>
+        <p>You have successfully imported the model into gazebo, save the world in the /worlds directory under limo_gazebo_sim and name it <strong>sit.world</strong>.</p>
+
+        <p><img src="/lab_sessions/lab4/assets/save_world.png" alt="save_screen" /></p>
+      </li>
+    </ol>
+  </li>
+  <li>Now that you are familiar with the whole process, import <strong>at least 3 models</strong> into the gazebo world you have just created. Within your own groups share the STL models that you and your groupmates have found before coming to the lab.</li>
+</ol>
+      <h3 id="task-2-saving--launching-worlds">
+        
+        
+          <a href="#task-2-saving--launching-worlds" class="anchor-heading" aria-labelledby="task-2-saving--launching-worlds"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 2: Saving &amp; Launching Worlds</strong>
+        
+        
+      </h3>
+    
+
+<ol>
+  <li>
+    <p>For ease of collaboration in the future, it is important to change the absolute path of the models included in your .world file to a relative path, so that others can also use your gazebo environments without editing.</p>
+
+    <p>To achieve this, gazebo needs to know where the STL file is saved with respect to the root folder. Gazebo simulation has specific environment variables that can be defined by users to simplify this process. Include the following lines into the package.xml file, <strong>within the &lt;package&gt; tag</strong>. Edit the package.xml file found within the limo_gazebo_sim package.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;export&gt;</span>
+     <span class="nt">&lt;gazebo_ros</span> <span class="na">gazebo_model_path=</span><span class="s">"${prefix}/meshes"</span><span class="nt">/&gt;</span>
+     <span class="nt">&lt;gazebo_ros</span> <span class="na">gazebo_media_path=</span><span class="s">"${prefix}/meshes"</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;/export&gt;</span>  
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Open the sit.world file and search for &lt;model name=’sit_map’ &gt; tag. Under this tag you will find the &lt;uri&gt; tag that specifies the path of your model. Change that to</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;uri&gt;</span>model://sit_map.stl<span class="nt">&lt;/uri&gt;</span>
+</code></pre></div>    </div>
+
+    <p><em>Note: There are 2 instances of the path within the file that needs to be changed. Please also be mindful of the indentations.</em></p>
+
+    <ol>
+      <li>
+        <p><strong class="label label-blue">Task 2a</strong>What is the <strong>absolute</strong> path of your STL model</p>
+      </li>
+      <li>
+        <p><strong class="label label-blue">Task 2b</strong>Why are there 2 instances where the model path is defined?</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>To launch the Limo simulation in your new gazebo environment, you will need to specify your world file in the <strong>limo_ackerman.launch</strong> and <strong>limo_four_diff.launch</strong> files. In the launch file you will find the line</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">"world_name"</span> <span class="na">default=</span><span class="s">"$(find limo_gazebo_sim)/worlds/empty.world"</span><span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p>This line sets the world file that will be used when the simulation is launched. Hence we will need to change it to</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">"world_name"</span> <span class="na">default=</span><span class="s">"$(find limo_gazebo_sim)/worlds/sit.world"</span><span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Now you are ready to launch the simulation.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> roslaunch limo_gazebo_sim limo_ackerman.launch
+</code></pre></div>    </div>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+      <h2 id="using-a-gazebo-world">
+        
+        
+          <a href="#using-a-gazebo-world" class="anchor-heading" aria-labelledby="using-a-gazebo-world"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Using a Gazebo world
+        
+        
+      </h2>
+    
+      <h3 id="task-3-mapping-a-simulation-world">
+        
+        
+          <a href="#task-3-mapping-a-simulation-world" class="anchor-heading" aria-labelledby="task-3-mapping-a-simulation-world"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 3: Mapping a simulation world</strong>
+        
+        
+      </h3>
+    
+<p>Now that you have a working simulation world, we can now start over first dive into the ROS navigation stack. The ROS navigation stack is a 2D navigation stack, meaning it does its job while only considering a 2d world/map. Essentially, the ROS navigation stack has these parts to allow autonomous navigation…</p>
+<ol>
+  <li>Map data of the surrounding environment (not always required)</li>
+  <li>Sensor data (typically but not limited to lidar)</li>
+  <li>Transforms (or tfs)</li>
+  <li>Planners and controllers</li>
+</ol>
+
+<p>Today we will take a look at building a map using the simulation world you have made with the slam_gmapping node within the gmapping package. To build a map, we require environment data from sensors (lidar laserscan in this case)</p>
+
+<ol>
+  <li>Run the simulation world using the launch file you have edited in Task 2.</li>
+  <li><strong class="label label-green">Task 3a</strong>
+    <ol>
+      <li>Include a screenshot of the ROS Network in your report.</li>
+      <li>What topic name is the lidar laserscan data being published under?</li>
+    </ol>
+  </li>
+  <li>Now we can run the slam_gmapping node to build the map,
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> roslaunch limo_bringup limo_gmapping.launch
+</code></pre></div>    </div>
+  </li>
+  <li><strong class="label label-green">Task 3b</strong>
+    <ol>
+      <li>Include a screenshot of the ROS Network in your report.</li>
+      <li>What topic name is the slam_gmapping node subscribed to for laserscan data?</li>
+    </ol>
+  </li>
+  <li><strong class="label label-green">Task 3c</strong>From task 3a and 3b answers and the rviz window, can you infer what has happened to the map building process and what might be the problem?</li>
+  <li><strong class="label label-green">Task 3d</strong>Fix the problem by modifying the limo gmapping launch file and build a full map of your environment by driving your limo around in the simulation, stopping once in awhile to build a section of the map (the resultant map should be tidy and clean). Describe what you did to fix the problem in your report.</li>
+  <li><strong class="label label-green">Task 3e</strong>
+    <ol>
+      <li>We can now save the map by running
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  rosrun map_server map_saver <span class="nt">-f</span> &lt;map_name&gt;
+</code></pre></div>        </div>
+      </li>
+      <li>This should have generated a <em>.pgm</em> and <em>.yaml</em> file representing the map in the directory you have ran the command. Include these 2 files and the modified limo_ros package in your submission.</li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>EXTRA (Not Graded): Try mapping your classroom using your LIMO, (<em>using limo_start.launch in limo_bringup instead of the simulation launch file</em>).</strong></p>
+      <h2 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading" aria-labelledby="submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission
+        
+        
+      </h2>
+    
+<p>Zip up your lab report into a zip file called “<strong>lab4_&lt;STUDENT_ID&gt;.zip</strong>” and submit by Sunday, 23:59.</p>
+
+        
+
+        
+
+        
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

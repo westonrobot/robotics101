@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lab 8 - Introduction to computer vision with ML/DL | Robotics101</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Lab 8 - Introduction to computer vision with ML/DL" />
+<meta name="author" content="Weston Robot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Course website for Introduction to Practical Robotics" />
+<meta property="og:description" content="Course website for Introduction to Practical Robotics" />
+<link rel="canonical" href="https://robotics101.westonrobot.net/lab_sessions/lab8" />
+<meta property="og:url" content="https://robotics101.westonrobot.net/lab_sessions/lab8" />
+<meta property="og:site_name" content="Robotics101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lab 8 - Introduction to computer vision with ML/DL" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Weston Robot"},"description":"Course website for Introduction to Practical Robotics","headline":"Lab 8 - Introduction to computer vision with ML/DL","url":"https://robotics101.westonrobot.net/lab_sessions/lab8"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://robotics101.westonrobot.net/" class="site-title lh-tight">
+  Robotics101
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/index.html" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/syllabus/" class="nav-list-link">Syllabus</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/schedule/" class="nav-list-link">Schedule</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lectures/" class="nav-list-link">Lectures</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture1" class="nav-list-link">Lecture 1 - Introduction to practical robotics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture2" class="nav-list-link">Lecture 2 - Python & ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture3" class="nav-list-link">Lecture 3 - Developer tools, project management & robot kinematics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture4" class="nav-list-link">Lecture 4 - Gazebo & ROS Navigation (Mapping)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture5" class="nav-list-link">Lecture 5 - ActionLib & ROS Navigation (Planning)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture6" class="nav-list-link">Lecture 6 - ROS Navigation (Recap & Costmaps)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture7" class="nav-list-link">Lecture 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture8" class="nav-list-link">Lecture 8 - Introduction to computer vision with Machine/Deep Learning</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lab_sessions/" class="nav-list-link">Lab Sessions</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab1" class="nav-list-link">Lab 1 - Linux basics & ROS installation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab2" class="nav-list-link">Lab 2 - Python and ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab3" class="nav-list-link">Lab 3 - Using Git & ROS Services</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab4" class="nav-list-link">Lab 4 - Using Gazebo & Mapping</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab5" class="nav-list-link">Lab 5 - ROS Navigation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab6" class="nav-list-link">Lab 6 - ROS Navigation (Recap & Costmap)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab7" class="nav-list-link">Lab 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item  active"><a href="https://robotics101.westonrobot.net/lab_sessions/lab8" class="nav-list-link active">Lab 8 - Introduction to computer vision with ML/DL</a></li></ul></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/resources/" class="nav-list-link">Resources</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Robotics101" aria-label="Search Robotics101" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://www.westonrobot.com/" class="site-button"
+                  
+                >
+                  Weston Robot
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/westonrobot" class="site-button"
+                  
+                >
+                  GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://robotics101.westonrobot.net/lab_sessions/">Lab Sessions</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Lab 8 - Introduction to computer vision with ML/DL</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <p><strong class="label label-red">Lab 8 submission due on Sunday, 23:59</strong></p>
+      <h2 class="no_toc text-delta" id="table-of-contents">
+        
+        
+          <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of contents
+        
+        
+      </h2>
+    
+
+<ul id="markdown-toc">
+  <li><a href="#prelab-1" id="markdown-toc-prelab-1">Prelab (1%)</a>    <ul>
+      <li><a href="#before-lab" id="markdown-toc-before-lab">Before Lab</a></li>
+      <li><a href="#start-of-lab" id="markdown-toc-start-of-lab">Start of Lab</a></li>
+      <li><a href="#readings" id="markdown-toc-readings">Readings</a></li>
+      <li><a href="#materials" id="markdown-toc-materials">Materials</a></li>
+    </ul>
+  </li>
+  <li><a href="#setup" id="markdown-toc-setup">Setup</a>    <ul>
+      <li><a href="#lab-report-and-submission" id="markdown-toc-lab-report-and-submission">Lab Report and Submission</a></li>
+      <li><a href="#learning-outcomes" id="markdown-toc-learning-outcomes">Learning Outcomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#lab-8-4" id="markdown-toc-lab-8-4">Lab 8 (4%)</a>    <ul>
+      <li><a href="#task-1-google-colab" id="markdown-toc-task-1-google-colab"><strong class="label label-green">Task 1: Google Colab</strong></a></li>
+      <li><a href="#task-2-create-your-object-detection-dataset" id="markdown-toc-task-2-create-your-object-detection-dataset"><strong class="label label-green">Task 2: Create your object detection dataset</strong></a></li>
+      <li><a href="#task-3-training-the-model" id="markdown-toc-task-3-training-the-model"><strong class="label label-green">Task 3: Training the model</strong></a></li>
+      <li><a href="#task-4-evaluating-the-trained-model" id="markdown-toc-task-4-evaluating-the-trained-model"><strong class="label label-green">Task 4: Evaluating the trained model</strong></a></li>
+      <li><a href="#task-5-exporting-the-model-for-deployment" id="markdown-toc-task-5-exporting-the-model-for-deployment"><strong class="label label-green">Task 5: Exporting the Model for deployment</strong></a></li>
+      <li><a href="#submission" id="markdown-toc-submission">Submission</a></li>
+    </ul>
+  </li>
+</ul>
+      <h1 id="prelab-1">
+        
+        
+          <a href="#prelab-1" class="anchor-heading" aria-labelledby="prelab-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prelab (1%)
+        
+        
+      </h1>
+    
+      <h2 id="before-lab">
+        
+        
+          <a href="#before-lab" class="anchor-heading" aria-labelledby="before-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Before Lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>Each Student must register for a free account with <a href="https://roboflow.com/">Roboflow</a></li>
+  <li>Download the Lab 8 Google Colab notebook in the Materials Section</li>
+</ol>
+      <h2 id="start-of-lab">
+        
+        
+          <a href="#start-of-lab" class="anchor-heading" aria-labelledby="start-of-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Start of Lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.</li>
+</ol>
+      <h2 id="readings">
+        
+        
+          <a href="#readings" class="anchor-heading" aria-labelledby="readings"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Readings
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="https://www.fritz.ai/object-detection/">Object Detection</a></li>
+  <li><a href="https://docs.ultralytics.com/">YOLO - You Only Look Once</a></li>
+  <li><a href="https://pytorch.org/tutorials/beginner/introyt/trainingyt.html">Model Training &amp; Deployment for PyTorch</a></li>
+  <li><a href="https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234">Training Metrics</a></li>
+</ol>
+      <h2 id="materials">
+        
+        
+          <a href="#materials" class="anchor-heading" aria-labelledby="materials"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="/lab_sessions/lab8/assets/Lab_8_notebook.ipynb">Lab 8 Google Colab notebook</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage1.zip">Images for training 1</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage2.zip">Images for training 2</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage3.zip">Images for training 3</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage4.zip">Images for training 4</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage5.zip">Images for training 5</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage6.zip">Images for training 6</a></li>
+  <li><a href="/lab_sessions/lab8/assets/trainingImage7.zip">Images for training 7</a></li>
+  <li><a href="/lab_sessions/lab8/assets/testImage1.zip">Images for testing inferences</a></li>
+</ol><hr />
+      <h1 id="setup">
+        
+        
+          <a href="#setup" class="anchor-heading" aria-labelledby="setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setup
+        
+        
+      </h1>
+    
+<ul>
+  <li>Be in your teams of 5</li>
+  <li>Tasks &amp; report should be performed by all <strong>group members individually</strong> unless told otherwise.</li>
+</ul>
+      <h2 id="lab-report-and-submission">
+        
+        
+          <a href="#lab-report-and-submission" class="anchor-heading" aria-labelledby="lab-report-and-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab Report and Submission
+        
+        
+      </h2>
+    
+<ul>
+  <li>Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.</li>
+  <li>You can share common experimental data, but not explanations, code or deductions for the lab report.</li>
+  <li>Discrepancies between report results and code submissions are liable for loss of marks.</li>
+  <li>Each task will be clearly labelled and will need to be included in your lab report, which is in the format “<strong>lab8_report_&lt;STUDENT_ID&gt;.doc / pdf</strong>”, include your name, student_id at the beginning of the report.</li>
+  <li>Zip up your lab report and other requirements (if present) and name it “<strong>lab8_report_&lt;STUDENT_ID&gt;.doc / pdf</strong>” and upload it.</li>
+</ul>
+      <h2 id="learning-outcomes">
+        
+        
+          <a href="#learning-outcomes" class="anchor-heading" aria-labelledby="learning-outcomes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Learning Outcomes
+        
+        
+      </h2>
+    
+<p>By the end of lab 8, you will have:</p>
+<ol>
+  <li>Learnt how to create a object detection dataset using labeling tools</li>
+  <li>Learnt how to train/deploy a object detection model</li>
+  <li>Learnt the basics of evaluating your object detection model and implementing tweaks to improve the model</li>
+  <li>Experience in the use of common tools/framework to do so (ie. Pytorch, Roboflow, YOLOv5….)</li>
+</ol><hr />
+      <h1 id="lab-8-4">
+        
+        
+          <a href="#lab-8-4" class="anchor-heading" aria-labelledby="lab-8-4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab 8 (4%)
+        
+        
+      </h1>
+    
+<p>Being able to identify objects is a very important skill for robots to have in order to perform tasks in a human environment. Hence, we will build on certain concepts learnt from the previous lab and learn the basics of creating a deep learning model that can be deployed on your robots.</p>
+      <h3 id="task-1-google-colab">
+        
+        
+          <a href="#task-1-google-colab" class="anchor-heading" aria-labelledby="task-1-google-colab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 1: Google Colab</strong>
+        
+        
+      </h3>
+    
+<p>For this lab, we have also prepared a Python jupyter notebook with sample code for how you can train and deploy your own model. Since most deep learning libraries are mainly only compatible with Python 3, we will be using Google Colab to run our notebook instead.</p>
+
+<p>Google Colab is a free Jupyter notebook environment that runs entirely in the cloud service. This allows us to access Google’s computing resources such as GPUs for our deep learning needs. While there is the option to upgrade to a premium version with more feature and resources, the free version will prove sufficient for our needs.</p>
+
+<p>Go to the <a href="https://colab.research.google.com/?utm_source=scs-index">Google Colab</a> site and upload the downloaded Lab-8 notebook. To do this, you will first need to login into your google account.
+<img src="/lab_sessions/lab8/assets/GoogleColabUpload.png" alt="Google Colab Upload" /></p>
+
+<p>You should be able to see the notebook uploaded onto your Google Drive
+<img src="/lab_sessions/lab8/assets/GoogleColabExample.png" alt="Google Colab Example" /></p>
+
+<p>To run cells in the notebook, we will need to connect to a runtime so that we can utilize the Google Cloud’s computing resources. Since Deep Learning and Model Training are computationally expensive and intensive, we will be making use of the GPU hardware accelerator. These can be done with the following steps:</p>
+
+<ol>
+  <li>Click <code class="language-plaintext highlighter-rouge">Connect</code> to connect to a runtime
+<img src="/lab_sessions/lab8/assets/connectRuntime.png" alt="Connect Runtime" /></li>
+  <li>Select <code class="language-plaintext highlighter-rouge">Change Runtime type</code> and change the Hardware accelerator to <code class="language-plaintext highlighter-rouge">GPU</code>
+<img src="/lab_sessions/lab8/assets/SelectGPU.png" alt="Select GPU" /></li>
+</ol>
+
+<p>With this, you should be able to run the cells in the notebook as you have done previously with the Open-CV notebook.</p>
+      <h3 id="task-2-create-your-object-detection-dataset">
+        
+        
+          <a href="#task-2-create-your-object-detection-dataset" class="anchor-heading" aria-labelledby="task-2-create-your-object-detection-dataset"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 2: Create your object detection dataset</strong>
+        
+        
+      </h3>
+    
+<p>The first step to creating our object detection model is to determine the kinds of objects that we want to identify. For this lab, we will be creating a model that is able to identify bottle caps. In future, you can experiment and train your model to identify multiple objects of other different types.</p>
+
+<p>So how do we train our model to identify bottle caps? Well, let’s consider the case of a student like yourself in University. How can the student get better results for their exams? The best method (although some of you might disagree) is to constantly study relevant materials and practice different kinds of questions to do well for the exams.</p>
+
+<p>Training our object detection model follows a similar concept. In order for our model to identify bottle caps accurately, we will need to give it pictures of bottle caps to study. Just like how studying more materials can give you better performance in exams, giving our model many variations of bottle caps to study will allow it to be more adept at being able to correctly identify bottle caps. Hence, our first step for model training would be to prepare our dataset for object detection.</p>
+
+<p>For this lab, we have already prepared sample images for you to train your model.</p>
+<ol>
+  <li>Download the training images (1 - 7) zip file(s) under the materials section and extract the images into a single folder. These images will be used for training our object detection model.</li>
+  <li>Annotate the training images using labelling tools
+    <ul>
+      <li>Our model needs to know where our bottle caps are in the images. Hence, we will need to draw bounding boxes to annotate the images and show the model where the bottle caps are located at. <br />
+<img src="/lab_sessions/lab8/assets/example_annotated_img.png" alt="Example annotated image" /></li>
+      <li>In order to annotate our images, we can make use of various softwares to do so, some of which are listed as additional readings in the notebook. For this lab, we will be making use of <a href="https://roboflow.com/">Roboflow</a> to annotate our images.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Roboflow</strong></p>
+
+<p>Roboflow is a platform that we can use to add and annotate image data. Also, the annotated image dataset can be augmented (we will discuss this further later on) and exported into different formats for model training. Hence, it is a convenient platform for preparing our object detection dataset.</p>
+
+<p>If you haven’t already done so under the Prelab section, create and login into your Roboflow account. Once logged in, the website will prompt you to run through their dataset preparation tutorial. We highly recommend that you follow the <a href="https://blog.roboflow.com/getting-started-with-roboflow/">tutorial project creation</a>, as we will be following the same process in order to prepare and export our dataset.</p>
+
+<ol>
+  <li>Create your new project and call it <code class="language-plaintext highlighter-rouge">Lab 8</code>.
+<img src="/lab_sessions/lab8/assets/CreatingProject.png" alt="Creating Project" /></li>
+  <li>Upload the training images that you have downloaded onto RoboFlow
+<img src="/lab_sessions/lab8/assets/UploadImg.png" alt="Upload Img" /></li>
+  <li>
+    <p>Under the annotation section, add all images under your job, and annotate all the images with the bounding box tool. At this current moment, do not make use of the segmentation/polygon drawing tool, as our model is for identifying of objects, rather than for segmentation/classification (as explained in the lectures)</p>
+
+    <ol>
+      <li>Note: This step will largely manual and is likely take up the bulk of your time. Nevertheless, we do encourage students to put in effort for image annotation as poorly annotated image data can heavily impact the accuracy of your trained model</li>
+    </ol>
+  </li>
+  <li>
+    <p>Once all the images have been annotated, add the images to the dataset. A prompt will request for the train-test data split. The values to use for the dataset split can potentially impact your model training heavily. For this lab, we will be using the <code class="language-plaintext highlighter-rouge">80-20</code> split For this lab. This means that 80% of the data will fall under the train dataset, while the remaining data will fall under the test dataset.
+<img src="/lab_sessions/lab8/assets/trainTest.png" alt="Train Test" /></p>
+  </li>
+  <li>
+    <p>After the train-test dataset split, we will be able to add preprocessing and augmentations to our image data. 
+<img src="/lab_sessions/lab8/assets/PreprocessAugment.png" alt="Preprocess Augmentation" /></p>
+
+    <ol>
+      <li>
+        <p>There are many <a href="https://www.mygreatlearning.com/blog/introduction-to-image-pre-processing/">techniques</a> that you can employ for image preprocessing. For this lab, we will be adding the auto-orientate and resize (stretch to 640 x 480) steps. Re-sizing changes the pixel information of the image, where reducing an image in size will result in unneeded pixel information being discarded.</p>
+      </li>
+      <li>
+        <p>There are many <a href="https://iq.opengenus.org/data-augmentation/">techniques</a> that you can employ to further augment your dataset. However, due to the lack of a big dataset and time, do limit the number of augmentations to a maximum of 3 to prevent long training times for the model.</p>
+      </li>
+    </ol>
+  </li>
+  <li>Once augmentations have been added, you will be able to generate a version and export the dataset in various types of formats. For this lab, we will be using the <code class="language-plaintext highlighter-rouge">YOLO v5 Pytorch</code> Format for export. Select the download code option and copy the download code into the notebook.</li>
+</ol>
+
+<p><img src="/lab_sessions/lab8/assets/selectYolov5.png" alt="Select Yolov5" />
+<img src="/lab_sessions/lab8/assets/DownloadCode.png" alt="Download Code" /></p>
+
+<ul>
+  <li>
+    <p><strong class="label label-blue">Task 2a</strong> Is it important for your bounding boxes to be a tight fit for the object? Explain your answer.</p>
+  </li>
+  <li>
+    <p><strong class="label label-blue">Task 2b</strong> Why did we choose to re-size our images to 640 x 480? (Instead of say 640 x 640?) Would re-sizing our images to 1280 x 960 be fine as well? (Hint - Observe the image resolutions of all the images within the dataset)</p>
+  </li>
+</ul>
+      <h3 id="task-3-training-the-model">
+        
+        
+          <a href="#task-3-training-the-model" class="anchor-heading" aria-labelledby="task-3-training-the-model"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 3: Training the model</strong>
+        
+        
+      </h3>
+    
+
+<p>With the dataset prepared and (painstakingly) annotated, it is now finally time to start training our model. Upload your notebook onto Google ColabOpen up the notebook and go to the Model Training Section. Follow the instructions in the notebook on how you can train your own model.</p>
+
+<p>Ensure that you have connected to a GPU runtime before starting your model training. You can do so by clicking on the “Change runtime type” button and changing the hardware accelerator to GPU. Otherwise, your model training time will take a significantly longer time to complete.</p>
+
+<p>Note: The notebook has been purposely written with some brevity, such that students will have to learn how to look for relevant information and approach a problem without step-by-step instructions (which is an important skill for any engineer to have). Nevertheless, most of the concepts in the notebook have been discussed and most problems that you may encounter can be solved with some googling and an understanding of the concepts discussed.</p>
+
+<ul>
+  <li><strong class="label label-blue">Task 3a</strong> Go through the notebook and run your model training through 80 epochs. Leave the output in the notebook.</li>
+</ul>
+      <h3 id="task-4-evaluating-the-trained-model">
+        
+        
+          <a href="#task-4-evaluating-the-trained-model" class="anchor-heading" aria-labelledby="task-4-evaluating-the-trained-model"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 4: Evaluating the trained model</strong>
+        
+        
+      </h3>
+    
+
+<p>Now that we have our newly trained model, we can make use of various training metrics to evaluate the accuracy and efficiency of our model, so that we can gain better insight on how we can improve andoptimize our model training.</p>
+
+<p>Follow the instructions in the notebook to visualize your results using Tensorboard. You should be able to get the tensorBoard window to show up within the notebook
+<img src="/lab_sessions/lab8/assets/tensorBoardExample.png" alt="Example Tensorboard screenshot" /></p>
+
+<p>Now that we have our Tensorboard window, lets discuss some of the training metrics that it logs.</p>
+
+<p>mean Average Precision (mAP) is a popular metric that tells you how precise your classifier is (how many instances it classifies correctly), as well as how robust it is (it does not miss a significant number of instances), where it computes the average precision value for recall value over 0 to 1.</p>
+
+<ul>
+  <li><strong class="label label-blue">Task 4a</strong> Attach a screenshot of your tensorboard metrics window with the lab report.</li>
+  <li><strong class="label label-blue">Task 4b</strong> What is the mAP value of your model when training at the 80th epoch? Does increasing the number of epochs mean that your mAP value will always increase?</li>
+  <li><strong class="label label-blue">Task 4c</strong> List down any 2 ways we can use to improve the mAP value of our model. State any assumptions that you made with the methods mentioned.</li>
+</ul>
+      <h3 id="task-5-exporting-the-model-for-deployment">
+        
+        
+          <a href="#task-5-exporting-the-model-for-deployment" class="anchor-heading" aria-labelledby="task-5-exporting-the-model-for-deployment"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 5: Exporting the Model for deployment</strong>
+        
+        
+      </h3>
+    
+
+<p>With our newly trained model, lets run some inferences on some test images in order to test out our model</p>
+
+<ol>
+  <li>Upload the images onto the runtime at the path <code class="language-plaintext highlighter-rouge">content/yolov5/data/images/</code> for the inference. This can be done by selecting the folder icon on the left-hand side of the page, and clicking on the <code class="language-plaintext highlighter-rouge">Upload</code> button.</li>
+</ol>
+
+<p><img src="/lab_sessions/lab8/assets/UploadingImageFiles.png" alt="Uploading Image Files" /></p>
+
+<ul>
+  <li>
+    <p><strong class="label label-blue">Task 5a</strong> Download the images that was run through the inference and attach the 3 images with the lab report. <strong>They should have bounding boxes drawn on the bottle caps with a minimum accuracy of 50%</strong>.
+<img src="/lab_sessions/lab8/assets/exampleBottleCapImg.png" alt="Example Bottle Cap Img" /></p>
+  </li>
+  <li>
+    <p><strong class="label label-blue">Task 5b</strong> Export your model in the PyTorch format (best.pt), and download the online notebook(.ipynb) with the output cells intact. Submit them together with the lab report.</p>
+  </li>
+</ul>
+
+<p><strong>Note</strong></p>
+<ul>
+  <li>
+    <p>We will also be <strong>testing your model on 10 other bottle cap images that are not in your dataset</strong> to evaluate the effectiveness &amp; accuracy of your model. Hence, we highly recommend you to train and improve your model on additional images of bottle caps.</p>
+  </li>
+  <li>
+    <p>These additional images can be taken using your own cameras(recommended to use the same aspect ratio as the training images of 4:3)/online images that you can find. Do refer to the considerations and good practices for Data Collection, Cleaning and Preparation mentioned in the lecture slides in order to optimize and improve your model training.</p>
+  </li>
+  <li>
+    <p>At the same time, the bottle cap images that we will be testing on would <strong>not be very different from those that were in the dataset</strong>. Hence, we do not expect you to overtrain your model with a very high detection acccuracy.</p>
+  </li>
+</ul>
+      <h2 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading" aria-labelledby="submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission
+        
+        
+      </h2>
+    
+<p>Zip up your lab report and the model files/notebooks you have made in Task 2/3/4/5 into a zip file called “<strong>lab8_&lt;STUDENT_ID&gt;.zip</strong>” and submit by Sunday, 23:59.</p>
+
+        
+
+        
+
+        
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

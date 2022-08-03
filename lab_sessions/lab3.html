@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lab 3 - Using Git &amp; ROS Services | Robotics101</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Lab 3 - Using Git &amp; ROS Services" />
+<meta name="author" content="Weston Robot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Course website for Introduction to Practical Robotics" />
+<meta property="og:description" content="Course website for Introduction to Practical Robotics" />
+<link rel="canonical" href="https://robotics101.westonrobot.net/lab_sessions/lab3" />
+<meta property="og:url" content="https://robotics101.westonrobot.net/lab_sessions/lab3" />
+<meta property="og:site_name" content="Robotics101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lab 3 - Using Git &amp; ROS Services" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Weston Robot"},"description":"Course website for Introduction to Practical Robotics","headline":"Lab 3 - Using Git &amp; ROS Services","url":"https://robotics101.westonrobot.net/lab_sessions/lab3"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://robotics101.westonrobot.net/" class="site-title lh-tight">
+  Robotics101
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/index.html" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/syllabus/" class="nav-list-link">Syllabus</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/schedule/" class="nav-list-link">Schedule</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lectures/" class="nav-list-link">Lectures</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture1" class="nav-list-link">Lecture 1 - Introduction to practical robotics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture2" class="nav-list-link">Lecture 2 - Python & ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture3" class="nav-list-link">Lecture 3 - Developer tools, project management & robot kinematics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture4" class="nav-list-link">Lecture 4 - Gazebo & ROS Navigation (Mapping)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture5" class="nav-list-link">Lecture 5 - ActionLib & ROS Navigation (Planning)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture6" class="nav-list-link">Lecture 6 - ROS Navigation (Recap & Costmaps)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture7" class="nav-list-link">Lecture 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture8" class="nav-list-link">Lecture 8 - Introduction to computer vision with Machine/Deep Learning</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lab_sessions/" class="nav-list-link">Lab Sessions</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab1" class="nav-list-link">Lab 1 - Linux basics & ROS installation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab2" class="nav-list-link">Lab 2 - Python and ROS basics</a></li><li class="nav-list-item  active"><a href="https://robotics101.westonrobot.net/lab_sessions/lab3" class="nav-list-link active">Lab 3 - Using Git & ROS Services</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab4" class="nav-list-link">Lab 4 - Using Gazebo & Mapping</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab5" class="nav-list-link">Lab 5 - ROS Navigation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab6" class="nav-list-link">Lab 6 - ROS Navigation (Recap & Costmap)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab7" class="nav-list-link">Lab 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab8" class="nav-list-link">Lab 8 - Introduction to computer vision with ML/DL</a></li></ul></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/resources/" class="nav-list-link">Resources</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Robotics101" aria-label="Search Robotics101" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://www.westonrobot.com/" class="site-button"
+                  
+                >
+                  Weston Robot
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/westonrobot" class="site-button"
+                  
+                >
+                  GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://robotics101.westonrobot.net/lab_sessions/">Lab Sessions</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Lab 3 - Using Git & ROS Services</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <p><strong class="label label-red">Lab 3 submission due on Sunday, 23:59</strong></p>
+      <h2 class="no_toc text-delta" id="table-of-contents">
+        
+        
+          <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of contents
+        
+        
+      </h2>
+    
+
+<ul id="markdown-toc">
+  <li><a href="#prelab-1" id="markdown-toc-prelab-1">Prelab (1%)</a>    <ul>
+      <li><a href="#before-lab" id="markdown-toc-before-lab">Before lab</a></li>
+      <li><a href="#start-of-lab" id="markdown-toc-start-of-lab">Start of Lab</a></li>
+      <li><a href="#readings" id="markdown-toc-readings">Readings</a></li>
+      <li><a href="#materials" id="markdown-toc-materials">Materials</a></li>
+    </ul>
+  </li>
+  <li><a href="#setup" id="markdown-toc-setup">Setup</a>    <ul>
+      <li><a href="#lab-report-and-submission" id="markdown-toc-lab-report-and-submission">Lab Report and Submission</a></li>
+      <li><a href="#learning-outcomes" id="markdown-toc-learning-outcomes">Learning Outcomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#lab-3-5" id="markdown-toc-lab-3-5">Lab 3 (5%)</a>    <ul>
+      <li><a href="#setting-up-a-github-organisation" id="markdown-toc-setting-up-a-github-organisation">Setting up a Github organisation</a></li>
+      <li><a href="#using-github-basics" id="markdown-toc-using-github-basics">Using Git(hub) basics</a>        <ul>
+          <li><a href="#task-1-working-with-git-solo" id="markdown-toc-task-1-working-with-git-solo"><strong class="label label-green">Task 1: Working with Git solo</strong></a></li>
+          <li><a href="#task-2-working-with-git-as-a-team" id="markdown-toc-task-2-working-with-git-as-a-team"><strong class="label label-green">Task 2: Working with Git as a team</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#mini-project" id="markdown-toc-mini-project">Mini-project</a>        <ul>
+          <li><a href="#background-overview" id="markdown-toc-background-overview">Background overview</a></li>
+          <li><a href="#task-3-putting-what-we-learnt-to-practice" id="markdown-toc-task-3-putting-what-we-learnt-to-practice"><strong class="label label-green">Task 3: Putting what we learnt to practice</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#submission" id="markdown-toc-submission">Submission</a></li>
+    </ul>
+  </li>
+</ul>
+      <h1 id="prelab-1">
+        
+        
+          <a href="#prelab-1" class="anchor-heading" aria-labelledby="prelab-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prelab (1%)
+        
+        
+      </h1>
+    
+      <h2 id="before-lab">
+        
+        
+          <a href="#before-lab" class="anchor-heading" aria-labelledby="before-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Before lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>Prepare your Github accounts
+    <ol>
+      <li>Each member should have his/her own Github account
+        <ol>
+          <li>Make sure to setup <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">SSH keys</a> for your account to be able to push/pull code from Github</li>
+        </ol>
+      </li>
+      <li><em>TIP for school students: you are typically eligible for Github pro for free with the <a href="https://education.Github.com/">GitHub Student Developer Pack</a>; along with many other perks.</em> ;D</li>
+    </ol>
+  </li>
+  <li>Download and install your preferred (I)DE.
+    <ol>
+      <li>For those who don’t have one, <a href="https://code.visualstudio.com/">Visual Studio Code (VSCode)</a> is a good place to start.</li>
+      <li>VSCode has great python &amp; ROS extensions. ;p</li>
+    </ol>
+  </li>
+  <li>Install git onto your systems</li>
+</ol>
+      <h2 id="start-of-lab">
+        
+        
+          <a href="#start-of-lab" class="anchor-heading" aria-labelledby="start-of-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Start of Lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.</li>
+</ol>
+      <h2 id="readings">
+        
+        
+          <a href="#readings" class="anchor-heading" aria-labelledby="readings"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Readings
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="https://git-scm.com/book/en/v2">Git - Basics Chapter 2</a></li>
+  <li><a href="http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams">ROS - Understanding Services</a></li>
+  <li><a href="http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29">ROS - Creating Service &amp; Client</a></li>
+  <li><a href="http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv">ROS - Creating Msg and Srv</a></li>
+  <li><a href="https://www.tutorialspoint.com/python/bitwise_operators_example.htm">Python - Bitwise Operators</a></li>
+  <li><a href="https://blog.finxter.com/python-conversions-decimal-binary-octal-hex/">Python - Bin, Hex, &amp; Octal</a></li>
+</ol>
+      <h2 id="materials">
+        
+        
+          <a href="#materials" class="anchor-heading" aria-labelledby="materials"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="https://education.Github.com/git-cheat-sheet-education.pdf">Git Cheatsheet</a></li>
+  <li><a href="https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf">Markdown Cheatsheet</a></li>
+  <li><a href="/lab_sessions/lab3/assets/LimoStatus_protocol.xlsx">LimoStatus Msg Protocol</a></li>
+</ol><hr />
+      <h1 id="setup">
+        
+        
+          <a href="#setup" class="anchor-heading" aria-labelledby="setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setup
+        
+        
+      </h1>
+    
+<ul>
+  <li>Be in your teams of 5</li>
+  <li>Tasks &amp; report should be performed by all <strong>group members individually</strong> unless told otherwise.</li>
+</ul>
+      <h2 id="lab-report-and-submission">
+        
+        
+          <a href="#lab-report-and-submission" class="anchor-heading" aria-labelledby="lab-report-and-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab Report and Submission
+        
+        
+      </h2>
+    
+<ul>
+  <li>Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.</li>
+  <li>You can share common experimental data, but not explanations, code or deductions for the lab report.</li>
+  <li>Discrepancies between report results and code submissions are liable for loss of marks.</li>
+  <li>Each task will be clearly labelled and will need to be included in your lab report, which is in the format “<strong>lab3_report_&lt;STUDENT_ID&gt;.doc / pdf</strong>”, include your name, student_id at the begining of the report.</li>
+  <li>Zip up your lab report and other requirements (if present) and name it “<strong>lab3_&lt;STUDENT_ID&gt;.zip</strong>” and upload it.</li>
+</ul>
+      <h2 id="learning-outcomes">
+        
+        
+          <a href="#learning-outcomes" class="anchor-heading" aria-labelledby="learning-outcomes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Learning Outcomes
+        
+        
+      </h2>
+    
+<p>By the end of lab 3, you will have:</p>
+<ol>
+  <li>learnt the basic project workflow using Git</li>
+  <li>experience how code collaboration works using Git</li>
+  <li>learnt how to implement a ROS service and client</li>
+</ol><hr />
+      <h1 id="lab-3-5">
+        
+        
+          <a href="#lab-3-5" class="anchor-heading" aria-labelledby="lab-3-5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab 3 (5%)
+        
+        
+      </h1>
+    
+      <h2 id="setting-up-a-github-organisation">
+        
+        
+          <a href="#setting-up-a-github-organisation" class="anchor-heading" aria-labelledby="setting-up-a-github-organisation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setting up a Github organisation
+        
+        
+      </h2>
+    
+<p>While multiple developers can work on a project in a single Github repository just fine, Github organisations take this a step further. They allow developers to share/manage access and collaborate across multiple projects/code repositories, all as a team.</p>
+
+<p>Today we will start by creating your organisations, ones which you will hopefully continue to use throughout this course.</p>
+
+<p><em>Note: only one member of the team has to create the organisation, he/she will be the owner of said organisation. The owner will be addressed as such for the rest of the course</em></p>
+
+<ol>
+  <li>Creating an organisation
+    <ol>
+      <li>On the owner’s main Github page, click the “+” tab on the top-right hand corner and   select “new organisation”</li>
+      <li>There are multiple tiers of Github organisations, we will just create a free tier one for this course.
+        <ol>
+          <li>For the organisation name, each team should follow the below format:
+            <ol>
+              <li>RSE2107A-AY2122T3-Team-X</li>
+              <li>Where X is your team number</li>
+            </ol>
+          </li>
+          <li>For contact email, you can use the owner’s email address</li>
+          <li>The organisation should belong to the owner’s personal account</li>
+          <li>It should look something shown below</li>
+        </ol>
+
+        <p><img src="/lab_sessions/lab3/assets/new_github_org.png" alt="img" /></p>
+      </li>
+    </ol>
+  </li>
+  <li>After creation, we need to get all team members within the same organisation
+    <ol>
+      <li>From the organisation’s homepage, select the “People tab”.</li>
+      <li>Once there, use the “invite member” button to invite each member of your team into your Github organisation as members.</li>
+      <li><strong>IMPORTANT: To facilitate grading, do invite the following accounts to your organisation as well.</strong>
+        <ol>
+          <li>hanskw-weston</li>
+          <li>Aojd22</li>
+          <li>kartheegeyan</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Congratulations, you now have a Github organisation as a team, you can explore the features and settings available to you as a organisation.
+    <ol>
+      <li><em>One such pertinent feature is the member privileges settings.</em></li>
+    </ol>
+  </li>
+</ol>
+      <h2 id="using-github-basics">
+        
+        
+          <a href="#using-github-basics" class="anchor-heading" aria-labelledby="using-github-basics"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Using Git(hub) basics
+        
+        
+      </h2>
+    
+<p>From the lecture &amp; readings, you should have a rough idea of what Git is all about and it’s role in any software development project.</p>
+
+<p>Good-bye whatever this was…</p>
+
+<p><img src="/lab_sessions/lab3/assets/chaos.png" alt="img" /></p>
+
+<p>Hello ordered chaos…</p>
+
+<p><img src="/lab_sessions/lab3/assets/ordered_chaos.png" alt="img" /></p>
+
+<p>This section of the lab will walk you through a typical project workflow when collaborating on a project, from repository creation to content manipulation.</p>
+
+<p><em>Note: the workflow demonstrated here is commonly called a “<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">feature branch workflow</a>”, which is only one of many commonly used workflows out there. While we are using this workflow in this lab, feel free to use any other workflows for your project development in the future</em></p>
+      <h3 id="task-1-working-with-git-solo">
+        
+        
+          <a href="#task-1-working-with-git-solo" class="anchor-heading" aria-labelledby="task-1-working-with-git-solo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 1: Working with Git solo</strong>
+        
+        
+      </h3>
+    
+<p>In this task, we will go through creating and commit a file to a common remote repository. By the end of this task, you should be aware how to track changes in your repositories and how to successfully merge your changes into a single shared repository.</p>
+
+<ol>
+  <li>Creating a remote code repository
+    <ol>
+      <li>From the owner’s organisation’s “Repositories” tab, click “New repository”.</li>
+      <li>Name this repository, “lab3-git”, <em>check add a README file</em>, make it public and hit “create” (make sure the owner is the organisation).</li>
+      <li><em>After creating, check that every member has write access to this new repository.</em></li>
+    </ol>
+  </li>
+  <li>Cloning remote repository to make a local one
+    <ol>
+      <li>Now we need each member to have a local repository to work on.</li>
+      <li>From the repository’s page, copy the clone url (make sure it is the SSH version) from the green “Code” button.
+<img src="/lab_sessions/lab3/assets/cloning.png" alt="img" /></li>
+      <li>On your terminal, navigate to where you would like this repository to exist and run
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git clone &lt;clone url&gt;
+</code></pre></div>        </div>
+      </li>
+      <li>A new local copy of the repository folder will be created in that location.</li>
+      <li><strong class="label label-blue">Task 1a</strong>We have just created a new remote repository and cloned it into a local repository. However, we can achieve the same result if we reverse the order and make a new local repository and <em>pushing</em> it into a remote one. Can you briefly describe the process to do so? (include any commands needed)</li>
+    </ol>
+  </li>
+  <li>Time to commit your first bit of “code”
+    <ol>
+      <li>In your terminal, navigate to the “lab3-git” folder.</li>
+      <li><strong class="label label-blue">Task 1b</strong>Once in, you can view your repository status by running the command below, include a screenshot of the output in your report.
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git status
+</code></pre></div>        </div>
+      </li>
+      <li>Create and checkout to a new branch by running the commands below (replacing the name accordingly)
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git branch feature_&lt;member name&gt;
+  git checkout feature_&lt;member name&gt;
+</code></pre></div>        </div>
+        <ol>
+          <li><strong class="label label-blue">Task 1c</strong>After checking out this new branch, check git status again and include a screenshot of the output in your report</li>
+          <li><strong class="label label-blue">Task 1d</strong>Compare the outputs from task 1b and 1c, are there any differences between them? If there are, can you explain <em>why</em> there are differences?</li>
+        </ol>
+      </li>
+      <li>In this new branch, create a text file using your name (e.g. albert.txt) in the folder, and write in it, a short introduction of yourself (or anything you would like to share with us).</li>
+      <li>As of now, this new file is <em>untracked</em> (you can check status) and we will need to <em>add this file</em> (or <em>staging</em>)to the repository. Run
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git add &lt;member name&gt;.txt
+</code></pre></div>        </div>
+      </li>
+      <li>we can now commit the files we have just staged by running <em>(some of you will see an error where git does not know who you are, run the suggested commands to configure your name and email with git)</em>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git commit <span class="nt">-m</span> <span class="s2">"Initial commit by &lt;member name&gt;"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>After commiting, we can now <em>push</em> the branch (with our new commit) to the remote repository on Github by
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git push <span class="nt">--set-upstream</span> origin feature_&lt;member name&gt;
+</code></pre></div>        </div>
+        <ol>
+          <li><strong class="label label-blue">Task 1e</strong>Can you explain what does “–set-upstream” does and why we need it?</li>
+        </ol>
+      </li>
+      <li>Now on create a <em>pull request</em> that requests to <em>merge</em> your new remote branch to the main remote branch, you should be able to see the commit and changes you have made in this new <em>pull request</em>
+ <img src="/lab_sessions/lab3/assets/new_pr.png" alt="img" />
+ <img src="/lab_sessions/lab3/assets/pr_details.png" alt="img" /></li>
+      <li>From this newly created <em>pull request</em>, get another member to <em>review and approve</em> the merge and merge your commits to the main branch. <em>NOTE: you can always reject a pull request if something is wrong</em></li>
+    </ol>
+  </li>
+  <li><strong class="label label-yellow">TAKE A BREAK: Wait for all your members to complete task 1 before continuing</strong></li>
+</ol>
+      <h3 id="task-2-working-with-git-as-a-team">
+        
+        
+          <a href="#task-2-working-with-git-as-a-team" class="anchor-heading" aria-labelledby="task-2-working-with-git-as-a-team"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 2: Working with Git as a team</strong>
+        
+        
+      </h3>
+    
+
+<p>In the previous task, we have seen how we can individually make changes to our files and commit them onto a shared remote repository. However, we have glossed over a detail in the workflow…</p>
+
+<p><strong>What if several people created/made changes to the same file/code? How would git know which code to use?</strong></p>
+
+<p>Well.. that situation is what we call a <em>merge conflict</em>, when git does not know how to merge 2 bits of code correctly.</p>
+
+<ol>
+  <li><strong class="label label-blue">Task 2a</strong>Now that everyone has merged their changes in the main branch, view the commit history of the main branch and include a screenshot in your report.
+<img src="/lab_sessions/lab3/assets/commit_history.png" alt="img" /></li>
+  <li>Now on your local repo, checkout to the main branch and run the command below. The log outputs before and after the pull should reflect any changes to the git history for that branch.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git log
+ git pull
+ git log
+</code></pre></div>    </div>
+    <ol>
+      <li><strong class="label label-blue">Task 2b</strong>We ran <em>git pull</em> to get changes from the remote main branch into our local main branch. What command is used if we just want to <strong>check</strong> for changes but not get those changes?</li>
+    </ol>
+  </li>
+  <li>Now from the main branch, make and checkout a new branch called “feature_readme_&lt; member name &gt;”</li>
+  <li>Your README file should only contain the repo’s name at the moment, under this title, write ur name and a few lines on what you expect to learn from this course (or anything else you want to feedback so far) and save the README.</li>
+  <li>Now stage, <em>commit</em> and <em>push</em> your changes to the remote repository and create a new <em>merge request</em> to the main <em>branch</em>.</li>
+  <li>Now for each <em>merge attempt</em> after the first merge, github should now warn that there is now a conflict and we would have to resolve it before it can merge.<br />
+<strong><em>NOTE: Please coordinate among your members when merging</em></strong>
+<img src="/lab_sessions/lab3/assets/merge_conflict.png" alt="img" /></li>
+  <li>When you click the resolve button, you will see a similar screen to this
+<img src="/lab_sessions/lab3/assets/conflict_details.png" alt="img" /></li>
+  <li>To resolve the conflict, edit the text to the desired text, making sure to remove the lines with arrows and equals added by git. After which mark the conflict as resolved and <em>commit</em> the merge.
+<img src="/lab_sessions/lab3/assets/unwanted_lines.png" alt="img" />
+Final desired text
+<img src="/lab_sessions/lab3/assets/final_form.png" alt="img" /></li>
+  <li>Repeat this step until all members have merged in their changes.</li>
+  <li><strong class="label label-blue">Task 2c</strong>Include a screenshot of the remote main branch’s commit history, and the url of your remote repository in your report.</li>
+</ol>
+      <h2 id="mini-project">
+        
+        
+          <a href="#mini-project" class="anchor-heading" aria-labelledby="mini-project"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Mini-project
+        
+        
+      </h2>
+    
+<p>To put what we have learnt into practice, each team will now attempt a “mini-project” of sorts. The end result of this mini-project should be in one shared remote repository (private or public, up to you) on github. How the work is split up among the members will be entirely up to each team.</p>
+      <h3 id="background-overview">
+        
+        
+          <a href="#background-overview" class="anchor-heading" aria-labelledby="background-overview"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Background overview
+        
+        
+      </h3>
+    
+<p>The limo robot is controlled by the limo_base node. This node publishes the status of the robot using the “/limo_status” topic and the <a href="https://github.com/westonrobot/limo_ros/blob/master/limo_base/msg/LimoStatus.msg">limo_base/LimoStatus msg data format</a>. However, the format only outputs numerical representations of the robot status, meaning that without the correct interpretation, one cannot tell what each number actually means.</p>
+
+<p>Thankfully, a description of the various values have been included in the materials provided in this lab, <a href="/lab_sessions/lab3/assets/LimoStatus_protocol.xlsx">LimoStatus Msg Protocol</a>.</p>
+      <h3 id="task-3-putting-what-we-learnt-to-practice">
+        
+        
+          <a href="#task-3-putting-what-we-learnt-to-practice" class="anchor-heading" aria-labelledby="task-3-putting-what-we-learnt-to-practice"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 3: Putting what we learnt to practice</strong>
+        
+        
+      </h3>
+    
+
+<ol>
+  <li>Using the protocol given, make a ROS package (called <strong><em>limo_status_translator</em></strong>) that has 2 types of nodes, details and functions given below:
+    <ol>
+      <li>limo_status_translator_node
+        <ol>
+          <li>Subscribe to the “/limo_status” topic.</li>
+          <li>Process the message received from the “/limo_status” topic into a “human readable string”</li>
+          <li>Implement a service (<a href="/lab_sessions/lab3/assets/GetLimoStatus.srv">.srv file</a> given), that will respond with the correct string depending on what was requested.
+            <ol>
+              <li>e.g. if get_status = 4 and motion_mode in /limo_status = 1, that means the client is requesting for the status_string corresponding to the robot’s current motion_mode, which according to the protocol means that the limo is in ackerman motion mode. The server will then respond with something like “motion mode is ackerman”.</li>
+              <li><strong><em>The status_string has to be in a format that when reading it will immediately tell a user what the status codes actually mean, like the example above.</em></strong></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>limo_status_client_node
+        <ol>
+          <li>Every 1 second, request the different types of strings from limo_status_translator_node and publishes the strings to 5 different topics as string msgs
+            <ol>
+              <li>/limo_status/vehicle_state</li>
+              <li>/limo_status/control_mode</li>
+              <li>/lmo_status/battery_voltage</li>
+              <li>/limo_status/error_code</li>
+              <li>/limo_status/motion_mode</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Final result/example
+ <img src="/lab_sessions/lab3/assets/mini_proj.png" alt="img" /></li>
+    </ol>
+  </li>
+  <li><strong class="label label-blue">Task 3a</strong>Include these things in your report
+    <ol>
+      <li>A short description of your contribution to the project</li>
+      <li>A screenshot of the ROS network when limo_base + the 2 new nodes are running</li>
+      <li>The url of your remote repository.</li>
+    </ol>
+  </li>
+</ol>
+      <h2 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading" aria-labelledby="submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission
+        
+        
+      </h2>
+    
+<p>Zip up your lab report and the package you have made in Task 3 into a zip file called “<strong>lab3_&lt;STUDENT_ID&gt;.zip</strong>” and submit by Sunday, 23:59.</p>
+
+        
+
+        
+
+        
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

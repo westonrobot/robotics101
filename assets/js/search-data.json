@@ -1,0 +1,980 @@
+{"0": {
+    "doc": "Announcements",
+    "title": "Announcements",
+    "content": "Announcements related to the module will be posted here. Do check here often! . ",
+    "url": "https://robotics101.westonrobot.net/announcements/",
+    "relUrl": "/announcements/"
+  },"1": {
+    "doc": "Announcements",
+    "title": "Week 0 Announcement",
+    "content": "May 4 &middot; 0 min read Hello world! . ",
+    "url": "https://robotics101.westonrobot.net/announcements/",
+    "relUrl": "/announcements/"
+  },"2": {
+    "doc": "Home",
+    "title": "Robotics 101",
+    "content": "Welcome to the Introduction to Practical Robotics class! . You can find useful information about the course here: . | announcements | weekly schedule | online resources | . It’s highly recommended that you go through the syllabus and course schedule at the beginning of the course. This will help you get an idea about what you can expect from the course so that you can better plan your study during this semester. ",
+    "url": "https://robotics101.westonrobot.net/index.html#robotics-101",
+    "relUrl": "/index.html#robotics-101"
+  },"3": {
+    "doc": "Home",
+    "title": "Course Staff",
+    "content": "Instructor . Yanliang Zhang . yanliang.zhang@westonrobot.com . I like teaching Robotics! . Teaching Assistants . Albert . course@westonrobot.com . Robotics is cool! . Kartheegeyan . course@westonrobot.com . Robotics is fun! . ",
+    "url": "https://robotics101.westonrobot.net/index.html#course-staff",
+    "relUrl": "/index.html#course-staff"
+  },"4": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/index.html",
+    "relUrl": "/index.html"
+  },"5": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Before Lab | Start of Lab | Readings | Materials | . | Setup . | Lab Report and Submission | Learning Outcomes | . | Lab 8 (4%) . | Task 1: Google Colab | Task 2: Create your object detection dataset | Task 3: Training the model | Task 4: Evaluating the trained model | Task 5: Exporting the Model for deployment | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#table-of-contents",
+    "relUrl": "/lab_sessions/lab8#table-of-contents"
+  },"6": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Prelab (1%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#prelab-1",
+    "relUrl": "/lab_sessions/lab8#prelab-1"
+  },"7": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Before Lab",
+    "content": ". | Each Student must register for a free account with Roboflow | Download the Lab 8 Google Colab notebook in the Materials Section | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#before-lab",
+    "relUrl": "/lab_sessions/lab8#before-lab"
+  },"8": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Start of Lab",
+    "content": ". | We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#start-of-lab",
+    "relUrl": "/lab_sessions/lab8#start-of-lab"
+  },"9": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Readings",
+    "content": ". | Object Detection | YOLO - You Only Look Once | Model Training &amp; Deployment for PyTorch | Training Metrics | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#readings",
+    "relUrl": "/lab_sessions/lab8#readings"
+  },"10": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Materials",
+    "content": ". | Lab 8 Google Colab notebook | Images for training 1 | Images for training 2 | Images for training 3 | Images for training 4 | Images for training 5 | Images for training 6 | Images for training 7 | Images for testing inferences | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#materials",
+    "relUrl": "/lab_sessions/lab8#materials"
+  },"11": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Tasks &amp; report should be performed by all group members individually unless told otherwise. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#setup",
+    "relUrl": "/lab_sessions/lab8#setup"
+  },"12": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Lab Report and Submission",
+    "content": ". | Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | You can share common experimental data, but not explanations, code or deductions for the lab report. | Discrepancies between report results and code submissions are liable for loss of marks. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab8_report_&lt;STUDENT_ID&gt;.doc / pdf”, include your name, student_id at the beginning of the report. | Zip up your lab report and other requirements (if present) and name it “lab8_report_&lt;STUDENT_ID&gt;.doc / pdf” and upload it. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab8#lab-report-and-submission"
+  },"13": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 8, you will have: . | Learnt how to create a object detection dataset using labeling tools | Learnt how to train/deploy a object detection model | Learnt the basics of evaluating your object detection model and implementing tweaks to improve the model | Experience in the use of common tools/framework to do so (ie. Pytorch, Roboflow, YOLOv5….) | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#learning-outcomes",
+    "relUrl": "/lab_sessions/lab8#learning-outcomes"
+  },"14": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Lab 8 (4%)",
+    "content": "Being able to identify objects is a very important skill for robots to have in order to perform tasks in a human environment. Hence, we will build on certain concepts learnt from the previous lab and learn the basics of creating a deep learning model that can be deployed on your robots. Task 1: Google Colab . For this lab, we have also prepared a Python jupyter notebook with sample code for how you can train and deploy your own model. Since most deep learning libraries are mainly only compatible with Python 3, we will be using Google Colab to run our notebook instead. Google Colab is a free Jupyter notebook environment that runs entirely in the cloud service. This allows us to access Google’s computing resources such as GPUs for our deep learning needs. While there is the option to upgrade to a premium version with more feature and resources, the free version will prove sufficient for our needs. Go to the Google Colab site and upload the downloaded Lab-8 notebook. To do this, you will first need to login into your google account. You should be able to see the notebook uploaded onto your Google Drive . To run cells in the notebook, we will need to connect to a runtime so that we can utilize the Google Cloud’s computing resources. Since Deep Learning and Model Training are computationally expensive and intensive, we will be making use of the GPU hardware accelerator. These can be done with the following steps: . | Click Connect to connect to a runtime | Select Change Runtime type and change the Hardware accelerator to GPU | . With this, you should be able to run the cells in the notebook as you have done previously with the Open-CV notebook. Task 2: Create your object detection dataset . The first step to creating our object detection model is to determine the kinds of objects that we want to identify. For this lab, we will be creating a model that is able to identify bottle caps. In future, you can experiment and train your model to identify multiple objects of other different types. So how do we train our model to identify bottle caps? Well, let’s consider the case of a student like yourself in University. How can the student get better results for their exams? The best method (although some of you might disagree) is to constantly study relevant materials and practice different kinds of questions to do well for the exams. Training our object detection model follows a similar concept. In order for our model to identify bottle caps accurately, we will need to give it pictures of bottle caps to study. Just like how studying more materials can give you better performance in exams, giving our model many variations of bottle caps to study will allow it to be more adept at being able to correctly identify bottle caps. Hence, our first step for model training would be to prepare our dataset for object detection. For this lab, we have already prepared sample images for you to train your model. | Download the training images (1 - 7) zip file(s) under the materials section and extract the images into a single folder. These images will be used for training our object detection model. | Annotate the training images using labelling tools . | Our model needs to know where our bottle caps are in the images. Hence, we will need to draw bounding boxes to annotate the images and show the model where the bottle caps are located at. | In order to annotate our images, we can make use of various softwares to do so, some of which are listed as additional readings in the notebook. For this lab, we will be making use of Roboflow to annotate our images. | . | . Roboflow . Roboflow is a platform that we can use to add and annotate image data. Also, the annotated image dataset can be augmented (we will discuss this further later on) and exported into different formats for model training. Hence, it is a convenient platform for preparing our object detection dataset. If you haven’t already done so under the Prelab section, create and login into your Roboflow account. Once logged in, the website will prompt you to run through their dataset preparation tutorial. We highly recommend that you follow the tutorial project creation, as we will be following the same process in order to prepare and export our dataset. | Create your new project and call it Lab 8. | Upload the training images that you have downloaded onto RoboFlow | Under the annotation section, add all images under your job, and annotate all the images with the bounding box tool. At this current moment, do not make use of the segmentation/polygon drawing tool, as our model is for identifying of objects, rather than for segmentation/classification (as explained in the lectures) . | Note: This step will largely manual and is likely take up the bulk of your time. Nevertheless, we do encourage students to put in effort for image annotation as poorly annotated image data can heavily impact the accuracy of your trained model | . | Once all the images have been annotated, add the images to the dataset. A prompt will request for the train-test data split. The values to use for the dataset split can potentially impact your model training heavily. For this lab, we will be using the 80-20 split For this lab. This means that 80% of the data will fall under the train dataset, while the remaining data will fall under the test dataset. | After the train-test dataset split, we will be able to add preprocessing and augmentations to our image data. | There are many techniques that you can employ for image preprocessing. For this lab, we will be adding the auto-orientate and resize (stretch to 640 x 480) steps. Re-sizing changes the pixel information of the image, where reducing an image in size will result in unneeded pixel information being discarded. | There are many techniques that you can employ to further augment your dataset. However, due to the lack of a big dataset and time, do limit the number of augmentations to a maximum of 3 to prevent long training times for the model. | . | Once augmentations have been added, you will be able to generate a version and export the dataset in various types of formats. For this lab, we will be using the YOLO v5 Pytorch Format for export. Select the download code option and copy the download code into the notebook. | . | Task 2a Is it important for your bounding boxes to be a tight fit for the object? Explain your answer. | Task 2b Why did we choose to re-size our images to 640 x 480? (Instead of say 640 x 640?) Would re-sizing our images to 1280 x 960 be fine as well? (Hint - Observe the image resolutions of all the images within the dataset) . | . Task 3: Training the model . With the dataset prepared and (painstakingly) annotated, it is now finally time to start training our model. Upload your notebook onto Google ColabOpen up the notebook and go to the Model Training Section. Follow the instructions in the notebook on how you can train your own model. Ensure that you have connected to a GPU runtime before starting your model training. You can do so by clicking on the “Change runtime type” button and changing the hardware accelerator to GPU. Otherwise, your model training time will take a significantly longer time to complete. Note: The notebook has been purposely written with some brevity, such that students will have to learn how to look for relevant information and approach a problem without step-by-step instructions (which is an important skill for any engineer to have). Nevertheless, most of the concepts in the notebook have been discussed and most problems that you may encounter can be solved with some googling and an understanding of the concepts discussed. | Task 3a Go through the notebook and run your model training through 80 epochs. Leave the output in the notebook. | . Task 4: Evaluating the trained model . Now that we have our newly trained model, we can make use of various training metrics to evaluate the accuracy and efficiency of our model, so that we can gain better insight on how we can improve andoptimize our model training. Follow the instructions in the notebook to visualize your results using Tensorboard. You should be able to get the tensorBoard window to show up within the notebook . Now that we have our Tensorboard window, lets discuss some of the training metrics that it logs. mean Average Precision (mAP) is a popular metric that tells you how precise your classifier is (how many instances it classifies correctly), as well as how robust it is (it does not miss a significant number of instances), where it computes the average precision value for recall value over 0 to 1. | Task 4a Attach a screenshot of your tensorboard metrics window with the lab report. | Task 4b What is the mAP value of your model when training at the 80th epoch? Does increasing the number of epochs mean that your mAP value will always increase? | Task 4c List down any 2 ways we can use to improve the mAP value of our model. State any assumptions that you made with the methods mentioned. | . Task 5: Exporting the Model for deployment . With our newly trained model, lets run some inferences on some test images in order to test out our model . | Upload the images onto the runtime at the path content/yolov5/data/images/ for the inference. This can be done by selecting the folder icon on the left-hand side of the page, and clicking on the Upload button. | . | Task 5a Download the images that was run through the inference and attach the 3 images with the lab report. They should have bounding boxes drawn on the bottle caps with a minimum accuracy of 50%. | Task 5b Export your model in the PyTorch format (best.pt), and download the online notebook(.ipynb) with the output cells intact. Submit them together with the lab report. | . Note . | We will also be testing your model on 10 other bottle cap images that are not in your dataset to evaluate the effectiveness &amp; accuracy of your model. Hence, we highly recommend you to train and improve your model on additional images of bottle caps. | These additional images can be taken using your own cameras(recommended to use the same aspect ratio as the training images of 4:3)/online images that you can find. Do refer to the considerations and good practices for Data Collection, Cleaning and Preparation mentioned in the lecture slides in order to optimize and improve your model training. | At the same time, the bottle cap images that we will be testing on would not be very different from those that were in the dataset. Hence, we do not expect you to overtrain your model with a very high detection acccuracy. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#lab-8-4",
+    "relUrl": "/lab_sessions/lab8#lab-8-4"
+  },"15": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Submission",
+    "content": "Zip up your lab report and the model files/notebooks you have made in Task 2/3/4/5 into a zip file called “lab8_&lt;STUDENT_ID&gt;.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8#submission",
+    "relUrl": "/lab_sessions/lab8#submission"
+  },"16": {
+    "doc": "Lab 8 - Introduction to computer vision with ML/DL",
+    "title": "Lab 8 - Introduction to computer vision with ML/DL",
+    "content": "Lab 8 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab8",
+    "relUrl": "/lab_sessions/lab8"
+  },"17": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Setup | Lab Report and Submission | Learning Outcomes | . | Lab 2 (5%) . | Setting up a catkin workspace for ROS development | Getting and Building an existing ROS package | Running a node . | Task 1: Running the simulation | Task 2: Tele-operating your limo | . | Making our first package . | Task 3: Creating a simple publisher and subscriber | Task 4: Implementing our own node | . | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#table-of-contents",
+    "relUrl": "/lab_sessions/lab2#table-of-contents"
+  },"18": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Prelab (1%)",
+    "content": "We will have a short quiz on concepts that have been covered in the lecture and those that will be needed during this lab session. It will be in a short-form open-ended answer format, and concepts covered will be from the readings found below. Readings . | ROS - Understanding Nodes | ROS - Understanding Topics | ROS - Launch files | Linux - Ifconfig | Python - Basics Tutorial | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#prelab-1",
+    "relUrl": "/lab_sessions/lab2#prelab-1"
+  },"19": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Steps should be performed by all group members individually. | You can share observation data, but not explanations, code or deductions for the lab report | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#setup",
+    "relUrl": "/lab_sessions/lab2#setup"
+  },"20": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Lab Report and Submission",
+    "content": ". | Thoughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab2_report_STUDENT_ID.doc / pdf”, include your name, student_id at the begining of the report. | Zip up your lab report and other requirements (if present) and name it “lab2_STUDENT_ID.zip” and upload it onto ___LOCATION TBC___. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab2#lab-report-and-submission"
+  },"21": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 2, you will have: . | learnt how to setup a ROS workspace for development | setup a ROS package and learn testing/debugging tools | create your own custom ROS package | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#learning-outcomes",
+    "relUrl": "/lab_sessions/lab2#learning-outcomes"
+  },"22": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Lab 2 (5%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#lab-2-5",
+    "relUrl": "/lab_sessions/lab2#lab-2-5"
+  },"23": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Setting up a catkin workspace for ROS development",
+    "content": "A catkin workspace is a folder dedicated for ROS development. | Make sure you have sourced you ROS installation | Now we can create and setup out first catkin workspace, to do this we . Make a folder where we want our workspace to be, (here we will make it at home and name it “catkin_ws”) Note: a catkin workspace folder can be named anything and be made anywhere . $ mkdir -p ~/catkin_ws/src $ cd ~/catkin_ws/ . We initialize the workspace with a convenince tool, inside the catkin_ws folder we run . $ catkin_make . If succesful, the folder will now have new “build” and “devel” folders. Inside the devel folder, there is a setup.bash file we need to source to setup the environment variables. We need to do this everytime we rebuild any packages . $ source devel/setup.bash . To make sure that the environment variables are setup correctly, we can check if the ROS_PACKAGE_PATH environment variable includes the directory you’re in. $ echo $ROS_PACKAGE_PATH . | Now, you have set up a catkin workspace for ROS development. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#setting-up-a-catkin-workspace-for-ros-development",
+    "relUrl": "/lab_sessions/lab2#setting-up-a-catkin-workspace-for-ros-development"
+  },"24": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Getting and Building an existing ROS package",
+    "content": "A ROS package can be simply thought as a self contained project folder that has related code and configuration files in it. A package can have 1 to many different nodes within it. Today we will use the limo_ros package to demonstrate how to setup a ros package. This limo_ros package is the same package contained within each limo robot IPC and the package that you guys will build your project on. | First we need to get the source code for the ROS package. The source code is contained in a github repository found here. For those already familiar with Git, you can go ahead and clone the repository into your catkin workspace’s src folder. For the rest, you can download a zip folder with the source code under the Code tab here and extract to your catkin workspace src folder. Do not fret!!! Git will be covered in a future lecture/lab . | Now that we have the source code, we need to build the limo_ros package . To build the package, from the base catkin workspace folder, we have to run . $ catkin_make . and after it builds successfully, we have to source devel/setup.bash . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#getting-and-building-an-existing-ros-package",
+    "relUrl": "/lab_sessions/lab2#getting-and-building-an-existing-ros-package"
+  },"25": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Running a node",
+    "content": "The limo_ros repository contains 4 packages, and details can be found in the source code folder or the github repository itself. Do familiarize yourself with this package as this package will be the basis of your coming project. But for today, we will just be taking a look at how we can run the gazebo simulation and how to tele-operate the limo from your own computer. Task 1: Running the simulation . Gazebo is a simulator that enables us to simulate a close representation of the limo hardware in a virtual world. To setup and get familiar with the simulation of the limo robot, instructions can be found in the limo_gazebo_sim sub package README.md file or can be viewed on the github repository directly here. | Using the README in the repository’s , start the simulation of the limo in gazebo in the 4-wheeled differential drive movement mode and control it using the twist_keyboard. | Once the simulation has been started, view the resulting ROS network using rqt_graph . | Task 1aTake a screenshot of the network graph, include this screenshot in your report. | Task 1bFrom this screenshot, which nodes publishes and subscribes to the “/cmd_vel” topic? | Task 1cWhat is the message data format used on this “/cmd_vel” topic? | . | . Task 2: Tele-operating your limo . The limo_base package contains the ROS package that controls and drives the limo robot. This package is designed to work on a computer connected to the limo’s on-board low-level controller thorugh a serial port. To setup and get familiar with the control node of the limo robot, instructions can be found in the limo_base sub package README.md file or can be viewed on the github repository directly here. In the following task, we will attempt to control the limo using your own computer. To achieve this, we will need to run the limo_base control node on the limo itself, and make our own computer publish to the /cmd_vel topic within the same ROS network. NOTE: Your limo’s has already been setup with all necessary ROS packages for this course within a catkin workspace. The workspace can be found under ~/agilex_ws. For the following task however, you will use the catkin workspace you have made earlier. Do coordinate with your team members when attempting to do this task as to avoid situations where multiple members are attempting to control the robot . | Connect your computer and the limo to a common wifi. | With a keyboard attached to limo’s computer, find the ip address of the nano . | Task 2aWhat’s the nano’s ip address? | . | After finding the ip address . | add the lines below to the nano’s bashrc file, replacing with the ip address (e.g. http://192.168.111.111:11311) you have found and source bashrc export ROS_MASTER_URI=http://&lt;nano ip address&gt;:11311 export ROS_HOSTNAME=&lt;nano ip address&gt; . | . | Run the limo_base_node on the jetson nano computer. | On your computer, find the ip address of your computer. | Task 2bWhat’s your computer’s ip address? | add the lines below your own bashrc file, be mindful of which ip address you use and source the new bashrc file export ROS_MASTER_URI=http://&lt;nano ip address&gt;:11311 export ROS_HOSTNAME=&lt;your own ip address&gt; . | . | On your computer run the teleop twist keyboard node to publish to /cmd_vel | Once the teleop twist keyboard has been started, view the resulting ROS network using rqt_graph . | Task 2cTake a screenshot of the network graph, include this screenshot in your report. | Task 2dFrom this screenshot, which nodes publishes and subscribes to the “/cmd_vel” topic? | Task 2eWhere is the ROS master node running on? | Task 2fFrom this screenshot and the bashrc files, can you deduce what does setting the ROS_MASTER_URI and ROS_HOSTNAME environment variables do? | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#running-a-node",
+    "relUrl": "/lab_sessions/lab2#running-a-node"
+  },"26": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Making our first package",
+    "content": "Now that we have gone through setting up, building, and running a exisitng package, we can now start making our very own custom package. This lab will cover creating the 2 most basic nodes we can have, publishers and subscribers. | Creating a empty catkin package . | Navigate to your catkin workspace’s src folder in your terminal | To create an empty package, run . catkin_create_pkg beginner_tutorials std_msgs rospy roscpp . | This will create a beginner_tutorials folder which contains a package.xml and a CMakeLists.txt, which have been partially filled out with the information you gave catkin_create_pkg. | . | . Task 3: Creating a simple publisher and subscriber . | Follow the official ROS tutorial here to create your first publisher and subscriber nodes. | After creating the 2 nodes, run the 2 nodes and rqt_graph . | Task 3aTake a screenshot of the ROS network graph, include this screenshot in your report. | Task 3bWhat is the topic name these 2 nodes are communcating on and where/how is this name defined? | Task 3cWhat is the message data format used on this topic? | Task 3dWhat is the frequency rate (in Hz) of publishing on this topic and how can we change this rate? | . | . Task 4: Implementing our own node . | Task 4aBuilding on the publisher and subscriber package we just made, create a node that, for every new message it receives from the original publisher; . | it changes the content of the received message (anyway you like) | republishes this new message to a new topic which is subscribed by the original subscriber | . You can modify the 2 original nodes to publish and subscribe to any topic you like and the resultant network should look similar to the diagram below when all 3 nodes are running. Include a screenshot of the network when all 3 nodes are running. | Task 4bInclude this final modified package alongside your report during submission. | Task 4cBriefly describe your new node. | Task 4dWhile running all 3 nodes, what happens to the listener node’s behavior when you switch off the talker node? | Task 4eCreate a ROS launch file to launch all 3 nodes at the same time using 1 roslaunch command. | . Before After . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#making-our-first-package",
+    "relUrl": "/lab_sessions/lab2#making-our-first-package"
+  },"27": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Submission",
+    "content": "Zip up your lab report and the package you have made in Task 3 and 4 into a zip file called “lab2_STUDENT_ID.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2#submission",
+    "relUrl": "/lab_sessions/lab2#submission"
+  },"28": {
+    "doc": "Lab 2 - Python and ROS basics",
+    "title": "Lab 2 - Python and ROS basics",
+    "content": "Lab 2 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab2",
+    "relUrl": "/lab_sessions/lab2"
+  },"29": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Before lab | Start of Lab | Readings | Materials | . | Setup . | Lab Report and Submission | Learning Outcomes | . | Lab 4 (4%) . | Creating a Gazebo world . | Task 1: Importing Models | Task 2: Saving &amp; Launching Worlds | . | Using a Gazebo world . | Task 3: Mapping a simulation world | . | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#table-of-contents",
+    "relUrl": "/lab_sessions/lab4#table-of-contents"
+  },"30": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Prelab (1%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#prelab-1",
+    "relUrl": "/lab_sessions/lab4#prelab-1"
+  },"31": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Before lab",
+    "content": ". | Each student must find and bring a STL model(s) you would like to import during the lab. The STL files can be shared amongst group members when importing multiple models. | Organisation owners should fork WestonRobot/Limo_ros repository into your groups’ github organisation. Following that, each member of the organisation will fork that repository into your own personal github accounts. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#before-lab",
+    "relUrl": "/lab_sessions/lab4#before-lab"
+  },"32": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Start of Lab",
+    "content": ". | We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#start-of-lab",
+    "relUrl": "/lab_sessions/lab4#start-of-lab"
+  },"33": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Readings",
+    "content": ". | Limo - Lidar Mapping | Limo - Lidar Navigation | TF - tf2 Overview | ROS Navigation - Setup | Gazebo - ROS Integration | ROS Navigation - Map Building | ROS - Topic Remapping | ROS - Launch Topic Remapping | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#readings",
+    "relUrl": "/lab_sessions/lab4#readings"
+  },"34": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Materials",
+    "content": ". | YDLidar - ROS package Note this package is slightly different fom the package already present in your limo robot, the package present in your limo is currently not available on github | empty_sit_map.stl | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#materials",
+    "relUrl": "/lab_sessions/lab4#materials"
+  },"35": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Tasks &amp; report should be performed by all group members individually unless told otherwise. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#setup",
+    "relUrl": "/lab_sessions/lab4#setup"
+  },"36": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Lab Report and Submission",
+    "content": ". | Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | You can share common experimental data, but not explanations, code or deductions for the lab report. | Discrepancies between report results and code submissions are liable for loss of marks. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab4_report_&lt;STUDENT_ID&gt;.doc / pdf”, include your name, student_id at the begining of the report. | Zip up your lab report and other requirements (if present) and name it “lab4_&lt;STUDENT_ID&gt;.zip” and upload it. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab4#lab-report-and-submission"
+  },"37": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 4, you will have: . | learnt how to create your own gazebo simulation world | learnt how to integrate your gazebo world into ROS | learnt how to perform mapping of your simulation world | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#learning-outcomes",
+    "relUrl": "/lab_sessions/lab4#learning-outcomes"
+  },"38": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Lab 4 (4%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#lab-4-4",
+    "relUrl": "/lab_sessions/lab4#lab-4-4"
+  },"39": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Creating a Gazebo world",
+    "content": "Task 1: Importing Models . Gazebo simulation can only use STL, OBJ or Collada (DAE) file formats for imported models. For simplicity, this lab will only require the groups to work with STL files. The STL file found under Materials will serve as the base for your simulation where you will be importing your own models on to. | Create directory called “meshes” in the limo_gazebo_sim package. | Download the empty_sit_map.stl file found under Materials and save it to the /meshes directory. | . | To import any model into gazebo, you will need a .world file. For this lab we will be using the empty.world file that can be found in the limo_gazebo_sim package. | From the /worlds directory within limo_gazebo_sim package run . gazebo empty.world . | Under ‘Edit’ select ‘Model Editor’ or press the shortcut keys Ctrl + M. | In the model editor, click on ‘Add’ and change the link name to sit_map before importing the empty_sit_map.stl. | Do not be alarmed by the size of the imported model. The large size of the model is due to the mismatch in standard units used by Gazebo and CAD software. Go ahead and place the model anywhere in the gazebo world. | . | The imported model is also called a link in gazebo. A physical link in the simulation contains inertia, visual and collision properties. To edit the model, right click on the model and select ‘Open Link Inspector’. The pop-up will allow you to change physical properties and geometry related to the link, visual and collision. | Lets set the pose of the model to the perimeters below so that the limo model can be generated at the global origin without any collision for the second part of the lab. | . x = -5.00, y = -2.50, z = 0.00, roll = 1.57, pitch = 0.00, yaw = 0.00 . Task 1aWhat does the link of a model define in gazebo? Use relevant sub-properties to explain. | The visual perimeters allow users to edit the overall appearance of the model. Properties such as colour, material, texture and size can be changed according to the user’s needs. | The imported model is scaled up due to Gazebo’s default unit of measurement being metres, while the default unit of measurement for CAD software is millimeters. Hence, we need to scale down the model by 1000. Under the ‘visual’ tab, set the geometry of the model to | . x = 0.001, y = 0.001, z = 0.001, roll = 0.00, pitch = 0.00, yaw = 0.00 . | The collision tab defines properties such as friction, bounce and contact perimeters. The yellow frame you see in the gazebo model editor indicates the area of collision when running simulations. Similar to the visual property, the collision area also needs to be scaled down by 1000. Set the geometry of the model to . x = 0.001, y = 0.001, z = 0.001, roll = 0.00, pitch = 0.00, yaw = 0.00 . | Task 1bWhat will happen if the visual property is scaled to 0.0005 instead of 0.001? What impact will the difference in scaling have when simulating the teleoperation of the Limo in the gazebo environment? . | Task 1cHow are visual and collision related to link? . | . | Select the ‘Model’ tab and check the ‘static’ box. When a model is set to be static, it becomes immovable. Gazebo’s dynamics engine will not update its position. | Under ‘file’ save the model in a folder of your choice and exit the model editor. The final result should be something similar to the image below. | You have successfully imported the model into gazebo, save the world in the /worlds directory under limo_gazebo_sim and name it sit.world. | . | Now that you are familiar with the whole process, import at least 3 models into the gazebo world you have just created. Within your own groups share the STL models that you and your groupmates have found before coming to the lab. | . Task 2: Saving &amp; Launching Worlds . | For ease of collaboration in the future, it is important to change the absolute path of the models included in your .world file to a relative path, so that others can also use your gazebo environments without editing. To achieve this, gazebo needs to know where the STL file is saved with respect to the root folder. Gazebo simulation has specific environment variables that can be defined by users to simplify this process. Include the following lines into the package.xml file, within the &lt;package&gt; tag. Edit the package.xml file found within the limo_gazebo_sim package. &lt;export&gt; &lt;gazebo_ros gazebo_model_path=\"${prefix}/meshes\"/&gt; &lt;gazebo_ros gazebo_media_path=\"${prefix}/meshes\"/&gt; &lt;/export&gt; . | Open the sit.world file and search for &lt;model name=’sit_map’ &gt; tag. Under this tag you will find the &lt;uri&gt; tag that specifies the path of your model. Change that to . &lt;uri&gt;model://sit_map.stl&lt;/uri&gt; . Note: There are 2 instances of the path within the file that needs to be changed. Please also be mindful of the indentations. | Task 2aWhat is the absolute path of your STL model . | Task 2bWhy are there 2 instances where the model path is defined? . | . | To launch the Limo simulation in your new gazebo environment, you will need to specify your world file in the limo_ackerman.launch and limo_four_diff.launch files. In the launch file you will find the line . &lt;arg name=\"world_name\" default=\"$(find limo_gazebo_sim)/worlds/empty.world\"/&gt; . This line sets the world file that will be used when the simulation is launched. Hence we will need to change it to . &lt;arg name=\"world_name\" default=\"$(find limo_gazebo_sim)/worlds/sit.world\"/&gt; . | Now you are ready to launch the simulation. roslaunch limo_gazebo_sim limo_ackerman.launch . rosrun teleop_twist_keyboard teleop_twist_keyboard.py . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#creating-a-gazebo-world",
+    "relUrl": "/lab_sessions/lab4#creating-a-gazebo-world"
+  },"40": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Using a Gazebo world",
+    "content": "Task 3: Mapping a simulation world . Now that you have a working simulation world, we can now start over first dive into the ROS navigation stack. The ROS navigation stack is a 2D navigation stack, meaning it does its job while only considering a 2d world/map. Essentially, the ROS navigation stack has these parts to allow autonomous navigation… . | Map data of the surrounding environment (not always required) | Sensor data (typically but not limited to lidar) | Transforms (or tfs) | Planners and controllers | . Today we will take a look at building a map using the simulation world you have made with the slam_gmapping node within the gmapping package. To build a map, we require environment data from sensors (lidar laserscan in this case) . | Run the simulation world using the launch file you have edited in Task 2. | Task 3a . | Include a screenshot of the ROS Network in your report. | What topic name is the lidar laserscan data being published under? | . | Now we can run the slam_gmapping node to build the map, roslaunch limo_bringup limo_gmapping.launch . | Task 3b . | Include a screenshot of the ROS Network in your report. | What topic name is the slam_gmapping node subscribed to for laserscan data? | . | Task 3cFrom task 3a and 3b answers and the rviz window, can you infer what has happened to the map building process and what might be the problem? | Task 3dFix the problem by modifying the limo gmapping launch file and build a full map of your environment by driving your limo around in the simulation, stopping once in awhile to build a section of the map (the resultant map should be tidy and clean). Describe what you did to fix the problem in your report. | Task 3e . | We can now save the map by running rosrun map_server map_saver -f &lt;map_name&gt; . | This should have generated a .pgm and .yaml file representing the map in the directory you have ran the command. Include these 2 files and the modified limo_ros package in your submission. | . | . EXTRA (Not Graded): Try mapping your classroom using your LIMO, (using limo_start.launch in limo_bringup instead of the simulation launch file). ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#using-a-gazebo-world",
+    "relUrl": "/lab_sessions/lab4#using-a-gazebo-world"
+  },"41": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Submission",
+    "content": "Zip up your lab report into a zip file called “lab4_&lt;STUDENT_ID&gt;.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4#submission",
+    "relUrl": "/lab_sessions/lab4#submission"
+  },"42": {
+    "doc": "Lab 4 - Using Gazebo & Mapping",
+    "title": "Lab 4 - Using Gazebo & Mapping",
+    "content": "Lab 4 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab4",
+    "relUrl": "/lab_sessions/lab4"
+  },"43": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Start of Lab | Readings | Materials | . | Setup . | Lab Report and Submission | Learning Outcomes | . | Lab 6 (4%) . | Recap . | Task 1: Mapping of a real-life environment | Task 2: Navigation of a real-life environment | . | Map manipulation . | Task 3: (Cost)Map Manipulation | . | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#table-of-contents",
+    "relUrl": "/lab_sessions/lab6#table-of-contents"
+  },"44": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Prelab (1%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#prelab-1",
+    "relUrl": "/lab_sessions/lab6#prelab-1"
+  },"45": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Start of Lab",
+    "content": ". | We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#start-of-lab",
+    "relUrl": "/lab_sessions/lab6#start-of-lab"
+  },"46": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Readings",
+    "content": ". | ROS Navigation - Setup | ROS Navigation - AMCL | ROS Navigation - Move_base | ROS Navigation - Map_Server | A* Algorithm | Dijkstra’s Algorithm | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#readings",
+    "relUrl": "/lab_sessions/lab6#readings"
+  },"47": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Materials",
+    "content": ". ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#materials",
+    "relUrl": "/lab_sessions/lab6#materials"
+  },"48": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Tasks &amp; report should be performed by all group members individually unless told otherwise. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#setup",
+    "relUrl": "/lab_sessions/lab6#setup"
+  },"49": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Lab Report and Submission",
+    "content": ". | Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | You can share common experimental data, but not explanations, code or deductions for the lab report. | Discrepancies between report results and code submissions are liable for loss of marks. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab6_report_team_&lt;TEAM_ID&gt;.doc / pdf”, include your name, student_id at the beginning of the report. | Zip up your lab report and other requirements (if present) and name it “lab6_team_&lt;TEAM_ID&gt;.zip” and upload it. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab6#lab-report-and-submission"
+  },"50": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 6, you will have: . | Recapped what you have learnt over the last 4 labs. | Navigated your limo robot through an real-life environment | Learnt how to manipulate the planners’ costmap by editing the map. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#learning-outcomes",
+    "relUrl": "/lab_sessions/lab6#learning-outcomes"
+  },"51": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Lab 6 (4%)",
+    "content": "Today’s lab will be done as a team, therefore each team will only have to create 1 report for this lab. However, each member will still need to submit that same report individually on the submission page. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#lab-6-4",
+    "relUrl": "/lab_sessions/lab6#lab-6-4"
+  },"52": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Recap",
+    "content": "Over the past few labs, you have mapped and navigated through a virtual gazebo environment. Today we will attempt to do the same in a real-life environment. Task 1: Mapping of a real-life environment . For this task, each team is tasked to use the limo robot to map a section of your classroom(or any area of your choosing). The section and size of your map is up to each team, but try to map an area big enough for the limo to move and navigate through. Since the area might be chaotic, the generated map do not have to be very clean. We can fix that further down this lab. | Task 1aInclude the generated map and pictures of the real-life space with your report. | . Task 2: Navigation of a real-life environment . Using the map you have generated and the limo_navigator node you have made in lab 5 task 2 (You can choose among your members), navigate the limo through 4 different way-points through your environment by running the navigator node on your computer. | Task 2aPick 4 way-points and list these in your report. | Task 2bTake a video of your limo navigating through these 4 way-points and a screen recording of the rviz window showing the navigation. Include these 2 videos with your submissions, name them as task2_limo and task2_screen. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#recap",
+    "relUrl": "/lab_sessions/lab6#recap"
+  },"53": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Map manipulation",
+    "content": "Task 3: (Cost)Map Manipulation . There are many reason why we would have to manipulate a map, from a cleaning up a “messy” map to “dis-allowing” movement within a certain space. The map uses primarily uses 3 colours to denote different types of “spaces” or “cells”… . | White denotes “free space” where the robot can freely move in. | Black denotes “occupied space” or “obstacles” where the robot cannot move in. | Gray denotes “no data” meaning we do not know what is in that space. | . By editing the map (.pgm) file, we can indirectly influence the global/local planners’ static costmaps. This in turn affects how these planners plan and navigate through the environment. | Task 3aUsing a image editing software, remove any obstacles in your map that should not be there (these includes things like obstacles that are no longer there, people’s feet etc…). Include this new map with your report, name it as cleaned_map.pgm. | You can use any editing software you are familiar with, a software that can be apt installed and relatively easy to use on ubuntu is gimp. | . | Task 3bBetween any 2 consecutive way-points chosen in task 2a, draw a wall obstacle that will cause the limo to navigate around this wall. Include this new map with your report, name it as added_obstacle_map.pgm. | Task 3cRerun task 2b with the new map in task 3b (You might need to rename the new map to the original name to run it.). Include these 2 videos with your submissions, name them as task3_limo and task3_screen. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#map-manipulation",
+    "relUrl": "/lab_sessions/lab6#map-manipulation"
+  },"54": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Submission",
+    "content": "Zip up your lab report into a zip file called “lab6_team_&lt;TEAM_ID&gt;.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6#submission",
+    "relUrl": "/lab_sessions/lab6#submission"
+  },"55": {
+    "doc": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "title": "Lab 6 - ROS Navigation (Recap & Costmap)",
+    "content": "Lab 6 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab6",
+    "relUrl": "/lab_sessions/lab6"
+  },"56": {
+    "doc": "Lab 1 - Linux basics & ROS installation",
+    "title": "Lab1 (4%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1#lab1-4",
+    "relUrl": "/lab_sessions/lab1#lab1-4"
+  },"57": {
+    "doc": "Lab 1 - Linux basics & ROS installation",
+    "title": "Prelab (1%)",
+    "content": "Before coming to the first lab, you are required to: . | Form your team of 5 | Install Ubuntu 18.04 on your computer | . Readings . | Notes on Ubuntu Installation | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1#prelab-1",
+    "relUrl": "/lab_sessions/lab1#prelab-1"
+  },"58": {
+    "doc": "Lab 1 - Linux basics & ROS installation",
+    "title": "What You Will Need",
+    "content": ". | Your computer with ubuntu installed | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1#what-you-will-need",
+    "relUrl": "/lab_sessions/lab1#what-you-will-need"
+  },"59": {
+    "doc": "Lab 1 - Linux basics & ROS installation",
+    "title": "Learning Outcomes",
+    "content": "By the end of Lab 1, you will have learnt: . | Basic Linux bash commands | Ubuntu’s package manager (apt) | Understand system variables (.bashrc) | Install ROS Melodic | Familiarize with your limo | . Installing ROS Melodic . | Setup sources.list To install ROS, we will have to prepare your computer to accept software from packages.ros.org. To do that we have to add the ROS apt repository to our system’s apt repository source index. sudo sh -c 'echo \"deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main\" &gt; /etc/apt/sources.list.d/ros-latest.list' . Command breakdown: . | sudo - This command temporarily gives you administrator privileges to run certain commands. | . | Setup apt key To get any software from a apt server, we have to get the key to that apt server. sudo apt install curl # if you haven't already installed curl curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add - . Command breakdown: . | apt - apt is ubuntu’s package manager used to get/remove software from apt servers. | . | Installing ros sudo apt update sudo apt install ros-melodic-desktop-full . Command breakdown: . | apt update - This fetches any available updates from all apt servers. This does not install any updates, but rather just informs our system that a update is available. | apt install - This attempts to install a specified package, this installs latest package version available (ROS melodic in this case). | . | Environment setup In order to use our newly installed ROS, we have to somehow inform our terminal where to find this new package. In linux, we use something called environment variables to do this. echo \"source /opt/ros/melodic/setup.bash\" &gt;&gt; ~/.bashrc source ~/.bashrc . Command breakdown: . | echo - This makes bash repeat whatever you tell it to (“source /opt/ros/melodic/setup.bash” in this case) | &gt;&gt; - This tells bash to place the text into a file (~/.bashrc in this case). | source - This essentially runs a file containing bash commands. | ~/.bashrc - This is a special file presnet in the home directory that contains bash commands that is runned once every time you open a new terminal. | . | ROS dependencies There are certain dependencies packages that ROS needs, that we have to apt install. These packages are… . | python-rosdep | python-rosinstall | python-rosinstall-generator | python-wstool | build-essential Using the information from step 3, install these dependencies. After installing these pacakges, run sudo rosdep init rosdep update . | . | Verify installation Now we can proceed with verifying our new ROS installation, by running roscore . If there are no errors, congratulations on installing ROS successfully. | . Getting to know your LIMO . LIMO User manual and start guide . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1#learning-outcomes",
+    "relUrl": "/lab_sessions/lab1#learning-outcomes"
+  },"60": {
+    "doc": "Lab 1 - Linux basics & ROS installation",
+    "title": "Lab 1 - Linux basics & ROS installation",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1",
+    "relUrl": "/lab_sessions/lab1"
+  },"61": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Start of Lab | Readings | Materials | . | Setup . | Lab Report and Submission | Learning Outcomes | . | Lab 5 (5%) . | Single Waypoint Navigation . | Task 1: Navigation using amcl &amp; move_base | . | Multi Waypoint Navigation . | Task 2: Navigation using a node . | Node description | . | . | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#table-of-contents",
+    "relUrl": "/lab_sessions/lab5#table-of-contents"
+  },"62": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Prelab (1%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#prelab-1",
+    "relUrl": "/lab_sessions/lab5#prelab-1"
+  },"63": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Start of Lab",
+    "content": ". | We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#start-of-lab",
+    "relUrl": "/lab_sessions/lab5#start-of-lab"
+  },"64": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Readings",
+    "content": ". | ROS Navigation - Setup | ROS Navigation - AMCL | ROS Navigation - Move_base | ActionLib - Python Tutorials | ROS Navigation - Map_Server | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#readings",
+    "relUrl": "/lab_sessions/lab5#readings"
+  },"65": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Materials",
+    "content": ". ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#materials",
+    "relUrl": "/lab_sessions/lab5#materials"
+  },"66": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Tasks &amp; report should be performed by all group members individually unless told otherwise. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#setup",
+    "relUrl": "/lab_sessions/lab5#setup"
+  },"67": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Lab Report and Submission",
+    "content": ". | Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | You can share common experimental data, but not explanations, code or deductions for the lab report. | Discrepancies between report results and code submissions are liable for loss of marks. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab5_report_&lt;STUDENT_ID&gt;.doc / pdf”, include your name, student_id at the begining of the report. | Zip up your lab report and other requirements (if present) and name it “lab5_&lt;STUDENT_ID&gt;.zip” and upload it. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab5#lab-report-and-submission"
+  },"68": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 5, you will have: . | learnt how to navigate using amcl/move_base | learnt how to provide waypoints to move_vase using a node | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#learning-outcomes",
+    "relUrl": "/lab_sessions/lab5#learning-outcomes"
+  },"69": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Lab 5 (5%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#lab-5-5",
+    "relUrl": "/lab_sessions/lab5#lab-5-5"
+  },"70": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Single Waypoint Navigation",
+    "content": "Task 1: Navigation using amcl &amp; move_base . Basic navigation using ROS navigation stack in created Gazebo world. We will be using the modified launch file and map you have made in lab 4. | Load Gazebo virtual environment and map . | Launch Gazebo simulation . roslaunch limo_gazebo_sim limo_four_diff.launch . | In another terminal, load map using map_server ros package . rosrun map_server map_server &lt;path-to-map-yaml-file&gt; . | . | Launch navigation . | In another terminal, launch navigation launch file . roslaunch limo_bringup limo_navigation_diff.launch . | LaserScan in RViz will not display anything as it is not subscribing to the correct topic. Change to “/limo/scan” . | . | Initial pose estimate and single point navigation using RViz . | AMCL requires an intial starting position, we can define this starting position using the RViz interface. At the top of RViz window, click “2D Pose Estimate”. | On the map, click and hold left mouse click at estimated location of Limo. | After setting the intial pose, we can then publish a goal for the Limo to navigate to. At the top of RViz window, click “2D Nav Goal”. | On the map, click and hold left mouse click at targeted location. | . | . Task 1aWhat topics do “2D Pose Estimate” and “2D Nav Goal” publish to and what are the message types? What are purposes of these topics? . Task 1bWith reference to the tasks in the previous lab, briefly explain why there are two available topics for LaserScan. Task 1cYou will see 3 Map topics on the left window pane in the RViz, yet you only loaded one map, briefly describe what they are. Task 1dSimilarly, you will see 2 Path topics on the left window pane in the RViz, yet the robot only follows one path, briefly describe what they are. Task 1eWhich published topics from move_base can you use to check whether the robot has reached the navigation goal? Hint: refer to move_base documentation and use the “rosmsg show” command. Optional TaskInstead of typing out the command to load the map each time, we have multiple ways to streamline this task. One such method is the roslaunch feature. Edit the navigation launch file to run the map server node. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#single-waypoint-navigation",
+    "relUrl": "/lab_sessions/lab5#single-waypoint-navigation"
+  },"71": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Multi Waypoint Navigation",
+    "content": "Task 2: Navigation using a node . Now that you have successfully navigated the limo through a known map, one way-point/goal at a time using rviz and learnt how move_base receives/feedbacks its navigation goals/status. In this task, you would have to navigate the limo through multiple way-points one after another using your own custom node in its own package. Node description . | Your package should be called “limo_navigator” | Your node should be called “limo_navigator_node” | Your node should follow the behaviour described below . | Send a way-point to move_base to navigate to. | Wait till limo has reached the way-point (or deemed it has failed). | Send the next way-point in the list. | Repeat till limo has reached the last way-point. | . | . | Task 2aPick 4 way-points anywhere within your map, list these in your report. | Task 2bCreate your custom node in its own package (behaviour listed above). | Task 2cCreate a launch file that launches your node along with the navigation setup (i.e. by launching using this file, your limo should start navigating to your waypoints automatically) | Task 2dInclude the limo_ros package you have been using in this lab and your custom package with launch file (from task 2b &amp; 2c) with your report. (Make sure that they are full packages that can be run) | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#multi-waypoint-navigation",
+    "relUrl": "/lab_sessions/lab5#multi-waypoint-navigation"
+  },"72": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Submission",
+    "content": "Zip up your lab report into a zip file called “lab5_&lt;STUDENT_ID&gt;.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5#submission",
+    "relUrl": "/lab_sessions/lab5#submission"
+  },"73": {
+    "doc": "Lab 5 - ROS Navigation",
+    "title": "Lab 5 - ROS Navigation",
+    "content": "Lab 5 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab5",
+    "relUrl": "/lab_sessions/lab5"
+  },"74": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Start of Lab | Readings | Materials | . | Setup . | Lab Report and Submission | Learning Outcomes | . | Lab 7 (4%) . | Working with Images + ROS . | Task 1: Starting the camera stream | Task 2: Utilising the camera stream . | Node description | . | . | Working with Images . | Task 3: Extracting Colours | Task 4: Detecting lines | . | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#table-of-contents",
+    "relUrl": "/lab_sessions/lab7#table-of-contents"
+  },"75": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Prelab (1%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#prelab-1",
+    "relUrl": "/lab_sessions/lab7#prelab-1"
+  },"76": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Start of Lab",
+    "content": ". | We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#start-of-lab",
+    "relUrl": "/lab_sessions/lab7#start-of-lab"
+  },"77": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Readings",
+    "content": ". | LIMO Guide - Depth Camera + LiDAR | ROS - rosparam | OpenCV - Canny Edge Detector | OpenCV - Hough Line Detector | OpenCV - Image Smoothing | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#readings",
+    "relUrl": "/lab_sessions/lab7#readings"
+  },"78": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Materials",
+    "content": ". | Colour Test Image | Colour Venn Diagram | Road Lane Image | Camera Adapter Mount Stp File | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#materials",
+    "relUrl": "/lab_sessions/lab7#materials"
+  },"79": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Tasks &amp; report should be performed by all group members individually unless told otherwise. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#setup",
+    "relUrl": "/lab_sessions/lab7#setup"
+  },"80": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Lab Report and Submission",
+    "content": ". | Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | You can share common experimental data, but not explanations, code or deductions for the lab report. | Discrepancies between report results and code submissions are liable for loss of marks. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab7_report_&lt;STUDENT_ID&gt;.doc / pdf”, include your name, student_id at the beginning of the report. | Zip up your lab report and other requirements (if present) and name it “lab7_report_&lt;STUDENT_ID&gt;.doc / pdf” and upload it. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab7#lab-report-and-submission"
+  },"81": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 7, you will have: . | Learnt how to start and subscribe to a video stream from limo’s camera | Manipulate and analyze images using OpenCV | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#learning-outcomes",
+    "relUrl": "/lab_sessions/lab7#learning-outcomes"
+  },"82": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Lab 7 (4%)",
+    "content": "Before starting with any of the task below, set your network so that each student’s computer can communicate with your LIMO through a local network. (Refer to lab 2 task 2) . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#lab-7-4",
+    "relUrl": "/lab_sessions/lab7#lab-7-4"
+  },"83": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Working with Images + ROS",
+    "content": "Each of your limo is equipped with a forward facing camera mounted on its “head”. The ROS driver (astra_camera) needed to run this camera has already been loaded onto the “~/agilex_ws” catkin workspace on the jetson nano’s home folder. Task 1: Starting the camera stream . For this task, you will need to utilise the image stream from your LIMO’s camera. The camera’s ROS driver mentioned above publishes the different types of “images” from the camera over the ROS network. We are mainly interested in the RGB image stream. | Task 1aSource the agilex_ws setup.bash and run the camera driver using the command below, include an image of the resultant ROS network from your computer in your report. roslaunch astra_camera dabai_u3.launch . | Task 1bWhen running, this driver dynamically creates parameters that are exposed to the ROS network. | What parameters are used to state the height and width of the image captured? | We can change these parameters using several methods, state 2 methods to do so. | . | Task 1cOut of all the different image streams published we are mainly interested in 2; “/camera/rgb/image_raw” &amp; “/camera/rgb/image_raw/compressed”. What are the data formats used to publish these 2 topics? | . Task 2: Utilising the camera stream . For this task, you will need to write a node in its own package that subscribes and displays the “/camera/rgb/image_raw” image stream in its own window. Node description . | Your package should be called “limo_pov” | Your node should be called “limo_pov_node” | Your node should follow the behaviour described below . | Subscribe to “/camera/rgb/image_raw” topic | For each image in the stream, display it in a window called “LIMO POV” using OpenCV’s “imshow” function | . | . | Task 2aCreate your custom node in its own package (behaviour listed above). | Task 2bCreate a launch file to launch limo_pov_node. | Task 2cIn what color space is this image stream in? (you can use the colour test image provided) | Task 2dConvert this image stream to a “GRB” colour space and display this new image in another window called “LIMO’s WACKY POV”. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#working-with-images--ros",
+    "relUrl": "/lab_sessions/lab7#working-with-images--ros"
+  },"84": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Working with Images",
+    "content": "Task 3: Extracting Colours . The different combinations of the primary colours in the RGB colour space gives us a total of 6 primary/secondary colours which are . | Red | Green | Blue | Yellow | Cyan | Magenta | . | Task 3aThe colour_test_img.png image have what are known as “pure” colours, meaning they only have the component colours necessary to make that colour. Create a python script called pure_color_extractor.py and include this script with your report. This script should . | Read the given colour_test_img.png image. | Extract each of the 6 colours listed above | Display each extracted colour on its own window (Total 7 including the original) named after the color. An example showing extracted red is shown below. | . | . | Task 3bHowever, images from the real world rarely so, having a mix of colours at different intensities but are still considered a specific colour. This can be the result of lighting, camera parameters, etc. We will use the colour_venn_diagram.jpg image as an example of this. Create a python script called mixed_color_extractor.py and include this script with your report. This script should . | Read the given colour_venn_diagram.jpg image. | Extract each of the 6 colours listed above | Display each extracted colour on its own window (Total 7 including the original) named after the color. An example showing extracted red is shown below. | . | . Task 4: Detecting lines . Sometimes we need to be able to extract/detect certain features in a image using opencv (shapes, line, etc). For this lab, we will focus on detecting straight lines. | Task 4aCreate a python script called lane_line_detector.py and include this script with your report. This script should . | Read the given road_lane.jpg image. | Extract the 2 lane lines at either side of the road. | Draw the detected lines and their slopes on the original image. | Display the drawn lines image in a window called “Detected Lanes Lines”. An example is shown below | . | . | Task 4bElaborate on/Document your script from task 4a. You should write it in such a way that anyone reading this document will understand what you are trying to achieve and be able to replicate what you have done on any similar image. Make sure to include details on any values you have chosen, how those values affect the process and how you have arrived at those values. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#working-with-images",
+    "relUrl": "/lab_sessions/lab7#working-with-images"
+  },"85": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Submission",
+    "content": "Zip up your lab report and the package/scripts you have made in Task 2/3/4 into a zip file called “lab7_&lt;STUDENT_ID&gt;.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7#submission",
+    "relUrl": "/lab_sessions/lab7#submission"
+  },"86": {
+    "doc": "Lab 7 - Introduction to computer vision with OpenCV",
+    "title": "Lab 7 - Introduction to computer vision with OpenCV",
+    "content": "Lab 7 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab7",
+    "relUrl": "/lab_sessions/lab7"
+  },"87": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Table of contents",
+    "content": ". | Prelab (1%) . | Before lab | Start of Lab | Readings | Materials | . | Setup . | Lab Report and Submission | Learning Outcomes | . | Lab 3 (5%) . | Setting up a Github organisation | Using Git(hub) basics . | Task 1: Working with Git solo | Task 2: Working with Git as a team | . | Mini-project . | Background overview | Task 3: Putting what we learnt to practice | . | Submission | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#table-of-contents",
+    "relUrl": "/lab_sessions/lab3#table-of-contents"
+  },"88": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Prelab (1%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#prelab-1",
+    "relUrl": "/lab_sessions/lab3#prelab-1"
+  },"89": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Before lab",
+    "content": ". | Prepare your Github accounts . | Each member should have his/her own Github account . | Make sure to setup SSH keys for your account to be able to push/pull code from Github | . | TIP for school students: you are typically eligible for Github pro for free with the GitHub Student Developer Pack; along with many other perks. ;D | . | Download and install your preferred (I)DE. | For those who don’t have one, Visual Studio Code (VSCode) is a good place to start. | VSCode has great python &amp; ROS extensions. ;p | . | Install git onto your systems | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#before-lab",
+    "relUrl": "/lab_sessions/lab3#before-lab"
+  },"90": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Start of Lab",
+    "content": ". | We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#start-of-lab",
+    "relUrl": "/lab_sessions/lab3#start-of-lab"
+  },"91": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Readings",
+    "content": ". | Git - Basics Chapter 2 | ROS - Understanding Services | ROS - Creating Service &amp; Client | ROS - Creating Msg and Srv | Python - Bitwise Operators | Python - Bin, Hex, &amp; Octal | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#readings",
+    "relUrl": "/lab_sessions/lab3#readings"
+  },"92": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Materials",
+    "content": ". | Git Cheatsheet | Markdown Cheatsheet | LimoStatus Msg Protocol | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#materials",
+    "relUrl": "/lab_sessions/lab3#materials"
+  },"93": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Setup",
+    "content": ". | Be in your teams of 5 | Tasks &amp; report should be performed by all group members individually unless told otherwise. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#setup",
+    "relUrl": "/lab_sessions/lab3#setup"
+  },"94": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Lab Report and Submission",
+    "content": ". | Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions. | You can share common experimental data, but not explanations, code or deductions for the lab report. | Discrepancies between report results and code submissions are liable for loss of marks. | Each task will be clearly labelled and will need to be included in your lab report, which is in the format “lab3_report_&lt;STUDENT_ID&gt;.doc / pdf”, include your name, student_id at the begining of the report. | Zip up your lab report and other requirements (if present) and name it “lab3_&lt;STUDENT_ID&gt;.zip” and upload it. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#lab-report-and-submission",
+    "relUrl": "/lab_sessions/lab3#lab-report-and-submission"
+  },"95": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Learning Outcomes",
+    "content": "By the end of lab 3, you will have: . | learnt the basic project workflow using Git | experience how code collaboration works using Git | learnt how to implement a ROS service and client | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#learning-outcomes",
+    "relUrl": "/lab_sessions/lab3#learning-outcomes"
+  },"96": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Lab 3 (5%)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#lab-3-5",
+    "relUrl": "/lab_sessions/lab3#lab-3-5"
+  },"97": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Setting up a Github organisation",
+    "content": "While multiple developers can work on a project in a single Github repository just fine, Github organisations take this a step further. They allow developers to share/manage access and collaborate across multiple projects/code repositories, all as a team. Today we will start by creating your organisations, ones which you will hopefully continue to use throughout this course. Note: only one member of the team has to create the organisation, he/she will be the owner of said organisation. The owner will be addressed as such for the rest of the course . | Creating an organisation . | On the owner’s main Github page, click the “+” tab on the top-right hand corner and select “new organisation” | There are multiple tiers of Github organisations, we will just create a free tier one for this course. | For the organisation name, each team should follow the below format: . | RSE2107A-AY2122T3-Team-X | Where X is your team number | . | For contact email, you can use the owner’s email address | The organisation should belong to the owner’s personal account | It should look something shown below | . | . | After creation, we need to get all team members within the same organisation . | From the organisation’s homepage, select the “People tab”. | Once there, use the “invite member” button to invite each member of your team into your Github organisation as members. | IMPORTANT: To facilitate grading, do invite the following accounts to your organisation as well. | hanskw-weston | Aojd22 | kartheegeyan | . | . | Congratulations, you now have a Github organisation as a team, you can explore the features and settings available to you as a organisation. | One such pertinent feature is the member privileges settings. | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#setting-up-a-github-organisation",
+    "relUrl": "/lab_sessions/lab3#setting-up-a-github-organisation"
+  },"98": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Using Git(hub) basics",
+    "content": "From the lecture &amp; readings, you should have a rough idea of what Git is all about and it’s role in any software development project. Good-bye whatever this was… . Hello ordered chaos… . This section of the lab will walk you through a typical project workflow when collaborating on a project, from repository creation to content manipulation. Note: the workflow demonstrated here is commonly called a “feature branch workflow”, which is only one of many commonly used workflows out there. While we are using this workflow in this lab, feel free to use any other workflows for your project development in the future . Task 1: Working with Git solo . In this task, we will go through creating and commit a file to a common remote repository. By the end of this task, you should be aware how to track changes in your repositories and how to successfully merge your changes into a single shared repository. | Creating a remote code repository . | From the owner’s organisation’s “Repositories” tab, click “New repository”. | Name this repository, “lab3-git”, check add a README file, make it public and hit “create” (make sure the owner is the organisation). | After creating, check that every member has write access to this new repository. | . | Cloning remote repository to make a local one . | Now we need each member to have a local repository to work on. | From the repository’s page, copy the clone url (make sure it is the SSH version) from the green “Code” button. | On your terminal, navigate to where you would like this repository to exist and run git clone &lt;clone url&gt; . | A new local copy of the repository folder will be created in that location. | Task 1aWe have just created a new remote repository and cloned it into a local repository. However, we can achieve the same result if we reverse the order and make a new local repository and pushing it into a remote one. Can you briefly describe the process to do so? (include any commands needed) | . | Time to commit your first bit of “code” . | In your terminal, navigate to the “lab3-git” folder. | Task 1bOnce in, you can view your repository status by running the command below, include a screenshot of the output in your report. git status . | Create and checkout to a new branch by running the commands below (replacing the name accordingly) git branch feature_&lt;member name&gt; git checkout feature_&lt;member name&gt; . | Task 1cAfter checking out this new branch, check git status again and include a screenshot of the output in your report | Task 1dCompare the outputs from task 1b and 1c, are there any differences between them? If there are, can you explain why there are differences? | . | In this new branch, create a text file using your name (e.g. albert.txt) in the folder, and write in it, a short introduction of yourself (or anything you would like to share with us). | As of now, this new file is untracked (you can check status) and we will need to add this file (or staging)to the repository. Run git add &lt;member name&gt;.txt . | we can now commit the files we have just staged by running (some of you will see an error where git does not know who you are, run the suggested commands to configure your name and email with git) git commit -m \"Initial commit by &lt;member name&gt;\" . | After commiting, we can now push the branch (with our new commit) to the remote repository on Github by git push --set-upstream origin feature_&lt;member name&gt; . | Task 1eCan you explain what does “–set-upstream” does and why we need it? | . | Now on create a pull request that requests to merge your new remote branch to the main remote branch, you should be able to see the commit and changes you have made in this new pull request | From this newly created pull request, get another member to review and approve the merge and merge your commits to the main branch. NOTE: you can always reject a pull request if something is wrong | . | TAKE A BREAK: Wait for all your members to complete task 1 before continuing | . Task 2: Working with Git as a team . In the previous task, we have seen how we can individually make changes to our files and commit them onto a shared remote repository. However, we have glossed over a detail in the workflow… . What if several people created/made changes to the same file/code? How would git know which code to use? . Well.. that situation is what we call a merge conflict, when git does not know how to merge 2 bits of code correctly. | Task 2aNow that everyone has merged their changes in the main branch, view the commit history of the main branch and include a screenshot in your report. | Now on your local repo, checkout to the main branch and run the command below. The log outputs before and after the pull should reflect any changes to the git history for that branch. git log git pull git log . | Task 2bWe ran git pull to get changes from the remote main branch into our local main branch. What command is used if we just want to check for changes but not get those changes? | . | Now from the main branch, make and checkout a new branch called “feature_readme_&lt; member name &gt;” | Your README file should only contain the repo’s name at the moment, under this title, write ur name and a few lines on what you expect to learn from this course (or anything else you want to feedback so far) and save the README. | Now stage, commit and push your changes to the remote repository and create a new merge request to the main branch. | Now for each merge attempt after the first merge, github should now warn that there is now a conflict and we would have to resolve it before it can merge. NOTE: Please coordinate among your members when merging | When you click the resolve button, you will see a similar screen to this | To resolve the conflict, edit the text to the desired text, making sure to remove the lines with arrows and equals added by git. After which mark the conflict as resolved and commit the merge. Final desired text | Repeat this step until all members have merged in their changes. | Task 2cInclude a screenshot of the remote main branch’s commit history, and the url of your remote repository in your report. | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#using-github-basics",
+    "relUrl": "/lab_sessions/lab3#using-github-basics"
+  },"99": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Mini-project",
+    "content": "To put what we have learnt into practice, each team will now attempt a “mini-project” of sorts. The end result of this mini-project should be in one shared remote repository (private or public, up to you) on github. How the work is split up among the members will be entirely up to each team. Background overview . The limo robot is controlled by the limo_base node. This node publishes the status of the robot using the “/limo_status” topic and the limo_base/LimoStatus msg data format. However, the format only outputs numerical representations of the robot status, meaning that without the correct interpretation, one cannot tell what each number actually means. Thankfully, a description of the various values have been included in the materials provided in this lab, LimoStatus Msg Protocol. Task 3: Putting what we learnt to practice . | Using the protocol given, make a ROS package (called limo_status_translator) that has 2 types of nodes, details and functions given below: . | limo_status_translator_node . | Subscribe to the “/limo_status” topic. | Process the message received from the “/limo_status” topic into a “human readable string” | Implement a service (.srv file given), that will respond with the correct string depending on what was requested. | e.g. if get_status = 4 and motion_mode in /limo_status = 1, that means the client is requesting for the status_string corresponding to the robot’s current motion_mode, which according to the protocol means that the limo is in ackerman motion mode. The server will then respond with something like “motion mode is ackerman”. | The status_string has to be in a format that when reading it will immediately tell a user what the status codes actually mean, like the example above. | . | . | limo_status_client_node . | Every 1 second, request the different types of strings from limo_status_translator_node and publishes the strings to 5 different topics as string msgs . | /limo_status/vehicle_state | /limo_status/control_mode | /lmo_status/battery_voltage | /limo_status/error_code | /limo_status/motion_mode | . | . | Final result/example | . | Task 3aInclude these things in your report . | A short description of your contribution to the project | A screenshot of the ROS network when limo_base + the 2 new nodes are running | The url of your remote repository. | . | . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#mini-project",
+    "relUrl": "/lab_sessions/lab3#mini-project"
+  },"100": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Submission",
+    "content": "Zip up your lab report and the package you have made in Task 3 into a zip file called “lab3_&lt;STUDENT_ID&gt;.zip” and submit by Sunday, 23:59. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3#submission",
+    "relUrl": "/lab_sessions/lab3#submission"
+  },"101": {
+    "doc": "Lab 3 - Using Git & ROS Services",
+    "title": "Lab 3 - Using Git & ROS Services",
+    "content": "Lab 3 submission due on Sunday, 23:59 . ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab3",
+    "relUrl": "/lab_sessions/lab3"
+  },"102": {
+    "doc": "Lab Sessions",
+    "title": "Lab Sessions",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/",
+    "relUrl": "/lab_sessions/"
+  },"103": {
+    "doc": "Lecture 7 - Introduction to computer vision with OpenCV",
+    "title": "Lecture 7 - Introduction to Computer Vision with OpenCV",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture7#lecture-7---introduction-to-computer-vision-with-opencv",
+    "relUrl": "/lectures/lecture7#lecture-7---introduction-to-computer-vision-with-opencv"
+  },"104": {
+    "doc": "Lecture 7 - Introduction to computer vision with OpenCV",
+    "title": "Overview",
+    "content": "Week 7’s lecture will provide a overview on Computer Vision, OpenCV and PID Control. | Computer Vision . | Basic Element on Computer Vision | 2D VS 3D Computer Vision | Mono and Stereo Cameras | Colour Spaces used in Computer Vision . | RGB, BGR | HSV and HSL | . | Typical applications in Robotics | . | OpenCV . | Overview on what is OpenCV | OpenCV basics and examples in Jupyter | . | PID Control . | PID Application | Types of Feedback control . | Bang Bang Control | PID Control | . | How P,I and D controls aid in moving a robot to its desired path | . | . While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects. Further information regarding week 7’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture7#overview",
+    "relUrl": "/lectures/lecture7#overview"
+  },"105": {
+    "doc": "Lecture 7 - Introduction to computer vision with OpenCV",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | In-class Resources: zip (Refer to the README on how to run the notebook) | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture7#lecture-resources",
+    "relUrl": "/lectures/lecture7#lecture-resources"
+  },"106": {
+    "doc": "Lecture 7 - Introduction to computer vision with OpenCV",
+    "title": "Lecture 7 - Introduction to computer vision with OpenCV",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture7",
+    "relUrl": "/lectures/lecture7"
+  },"107": {
+    "doc": "Lecture 2 - Python & ROS basics",
+    "title": "Lecture 2: Python &amp; ROS basics",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture2#lecture-2-python--ros-basics",
+    "relUrl": "/lectures/lecture2#lecture-2-python--ros-basics"
+  },"108": {
+    "doc": "Lecture 2 - Python & ROS basics",
+    "title": "Overview",
+    "content": "Week 2’s lecture will provide a a quick crash course on python2 basics and ROS melodic development. This lecture will cover the fundamental basics of python and ROS, meant to serve as a foundation with which students can built on and expand. While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects and learn/experience what Python/ROS development can be like. Further information regarding week 2’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture2#overview",
+    "relUrl": "/lectures/lecture2#overview"
+  },"109": {
+    "doc": "Lecture 2 - Python & ROS basics",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | In-class Resources: zip (Refer to the README on how to run the notebook) | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture2#lecture-resources",
+    "relUrl": "/lectures/lecture2#lecture-resources"
+  },"110": {
+    "doc": "Lecture 2 - Python & ROS basics",
+    "title": "Lecture 2 - Python & ROS basics",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture2",
+    "relUrl": "/lectures/lecture2"
+  },"111": {
+    "doc": "Lecture 8 - Introduction to computer vision with Machine/Deep Learning",
+    "title": "Lecture 8 - Introduction to Computer Vision with Machine/Deep Learning",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture8#lecture-8---introduction-to-computer-vision-with-machinedeep-learning",
+    "relUrl": "/lectures/lecture8#lecture-8---introduction-to-computer-vision-with-machinedeep-learning"
+  },"112": {
+    "doc": "Lecture 8 - Introduction to computer vision with Machine/Deep Learning",
+    "title": "Overview",
+    "content": "Week 8’s lecture will provide a overview on Machine/Deep learning and common workflows. | Deep Learning . | What is Artificial Intelligence, Machine Learning and Deep Learning, and their relation to each other | Advantages of Deep Learning over Machine Learning | Neural Networks . | Overview on what are Neural Networks | How do neural networks work . | Nodes | Convolutional Neural Nets (CNNs) | . | . | . | Deep Learning in CV . | How Deep Learning can be used for image recognition | Types of image recognition . | Classification | Detection | Segmentation | . | . | Object Detection Workflow . | What is Object Detection and how it works | . | Data Collection . | Methods | Considerations | . | . | . | Data Cleaning &amp; Preparation . | Annotation of Images | Image Pre-processing | Data Augmentation | Train-Test Split | . | . | . | Model Training . | Model Creation | Transfer Learning | Training Methods | . | . | . | Model Evaluation . | Training Metrics | Visualization Tools | . | . | . | Model Deployment . | Exporting the model into different formats | . | . | . | . While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects. Further information regarding week 8’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture8#overview",
+    "relUrl": "/lectures/lecture8#overview"
+  },"113": {
+    "doc": "Lecture 8 - Introduction to computer vision with Machine/Deep Learning",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture8#lecture-resources",
+    "relUrl": "/lectures/lecture8#lecture-resources"
+  },"114": {
+    "doc": "Lecture 8 - Introduction to computer vision with Machine/Deep Learning",
+    "title": "Lecture 8 - Introduction to computer vision with Machine/Deep Learning",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture8",
+    "relUrl": "/lectures/lecture8"
+  },"115": {
+    "doc": "Lecture 3 - Developer tools, project management & robot kinematics",
+    "title": "Lecture 3 - Developer tools, project management &amp; robot kinematics",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture3#lecture-3---developer-tools-project-management--robot-kinematics",
+    "relUrl": "/lectures/lecture3#lecture-3---developer-tools-project-management--robot-kinematics"
+  },"116": {
+    "doc": "Lecture 3 - Developer tools, project management & robot kinematics",
+    "title": "Overview",
+    "content": "Week 3’s lecture will provide a overview on common developer tools (Git(hub), Markdown), fundamentals of project management and a basic view of robot kinematics specific to limo. | Git(hub) . | What is Git, its aims and why we need/use it. | Git vs Github. | Common workflows | Basic usage | . | Project management . | Vendor and BOM management | Time and Budget planning. | . | Robot Kinematics . | What are the different types of robot locomotion, strengths and weaknesses. | Limo specific kinematics. | . | . While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects. Further information regarding week 3’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture3#overview",
+    "relUrl": "/lectures/lecture3#overview"
+  },"117": {
+    "doc": "Lecture 3 - Developer tools, project management & robot kinematics",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture3#lecture-resources",
+    "relUrl": "/lectures/lecture3#lecture-resources"
+  },"118": {
+    "doc": "Lecture 3 - Developer tools, project management & robot kinematics",
+    "title": "Lecture 3 - Developer tools, project management & robot kinematics",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture3",
+    "relUrl": "/lectures/lecture3"
+  },"119": {
+    "doc": "Lecture 1 - Introduction to practical robotics",
+    "title": "Lecture 1: Introduction to practical robotics",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture1#lecture-1-introduction-to-practical-robotics",
+    "relUrl": "/lectures/lecture1#lecture-1-introduction-to-practical-robotics"
+  },"120": {
+    "doc": "Lecture 1 - Introduction to practical robotics",
+    "title": "Overview",
+    "content": "Week 1’s lecture will provide a overview of the robotics industry in Singapore and cover administrative matters pertaining to the module. This lecture will serve as an introduction to the essential concepts of Ubuntu and provide greater insight to the LIMO robot hardware. Students will be learn about the Ubuntu kernel, linux terminal commands, bash script and the file system. Furthermore, students will have a better understanding of the peripherals and drivers present on the LIMO robot. Further information regarding week 1’s prelab and lab will be provided during the lecture. Looking forward to meeting all of you on Monday! . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture1#overview",
+    "relUrl": "/lectures/lecture1#overview"
+  },"121": {
+    "doc": "Lecture 1 - Introduction to practical robotics",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | Limo Robot: pdf | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture1#lecture-resources",
+    "relUrl": "/lectures/lecture1#lecture-resources"
+  },"122": {
+    "doc": "Lecture 1 - Introduction to practical robotics",
+    "title": "Lecture 1 - Introduction to practical robotics",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture1",
+    "relUrl": "/lectures/lecture1"
+  },"123": {
+    "doc": "Lecture 5 - ActionLib & ROS Navigation (Planning)",
+    "title": "Lecture 5 - ActionLib &amp; ROS Navigation (Planning)",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture5#lecture-5---actionlib--ros-navigation-planning",
+    "relUrl": "/lectures/lecture5#lecture-5---actionlib--ros-navigation-planning"
+  },"124": {
+    "doc": "Lecture 5 - ActionLib & ROS Navigation (Planning)",
+    "title": "Overview",
+    "content": "Week 5’s lecture will provide a overview on the ROS navigation stack, localisation and move_base from the actionlib package. | Navigation stack . | Map-based navigation | Packages commonly used for navigation | . | Localisation . | What is localisation | AMCL . | Package details | Setting up the node | . | . | Move_base . | What is move_base | Global and local costmaps . | Package details | Costmap layers | . | Global and local planners . | Planners used by Limo robot | Trajectory tuning and cost function | . | . | . While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects. Further information regarding week 5’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture5#overview",
+    "relUrl": "/lectures/lecture5#overview"
+  },"125": {
+    "doc": "Lecture 5 - ActionLib & ROS Navigation (Planning)",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture5#lecture-resources",
+    "relUrl": "/lectures/lecture5#lecture-resources"
+  },"126": {
+    "doc": "Lecture 5 - ActionLib & ROS Navigation (Planning)",
+    "title": "Lecture 5 - ActionLib & ROS Navigation (Planning)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture5",
+    "relUrl": "/lectures/lecture5"
+  },"127": {
+    "doc": "Lecture 6 - ROS Navigation (Recap & Costmaps)",
+    "title": "Lecture 6 - ROS Navigation (Recap &amp; Costmaps)",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture6#lecture-6---ros-navigation-recap--costmaps",
+    "relUrl": "/lectures/lecture6#lecture-6---ros-navigation-recap--costmaps"
+  },"128": {
+    "doc": "Lecture 6 - ROS Navigation (Recap & Costmaps)",
+    "title": "Overview",
+    "content": "Week 6’s lecture will provide a overview on the algorithms that the global planner (Dijkstra and A*) and local planner (Trajectory Rollout) uses. | Global Planners . | Overview on what global planner does | Algorithms of global planners . | Dijkstra’s | A* (A-star) | . | How they work in theory | How are they applied in ROS Navigation stack | . | Local Planners . | Overview on what local planner does | Trajectory Rollout . | How it works in theory | How are trajectory selected | . | . | . While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects. Further information regarding week 6’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture6#overview",
+    "relUrl": "/lectures/lecture6#overview"
+  },"129": {
+    "doc": "Lecture 6 - ROS Navigation (Recap & Costmaps)",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture6#lecture-resources",
+    "relUrl": "/lectures/lecture6#lecture-resources"
+  },"130": {
+    "doc": "Lecture 6 - ROS Navigation (Recap & Costmaps)",
+    "title": "Lecture 6 - ROS Navigation (Recap & Costmaps)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture6",
+    "relUrl": "/lectures/lecture6"
+  },"131": {
+    "doc": "Lecture 4 - Gazebo & ROS Navigation (Mapping)",
+    "title": "Lecture 4 - Gazebo &amp; ROS Navigation (Mapping)",
+    "content": ". | Monday, 9:00 am – 1:00 pm | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture4#lecture-4---gazebo--ros-navigation-mapping",
+    "relUrl": "/lectures/lecture4#lecture-4---gazebo--ros-navigation-mapping"
+  },"132": {
+    "doc": "Lecture 4 - Gazebo & ROS Navigation (Mapping)",
+    "title": "Overview",
+    "content": "Week 4’s lecture will provide a overview on simulations, Gazebo worlds and ROS integration. We will also be beginning our look into ROS navigation stack. | Simulations . | What are simulations and why are they useful | Physics engines | Gazebo . | GUI | ROS Integration | . | . | 3D printing . | How 3D printing works | 3D printing vs traditional manufacturing | . | ROS Navigation . | Sensors used for localisation and mapping | Coordinate transformation | SLAM | . | . While the concepts covered are non-exhaustive by any means, it should cover most (if not all) that a student will need during the duration of the course. With that in mind, students are still encouraged to explore more advanced concepts to broaden what they are able to do in the their projects. Further information regarding week 4’s prelab and lab will be provided during the lecture. ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture4#overview",
+    "relUrl": "/lectures/lecture4#overview"
+  },"133": {
+    "doc": "Lecture 4 - Gazebo & ROS Navigation (Mapping)",
+    "title": "Lecture resources",
+    "content": ". | Slides: pdf | . ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture4#lecture-resources",
+    "relUrl": "/lectures/lecture4#lecture-resources"
+  },"134": {
+    "doc": "Lecture 4 - Gazebo & ROS Navigation (Mapping)",
+    "title": "Lecture 4 - Gazebo & ROS Navigation (Mapping)",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/lecture4",
+    "relUrl": "/lectures/lecture4"
+  },"135": {
+    "doc": "Lectures",
+    "title": "Lectures",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lectures/",
+    "relUrl": "/lectures/"
+  },"136": {
+    "doc": "Ubuntu Installation",
+    "title": "Install Ubuntu 18.04",
+    "content": "NOTICE: Before proceeding with any ubuntu installation (especially when dual booting), it is highly recommended that you backup any important data you have on the computer. We will not be responsible for any loss of data and cannot provide assistance with any data recovery attempts. 1. Preparation . You need to set up a bootable USB drive for Ubuntu installation. You need the following: . | A USB drive with a minimum capacity of 4GB | Ubuntu 18.04 Desktop Image | Windows/Linux application for creating a bootable USB drive: Rufus or Etcher . | Rufus | Etcher | . | . IMPORTANT : You will need to format the USB drive, so backup your data on the USB drive first. After creation, verify you can boot from your USB drive. Usually you can choose which disk to boot from by pressing F2 or F10 or ESC at the boot screen. Search the Internet for information specific to your computer brand and model. If unable to boot from USB, try disabling secure boot/fast boot in BIOS configuration. 2. Disk Partition . Suggested partitioning Size: . | /: root partition, ext4 format, &gt;=25GB | /home: ext4 format, allocate it rest of the free space (as much as possible), this is the place where you put most of your work files | swap: swap area, 4~8G should be sufficient for most computers | . 3. Installation . You mostly only need to follow the Ubuntu installation guide and provide information such as user name, computer name, password etc. You’re encouraged to refer to online materials for detailed guide for installing Ubuntu: . | Dual Boot | Bootable USB drive | VM Oracle VirtualBox | . NOTE: Using virtual machine is not recommended for this course. You may encounter issues related to hardware access. ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1/prelab#install-ubuntu-1804",
+    "relUrl": "/lab_sessions/lab1/prelab#install-ubuntu-1804"
+  },"137": {
+    "doc": "Ubuntu Installation",
+    "title": "Ubuntu Installation",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/lab_sessions/lab1/prelab",
+    "relUrl": "/lab_sessions/lab1/prelab"
+  },"138": {
+    "doc": "Resources",
+    "title": "Github",
+    "content": "LIMO ROS . ",
+    "url": "https://robotics101.westonrobot.net/resources/#github",
+    "relUrl": "/resources/#github"
+  },"139": {
+    "doc": "Resources",
+    "title": "Resources",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/resources/",
+    "relUrl": "/resources/"
+  },"140": {
+    "doc": "Schedule",
+    "title": "Schedule",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/schedule/",
+    "relUrl": "/schedule/"
+  },"141": {
+    "doc": "Schedule",
+    "title": "Week 1 - Overview of the Course",
+    "content": "Monday Introduction to practical robotics Wednesday Lab 1 Ubuntu and ROS installation &amp; Linux basics Sunday Lab 1 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-1-overview-of-the-course",
+    "relUrl": "/schedule/#week-1-overview-of-the-course"
+  },"142": {
+    "doc": "Schedule",
+    "title": "Week 2 - Python and ROS Basics",
+    "content": "Monday Make-up due to Vesak dayPython crash course &amp; ROS basic concepts Wednesday Lab 2 Write a ROS node to publish and subscribe topics Sunday Lab 2 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-2-python-and-ros-basics",
+    "relUrl": "/schedule/#week-2-python-and-ros-basics"
+  },"143": {
+    "doc": "Schedule",
+    "title": "Week 3 - Foundations of Robot Software Development",
+    "content": "Monday Introduction to common development tools &amp; foundations of mobile robots Wednesday Lab 3 Using Git &amp; ROS Services Sunday Lab 3 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-3-foundations-of-robot-software-development",
+    "relUrl": "/schedule/#week-3-foundations-of-robot-software-development"
+  },"144": {
+    "doc": "Schedule",
+    "title": "Week 4 - Robot Simulation with Gazebo &amp; ROS SLAM",
+    "content": "Monday Robot simulation with Gazebo &amp; ROS SLAM Wednesday Lab 4 Create a Gazebo simulation scenario and perform mapping with ROS Sunday Lab 4 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-4-robot-simulation-with-gazebo-ros-slam",
+    "relUrl": "/schedule/#week-4-robot-simulation-with-gazebo-ros-slam"
+  },"145": {
+    "doc": "Schedule",
+    "title": "Week 5 - Mobile Robot Autonomous Navigation",
+    "content": "Monday Introduction to mobile robot navigation Wednesday Lab 5 Implement multi-waypoint navigation with ROS Sunday Lab 5 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-5-mobile-robot-autonomous-navigation",
+    "relUrl": "/schedule/#week-5-mobile-robot-autonomous-navigation"
+  },"146": {
+    "doc": "Schedule",
+    "title": "Week 6 - Navigation Algorithm Study",
+    "content": "Monday Introduction to local and global planners in ROS: DWA and Dijkstra &amp; A* Wednesday Lab 6 Advanced ROS navigation: planner for ackermann robot and add cost map Sunday Lab 6 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-6-navigation-algorithm-study",
+    "relUrl": "/schedule/#week-6-navigation-algorithm-study"
+  },"147": {
+    "doc": "Schedule",
+    "title": "Week 7 - Mid-term review",
+    "content": "Monday Mid-term review Wednesday Mid-term review ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-7-mid-term-review",
+    "relUrl": "/schedule/#week-7-mid-term-review"
+  },"148": {
+    "doc": "Schedule",
+    "title": "Week 8 - Foundations of Robot Software Development",
+    "content": "Monday Introduction to computer vision with OpenCV Wednesday Lab 7 Lane detection and lane tracking control with LIMO Sunday Lab 7 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-8-foundations-of-robot-software-development",
+    "relUrl": "/schedule/#week-8-foundations-of-robot-software-development"
+  },"149": {
+    "doc": "Schedule",
+    "title": "Week 9 - Introduction to deep learning for computer vision",
+    "content": "Monday Introduction to machine learning and pattern recognition Wednesday Lab 8 Basic pattern recognition with OpenCV and Python Sunday Lab 8 report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-9-introduction-to-deep-learning-for-computer-vision",
+    "relUrl": "/schedule/#week-9-introduction-to-deep-learning-for-computer-vision"
+  },"150": {
+    "doc": "Schedule",
+    "title": "Week 10 - System Integration and Testing",
+    "content": "Monday No lecture, System integration and testing Wednesday System integration and testing ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-10-system-integration-and-testing",
+    "relUrl": "/schedule/#week-10-system-integration-and-testing"
+  },"151": {
+    "doc": "Schedule",
+    "title": "Week 11 - System Integration and Testing",
+    "content": "Monday No lecture, System integration and testing Wednesday System integration and testing ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-11-system-integration-and-testing",
+    "relUrl": "/schedule/#week-11-system-integration-and-testing"
+  },"152": {
+    "doc": "Schedule",
+    "title": "Week 12 - Final competition",
+    "content": "Monday No lecture, System integration and testing Wednesday Final competition ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-12-final-competition",
+    "relUrl": "/schedule/#week-12-final-competition"
+  },"153": {
+    "doc": "Schedule",
+    "title": "Week 13 - Final presentation and report",
+    "content": "Monday Final presentation Wednesday Submit report Sunday Final project report due ",
+    "url": "https://robotics101.westonrobot.net/schedule/#week-13-final-presentation-and-report",
+    "relUrl": "/schedule/#week-13-final-presentation-and-report"
+  },"154": {
+    "doc": "Syllabus",
+    "title": "Syllabus",
+    "content": " ",
+    "url": "https://robotics101.westonrobot.net/syllabus/",
+    "relUrl": "/syllabus/"
+  },"155": {
+    "doc": "Syllabus",
+    "title": "Objectives",
+    "content": "This course is primarily designed for students who are new to robotics but want to get a quick exposure to various aspects of robotics development, including hardware, ROS, autonomous navigation, computer vision and machine learning, etc. It covers the industry best tools, workflows and practices, and bridges the gaps between academia courses and solutions to practical challenges in robot and robotics application development. ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#objectives",
+    "relUrl": "/syllabus/#objectives"
+  },"156": {
+    "doc": "Syllabus",
+    "title": "Prerequisites",
+    "content": "A basic understanding of electronics, computer network and programming is assumed. Hands-on experience with CAD tools and 3D printing is also required. ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#prerequisites",
+    "relUrl": "/syllabus/#prerequisites"
+  },"157": {
+    "doc": "Syllabus",
+    "title": "Office Hours",
+    "content": "After class, or by appointment, or post your questions in the forum provided for this purpose. ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#office-hours",
+    "relUrl": "/syllabus/#office-hours"
+  },"158": {
+    "doc": "Syllabus",
+    "title": "Grading Policy",
+    "content": ". | Labs (50%): 8 graded lab sessions, each worth 4-8% | Final project (50%): demonstration (25%), presentation (15%), report (10%) | . ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#grading-policy",
+    "relUrl": "/syllabus/#grading-policy"
+  },"159": {
+    "doc": "Syllabus",
+    "title": "Class Policy",
+    "content": "Regular attendance of both the lectures and lab sessions are essential and expected. ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#class-policy",
+    "relUrl": "/syllabus/#class-policy"
+  },"160": {
+    "doc": "Syllabus",
+    "title": "Academic Honesty",
+    "content": "Lack of knowledge of the academic honesty policy is not a reasonable explanation for a violation. ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#academic-honesty",
+    "relUrl": "/syllabus/#academic-honesty"
+  },"161": {
+    "doc": "Syllabus",
+    "title": "Tentative Schedule",
+    "content": "You can find the course schedule on this page. ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#tentative-schedule",
+    "relUrl": "/syllabus/#tentative-schedule"
+  },"162": {
+    "doc": "Syllabus",
+    "title": "Main References",
+    "content": "As the course covers a wide variety of topics, students are encouraged to search and learn from resources from the Internet. The following is a short list of useful books that will be touched during the course. You may need to consult them occasionally. | Roland Siegwart, Illah Reza Nourbakhsh and Davide Scaramuzza, Introduction to Autonomous Mobile Robots, Second Edition, MIT Press, 2011. | Jason M. O’Kane, A Gentle Introduction to ROS , Independently published, 2013. | . ",
+    "url": "https://robotics101.westonrobot.net/syllabus/#main-references",
+    "relUrl": "/syllabus/#main-references"
+  }
+}

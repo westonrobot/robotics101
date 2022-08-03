@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lab 5 - ROS Navigation | Robotics101</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Lab 5 - ROS Navigation" />
+<meta name="author" content="Weston Robot" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Course website for Introduction to Practical Robotics" />
+<meta property="og:description" content="Course website for Introduction to Practical Robotics" />
+<link rel="canonical" href="https://robotics101.westonrobot.net/lab_sessions/lab5" />
+<meta property="og:url" content="https://robotics101.westonrobot.net/lab_sessions/lab5" />
+<meta property="og:site_name" content="Robotics101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lab 5 - ROS Navigation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Weston Robot"},"description":"Course website for Introduction to Practical Robotics","headline":"Lab 5 - ROS Navigation","url":"https://robotics101.westonrobot.net/lab_sessions/lab5"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://robotics101.westonrobot.net/" class="site-title lh-tight">
+  Robotics101
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/index.html" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/syllabus/" class="nav-list-link">Syllabus</a></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/schedule/" class="nav-list-link">Schedule</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lectures/" class="nav-list-link">Lectures</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture1" class="nav-list-link">Lecture 1 - Introduction to practical robotics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture2" class="nav-list-link">Lecture 2 - Python & ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture3" class="nav-list-link">Lecture 3 - Developer tools, project management & robot kinematics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture4" class="nav-list-link">Lecture 4 - Gazebo & ROS Navigation (Mapping)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture5" class="nav-list-link">Lecture 5 - ActionLib & ROS Navigation (Planning)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture6" class="nav-list-link">Lecture 6 - ROS Navigation (Recap & Costmaps)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture7" class="nav-list-link">Lecture 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lectures/lecture8" class="nav-list-link">Lecture 8 - Introduction to computer vision with Machine/Deep Learning</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://robotics101.westonrobot.net/lab_sessions/" class="nav-list-link">Lab Sessions</a><ul class="nav-list "><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab1" class="nav-list-link">Lab 1 - Linux basics & ROS installation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab2" class="nav-list-link">Lab 2 - Python and ROS basics</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab3" class="nav-list-link">Lab 3 - Using Git & ROS Services</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab4" class="nav-list-link">Lab 4 - Using Gazebo & Mapping</a></li><li class="nav-list-item  active"><a href="https://robotics101.westonrobot.net/lab_sessions/lab5" class="nav-list-link active">Lab 5 - ROS Navigation</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab6" class="nav-list-link">Lab 6 - ROS Navigation (Recap & Costmap)</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab7" class="nav-list-link">Lab 7 - Introduction to computer vision with OpenCV</a></li><li class="nav-list-item "><a href="https://robotics101.westonrobot.net/lab_sessions/lab8" class="nav-list-link">Lab 8 - Introduction to computer vision with ML/DL</a></li></ul></li><li class="nav-list-item"><a href="https://robotics101.westonrobot.net/resources/" class="nav-list-link">Resources</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Robotics101" aria-label="Search Robotics101" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://www.westonrobot.com/" class="site-button"
+                  
+                >
+                  Weston Robot
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/westonrobot" class="site-button"
+                  
+                >
+                  GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://robotics101.westonrobot.net/lab_sessions/">Lab Sessions</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Lab 5 - ROS Navigation</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <p><strong class="label label-red">Lab 5 submission due on Sunday, 23:59</strong></p>
+      <h2 class="no_toc text-delta" id="table-of-contents">
+        
+        
+          <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of contents
+        
+        
+      </h2>
+    
+
+<ul id="markdown-toc">
+  <li><a href="#prelab-1" id="markdown-toc-prelab-1">Prelab (1%)</a>    <ul>
+      <li><a href="#start-of-lab" id="markdown-toc-start-of-lab">Start of Lab</a></li>
+      <li><a href="#readings" id="markdown-toc-readings">Readings</a></li>
+      <li><a href="#materials" id="markdown-toc-materials">Materials</a></li>
+    </ul>
+  </li>
+  <li><a href="#setup" id="markdown-toc-setup">Setup</a>    <ul>
+      <li><a href="#lab-report-and-submission" id="markdown-toc-lab-report-and-submission">Lab Report and Submission</a></li>
+      <li><a href="#learning-outcomes" id="markdown-toc-learning-outcomes">Learning Outcomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#lab-5-5" id="markdown-toc-lab-5-5">Lab 5 (5%)</a>    <ul>
+      <li><a href="#single-waypoint-navigation" id="markdown-toc-single-waypoint-navigation">Single Waypoint Navigation</a>        <ul>
+          <li><a href="#task-1-navigation-using-amcl--move_base" id="markdown-toc-task-1-navigation-using-amcl--move_base"><strong class="label label-green">Task 1: Navigation using amcl &amp; move_base</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#multi-waypoint-navigation" id="markdown-toc-multi-waypoint-navigation">Multi Waypoint Navigation</a>        <ul>
+          <li><a href="#task-2-navigation-using-a-node" id="markdown-toc-task-2-navigation-using-a-node"><strong class="label label-green">Task 2: Navigation using a node</strong></a>            <ul>
+              <li><a href="#node-description" id="markdown-toc-node-description"><strong>Node description</strong></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#submission" id="markdown-toc-submission">Submission</a></li>
+    </ul>
+  </li>
+</ul>
+      <h1 id="prelab-1">
+        
+        
+          <a href="#prelab-1" class="anchor-heading" aria-labelledby="prelab-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prelab (1%)
+        
+        
+      </h1>
+    
+      <h2 id="start-of-lab">
+        
+        
+          <a href="#start-of-lab" class="anchor-heading" aria-labelledby="start-of-lab"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Start of Lab
+        
+        
+      </h2>
+    
+<ol>
+  <li>We will have a short MCQ quiz on concepts that have been covered in the lecture and those that will be needed during this lab session, concepts covered will be from the readings found below.</li>
+</ol>
+      <h2 id="readings">
+        
+        
+          <a href="#readings" class="anchor-heading" aria-labelledby="readings"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Readings
+        
+        
+      </h2>
+    
+<ol>
+  <li><a href="http://wiki.ros.org/navigation/Tutorials/RobotSetup">ROS Navigation - Setup</a></li>
+  <li><a href="http://wiki.ros.org/amcl">ROS Navigation - AMCL</a></li>
+  <li><a href="http://wiki.ros.org/move_base">ROS Navigation - Move_base</a></li>
+  <li><a href="http://wiki.ros.org/actionlib_tutorials/Tutorials">ActionLib - Python Tutorials</a></li>
+  <li><a href="http://wiki.ros.org/map_server">ROS Navigation - Map_Server</a></li>
+</ol>
+      <h2 id="materials">
+        
+        
+          <a href="#materials" class="anchor-heading" aria-labelledby="materials"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials
+        
+        
+      </h2>
+    <hr />
+      <h1 id="setup">
+        
+        
+          <a href="#setup" class="anchor-heading" aria-labelledby="setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Setup
+        
+        
+      </h1>
+    
+<ul>
+  <li>Be in your teams of 5</li>
+  <li>Tasks &amp; report should be performed by all <strong>group members individually</strong> unless told otherwise.</li>
+</ul>
+      <h2 id="lab-report-and-submission">
+        
+        
+          <a href="#lab-report-and-submission" class="anchor-heading" aria-labelledby="lab-report-and-submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab Report and Submission
+        
+        
+      </h2>
+    
+<ul>
+  <li>Throughout this lab, there are tasks that you are supposed to perform and record observations/deductions.</li>
+  <li>You can share common experimental data, but not explanations, code or deductions for the lab report.</li>
+  <li>Discrepancies between report results and code submissions are liable for loss of marks.</li>
+  <li>Each task will be clearly labelled and will need to be included in your lab report, which is in the format “<strong>lab5_report_&lt;STUDENT_ID&gt;.doc / pdf</strong>”, include your name, student_id at the begining of the report.</li>
+  <li>Zip up your lab report and other requirements (if present) and name it “<strong>lab5_&lt;STUDENT_ID&gt;.zip</strong>” and upload it.</li>
+</ul>
+      <h2 id="learning-outcomes">
+        
+        
+          <a href="#learning-outcomes" class="anchor-heading" aria-labelledby="learning-outcomes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Learning Outcomes
+        
+        
+      </h2>
+    
+<p>By the end of lab 5, you will have:</p>
+<ol>
+  <li>learnt how to navigate using amcl/move_base</li>
+  <li>learnt how to provide waypoints to move_vase using a node</li>
+</ol><hr />
+      <h1 id="lab-5-5">
+        
+        
+          <a href="#lab-5-5" class="anchor-heading" aria-labelledby="lab-5-5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lab 5 (5%)
+        
+        
+      </h1>
+    
+      <h2 id="single-waypoint-navigation">
+        
+        
+          <a href="#single-waypoint-navigation" class="anchor-heading" aria-labelledby="single-waypoint-navigation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Single Waypoint Navigation
+        
+        
+      </h2>
+    
+      <h3 id="task-1-navigation-using-amcl--move_base">
+        
+        
+          <a href="#task-1-navigation-using-amcl--move_base" class="anchor-heading" aria-labelledby="task-1-navigation-using-amcl--move_base"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 1: Navigation using amcl &amp; move_base</strong>
+        
+        
+      </h3>
+    
+<p>Basic navigation using ROS navigation stack in created Gazebo world. We will be using the modified launch file and map you have made in lab 4.</p>
+
+<p><img src="/lab_sessions/lab5/assets/overview_tf_small.png" alt="overview_tf_small" /></p>
+
+<ol>
+  <li>Load Gazebo virtual environment and map
+    <ol>
+      <li>
+        <p>Launch Gazebo simulation</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> roslaunch limo_gazebo_sim limo_four_diff.launch
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>In another terminal, load map using map_server ros package</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rosrun map_server map_server &lt;path-to-map-yaml-file&gt;
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>Launch navigation
+    <ol>
+      <li>
+        <p>In another terminal, launch navigation launch file</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> roslaunch limo_bringup limo_navigation_diff.launch
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>LaserScan in RViz will not display anything as it is not subscribing to the correct topic. Change to “/limo/scan”</p>
+      </li>
+    </ol>
+
+    <p><img src="/lab_sessions/lab5/assets/Laserscan.png" alt="Laserscan" /></p>
+  </li>
+  <li>Initial pose estimate and single point navigation using RViz
+    <ol>
+      <li>AMCL requires an intial starting position, we can define this starting position using the RViz interface. At the top of RViz window, click “2D Pose Estimate”.</li>
+      <li>On the map, click and hold left mouse click at estimated location of Limo.</li>
+      <li>After setting the intial pose, we can then publish a goal for the Limo to navigate to. At the top of RViz window, click “2D Nav Goal”.</li>
+      <li>On the map, click and hold left mouse click at targeted location.</li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong class="label label-blue">Task 1a</strong>What topics do “2D Pose Estimate” and “2D Nav Goal” publish to and what are the message types? What are purposes of these topics?</p>
+
+<p><strong class="label label-blue">Task 1b</strong>With reference to the tasks in the previous lab, briefly explain why there are two available topics for LaserScan.</p>
+
+<p><strong class="label label-blue">Task 1c</strong>You will see 3 Map topics on the left window pane in the RViz, yet you only loaded one map, briefly describe what they are.</p>
+
+<p><strong class="label label-blue">Task 1d</strong>Similarly, you will see 2 Path topics on the left window pane in the RViz, yet the robot only follows one path, briefly describe what they are.</p>
+
+<p><strong class="label label-blue">Task 1e</strong>Which published topics from move_base can you use to check whether the robot has reached the navigation goal? Hint: refer to <a href="http://wiki.ros.org/move_base">move_base</a> documentation and use the “rosmsg show” command.</p>
+
+<p><strong class="label label-blue">Optional Task</strong>Instead of typing out the command to load the map each time, we have multiple ways to streamline this task. One such method is the roslaunch feature. Edit the navigation launch file to run the map server node.</p>
+      <h2 id="multi-waypoint-navigation">
+        
+        
+          <a href="#multi-waypoint-navigation" class="anchor-heading" aria-labelledby="multi-waypoint-navigation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Multi Waypoint Navigation
+        
+        
+      </h2>
+    
+      <h3 id="task-2-navigation-using-a-node">
+        
+        
+          <a href="#task-2-navigation-using-a-node" class="anchor-heading" aria-labelledby="task-2-navigation-using-a-node"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong class="label label-green">Task 2: Navigation using a node</strong>
+        
+        
+      </h3>
+    
+<p>Now that you have successfully navigated the limo through a known map, one way-point/goal at a time using rviz and learnt how move_base receives/feedbacks its navigation goals/status.</p>
+
+<p>In this task, you would have to navigate the limo through multiple way-points one after another using your own custom node in its own package.</p>
+      <h4 id="node-description">
+        
+        
+          <a href="#node-description" class="anchor-heading" aria-labelledby="node-description"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong>Node description</strong>
+        
+        
+      </h4>
+    
+<ul>
+  <li>Your package should be called “limo_navigator”</li>
+  <li>Your node should be called “limo_navigator_node”</li>
+  <li>Your node should follow the behaviour described below
+    <ul>
+      <li>Send a way-point to move_base to navigate to.</li>
+      <li>Wait till limo has reached the way-point (or deemed it has failed).</li>
+      <li>Send the next way-point in the list.</li>
+      <li>Repeat till limo has reached the last way-point.</li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li><strong class="label label-green">Task 2a</strong>Pick 4 way-points anywhere within your map, list these in your report.</li>
+  <li><strong class="label label-green">Task 2b</strong>Create your custom node in its own package (behaviour listed above).</li>
+  <li><strong class="label label-green">Task 2c</strong>Create a launch file that launches your node along with the navigation setup (i.e. by launching using this file, your limo should start navigating to your waypoints automatically)</li>
+  <li><strong class="label label-green">Task 2d</strong>Include the limo_ros package you have been using in this lab and your custom package with launch file (from task 2b &amp; 2c) with your report. (Make sure that they are full packages that can be run)</li>
+</ol>
+      <h2 id="submission">
+        
+        
+          <a href="#submission" class="anchor-heading" aria-labelledby="submission"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Submission
+        
+        
+      </h2>
+    
+<p>Zip up your lab report into a zip file called “<strong>lab5_&lt;STUDENT_ID&gt;.zip</strong>” and submit by Sunday, 23:59.</p>
+
+        
+
+        
+
+        
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+
