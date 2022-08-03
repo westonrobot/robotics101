@@ -5,7 +5,7 @@ permalink: /lab_sessions/lab5
 parent: Lab Sessions
 nav_order: 5
 ---
-**Lab 5 submission due on 11<sup>th</sup> June 2022, 23:59**{: .label .label-red }
+**Lab 5 submission due on Sunday, 23:59**{: .label .label-red }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -119,4 +119,4 @@ In this task, you would have to navigate the limo through multiple way-points on
 
 
 ## Submission
-Zip up your lab report into a zip file called "**lab5\_<STUDENT\_ID>.zip**" and submit by 11<sup>th</sup> June 2022, 23:59.
+Zip up your lab report into a zip file called "**lab5\_<STUDENT\_ID>.zip**" and submit by Sunday, 23:59.

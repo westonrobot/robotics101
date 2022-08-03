@@ -5,7 +5,7 @@ permalink: /lab_sessions/lab2
 parent: Lab Sessions
 nav_order: 2
 ---
-**Lab 2 submission due on 22<sup>nd</sup> May 2022, 23:59**{: .label .label-red }
+**Lab 2 submission due on Sunday, 23:59**{: .label .label-red }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -196,4 +196,4 @@ Now that we have gone through setting up, building, and running a exisitng packa
 ![img](assets/network_after.png)
 
 ## Submission
-Zip up your lab report and the package you have made in Task 3 and 4 into a zip file called "**lab2\_STUDENT\_ID.zip**" and submit by 22<sup>nd</sup> May 2022, 23:59.
+Zip up your lab report and the package you have made in Task 3 and 4 into a zip file called "**lab2\_STUDENT\_ID.zip**" and submit by Sunday, 23:59.
