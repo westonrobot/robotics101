@@ -8,7 +8,7 @@ nav_order: 1
 
 # **Lecture 1: Introduction to practical robotics**
 
-- Mon, May 09, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -19,5 +19,5 @@ This lecture will serve as an introduction to the essential concepts of Ubuntu a
 Further information regarding week 1's prelab and lab will be provided during the lecture.
 Looking forward to meeting all of you on Monday!
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture1/assets/Lecture 1 - LIMO Training.pdf %})

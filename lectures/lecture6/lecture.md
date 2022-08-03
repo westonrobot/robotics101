@@ -8,7 +8,7 @@ nav_order: 6
 
 # **Lecture 6 - ROS Navigation (Recap & Costmaps)**
 
-- Mon, June 13, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -33,5 +33,5 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 6's prelab and lab will be provided during the lecture.
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture6/assets/Lecture 6 - Navigation Part 2.pdf %})
