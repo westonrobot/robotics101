@@ -8,7 +8,7 @@ nav_order: 7
 
 # **Lecture 7 - Introduction to Computer Vision with OpenCV**
 
-- Mon, June 27, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -40,5 +40,6 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 7's prelab and lab will be provided during the lecture.
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture7/assets/Lecture 7 - Computer Vision and PID Control.pdf %})
+* In-class Resources: [zip]({{ site.baseurl }}{% link lectures/lecture7/assets/lecture7_handouts.zip %}) (Refer to the README on how to run the notebook)

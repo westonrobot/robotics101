@@ -1,9 +1,9 @@
 ---
-title: Week 10 - Model-based design in Robotics
+title: Week 10 - System Integration and Testing
 ---
 
-Jul 11
-: [Model-based design in Robotics](#)
+Monday
+: No lecture, System integration and testing
 
-Jul 13
+Wednesday
 : System integration and testing

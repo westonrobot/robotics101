@@ -8,7 +8,7 @@ nav_order: 3
 
 # **Lecture 3 - Developer tools, project management & robot kinematics**
 
-- Mon, May 23, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -30,5 +30,5 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 3's prelab and lab will be provided during the lecture.
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture3/assets/Lecture 3 - Common Tools.pdf %})

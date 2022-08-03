@@ -5,7 +5,7 @@ permalink: /lab_sessions/lab3
 parent: Lab Sessions
 nav_order: 3
 ---
-**Lab 3 submission due on 28<sup>th</sup> May 2022, 23:59**{: .label .label-red }
+**Lab 3 submission due on Sunday, 23:59**{: .label .label-red }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -221,4 +221,4 @@ Thankfully, a description of the various values have been included in the materi
    3. The url of your remote repository.
 
 ## Submission
-Zip up your lab report and the package you have made in Task 3 into a zip file called "**lab3\_<STUDENT\_ID>.zip**" and submit by 28<sup>th</sup> May 2022, 23:59.
+Zip up your lab report and the package you have made in Task 3 into a zip file called "**lab3\_<STUDENT\_ID>.zip**" and submit by Sunday, 23:59.

@@ -8,7 +8,7 @@ nav_order: 4
 
 # **Lecture 4 - Gazebo & ROS Navigation (Mapping)**
 
-- Mon, May 30, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -32,5 +32,5 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 4's prelab and lab will be provided during the lecture.
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture4/assets/Lecture 4 - Simulation and Navigation.pdf %})

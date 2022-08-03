@@ -5,7 +5,7 @@ permalink: /lab_sessions/lab4
 parent: Lab Sessions
 nav_order: 4
 ---
-**Lab 4 submission due on 4<sup>th</sup> June 2022, 23:59**{: .label .label-red }
+**Lab 4 submission due on Sunday, 23:59**{: .label .label-red }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -216,4 +216,4 @@ Today we will take a look at building a map using the simulation world you have 
 
 
 ## Submission
-Zip up your lab report into a zip file called "**lab4\_<STUDENT\_ID>.zip**" and submit by 4<sup>th</sup> June 2022, 23:59.
+Zip up your lab report into a zip file called "**lab4\_<STUDENT\_ID>.zip**" and submit by Sunday, 23:59.

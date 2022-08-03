@@ -5,7 +5,7 @@ permalink: /lab_sessions/lab6
 parent: Lab Sessions
 nav_order: 6
 ---
-**Lab 6 submission due on 18<sup>th</sup> June 2022, 23:59**{: .label .label-red }
+**Lab 6 submission due on Sunday, 23:59**{: .label .label-red }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -87,4 +87,4 @@ By editing the map (.pgm) file, we can indirectly influence the global/local pla
 
 
 ## Submission
-Zip up your lab report into a zip file called "**lab6\_team\_<TEAM\_ID>.zip**" and submit by 18<sup>th</sup> June 2022, 23:59.
+Zip up your lab report into a zip file called "**lab6\_team\_<TEAM\_ID>.zip**" and submit by Sunday, 23:59.

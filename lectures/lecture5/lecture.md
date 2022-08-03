@@ -8,7 +8,7 @@ nav_order: 5
 
 # **Lecture 5 - ActionLib & ROS Navigation (Planning)**
 
-- Mon, June 6, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -36,5 +36,5 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 5's prelab and lab will be provided during the lecture.
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture5/assets/Lecture 5 - Navigation Part 1.pdf %})

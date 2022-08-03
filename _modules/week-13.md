@@ -2,11 +2,11 @@
 title: Week 13 - Final presentation and report
 ---
 
-Aug 1
+Monday
 : [Final presentation](#)
 
-Aug 3
+Wednesday
 : [Submit report](#)
 
-Aug 7
+Sunday
 : **Final project report due**{: .label .label-red }

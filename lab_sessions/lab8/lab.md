@@ -5,7 +5,7 @@ permalink: /lab_sessions/lab8
 parent: Lab Sessions
 nav_order: 8
 ---
-**Lab 8 submission due on 9<sup>th</sup> July 2022, 23:59**{: .label .label-red }
+**Lab 8 submission due on Sunday, 23:59**{: .label .label-red }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -179,4 +179,4 @@ With our newly trained model, lets run some inferences on some test images in or
 * At the same time, the bottle cap images that we will be testing on would **not be very different from those that were in the dataset**. Hence, we do not expect you to overtrain your model with a very high detection acccuracy.
 
 ## Submission
-Zip up your lab report and the model files/notebooks you have made in Task 2/3/4/5 into a zip file called "**lab8\_<STUDENT\_ID>.zip**" and submit by 9<sup>nd</sup> July 2022, 23:59.
+Zip up your lab report and the model files/notebooks you have made in Task 2/3/4/5 into a zip file called "**lab8\_<STUDENT\_ID>.zip**" and submit by Sunday, 23:59.

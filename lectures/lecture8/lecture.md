@@ -8,7 +8,7 @@ nav_order: 8
 
 # **Lecture 8 - Introduction to Computer Vision with Machine/Deep Learning**
 
-- Mon, July 4, 9:00 am – 1:00 pm
+- Monday, 9:00 am – 1:00 pm
 
 ## **Overview**
 
@@ -56,5 +56,5 @@ While the concepts covered are non-exhaustive by any means, it should cover most
 
 Further information regarding week 8's prelab and lab will be provided during the lecture.
 
-<!-- ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}) -->
+## **Lecture resources**
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture8/assets/Lecture 8 - AI - ML - Deep Learning.pdf %})

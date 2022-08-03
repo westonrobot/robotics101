@@ -2,8 +2,8 @@
 title: Week 11 - System Integration and Testing
 ---
 
-Jul 18
+Monday
 : No lecture, System integration and testing
 
-Jul 20
+Wednesday
 : System integration and testing

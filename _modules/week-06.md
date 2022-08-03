@@ -2,11 +2,11 @@
 title: Week 6 - Navigation Algorithm Study
 ---
 
-Jun 13
-: [Introduction to local and global planners in ROS: DWA and Dijkstra & A*](#)
+Monday
+: [Introduction to local and global planners in ROS: DWA and Dijkstra & A*]({{ site.baseurl }}{% link lectures/lecture6/lecture.md %})
 
-Jun 15
-: **Lab 6**{: .label .label-green} [Advanced ROS navigation: planner for ackermann robot and add cost map](#)
+Wednesday
+: **Lab 6**{: .label .label-green} [Advanced ROS navigation: planner for ackermann robot and add cost map]({{ site.baseurl }}{% link lab_sessions/lab6/lab.md %})
 
-Jun 18
+Sunday
 : **Lab 6 report due**{: .label .label-red }
