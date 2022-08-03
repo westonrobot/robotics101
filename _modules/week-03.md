@@ -2,11 +2,11 @@
 title: Week 3 - Foundations of Robot Software Development
 ---
 
-May 23
-: [Introduction to common development tools & foundations of mobile robots](#)
+Monday
+: [Introduction to common development tools & foundations of mobile robots]({{ site.baseurl }}{% link lectures/lecture3/lecture.md %})
 
-May 25
-: **Lab 3**{: .label .label-green} [Using Git & ROS Services](#)
+Wednesday
+: **Lab 3**{: .label .label-green} [Using Git & ROS Services]({{ site.baseurl }}{% link lab_sessions/lab3/lab.md %})
 
-May 28
+Sunday
 : **Lab 3 report due**{: .label .label-red }

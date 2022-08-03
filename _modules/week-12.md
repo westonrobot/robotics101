@@ -2,8 +2,8 @@
 title: Week 12 - Final competition
 ---
 
-Jul 25
+Monday
 : No lecture, System integration and testing
 
-Jul 27
+Wednesday
 : [Final competition](#)
