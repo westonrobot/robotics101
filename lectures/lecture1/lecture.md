@@ -20,4 +20,5 @@ Further information regarding week 1's prelab and lab will be provided during th
 Looking forward to meeting all of you on Monday!
 
 ## **Lecture resources**
-* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture1/assets/Lecture 1 - LIMO Training.pdf %})
+* Slides: [pdf]({{ site.baseurl }}{% link lectures/lecture1/assets/Lecture 1 - Introduction.pdf %})
+* Limo Robot: [pdf]({{ site.baseurl }}{% link lectures/lecture1/assets/Lecture 1 - LIMO Training.pdf %})
